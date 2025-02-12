@@ -40,6 +40,7 @@ public class Button : MonoBehaviour
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
             Debug.Log($"Loading scene: {sceneToLoad}");
+            UGS_SceneTransition.TestAppSceneCustomEvent(sceneToLoad);
             SceneManager.LoadScene(sceneToLoad);
         }
         else
