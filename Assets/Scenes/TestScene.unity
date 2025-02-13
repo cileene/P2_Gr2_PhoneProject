@@ -321,6 +321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 144267357}
     m_Modifications:
+    - target: {fileID: 4660623286111098734, guid: a3edf6a1573844a738308a7ada3a71db, type: 3}
+      propertyPath: sceneToLoad
+      value: PhoneChatExampleScene
+      objectReference: {fileID: 0}
     - target: {fileID: 4787104434609994706, guid: a3edf6a1573844a738308a7ada3a71db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
