@@ -45,13 +45,17 @@ namespace Yarn.Unity.Example
         {
             dialogueBubblePrefab.SetActive(false);
             UpdateMessageBoxSettings();
+            // Adjust the position of the options container
+            RectTransform optionsRectTransform = optionsContainer.GetComponent<RectTransform>();
+            optionsRectTransform.anchoredPosition = new Vector2(optionsRectTransform.anchoredPosition.x, -200); // Adjust the y value as needed
         }
+        
 
         // YarnCommand <<Me>>, but does not use YarnCommand C# attribute, registers in Awake() instead
         public void SetSenderMe() 
         {
             isRightAlignment = true;
-            currentBGColor = Color.blue;
+            currentBGColor = new Color(26f / 255f, 188f / 255f, 156f / 255f);
             currentTextColor = Color.white;
         }
 
