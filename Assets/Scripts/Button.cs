@@ -39,7 +39,7 @@ public class Button : MonoBehaviour
     private void LoadScene()
     {
         // if the scene to load is not empty, load the scene
-        if (!string.IsNullOrEmpty(sceneToLoad))
+        if (!string.IsNullOrEmpty(sceneToLoad) && GameManager.PhoneUnlocked)
         {
             Debug.Log($"Loading scene: {sceneToLoad}");
             UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); // send to Analytics
@@ -47,7 +47,7 @@ public class Button : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Scene to load is not specified.");
+            Debug.LogWarning("Scene to load is not specified or phone is locked.");
         }
     }
 }
