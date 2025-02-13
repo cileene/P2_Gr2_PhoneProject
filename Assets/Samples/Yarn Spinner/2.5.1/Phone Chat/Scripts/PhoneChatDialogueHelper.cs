@@ -51,7 +51,7 @@ namespace Yarn.Unity.Example
         public void SetSenderMe() 
         {
             isRightAlignment = true;
-            currentBGColor = Color.blue;
+            currentBGColor = new Color(26f / 255f, 188f / 255f, 156f / 255f);
             currentTextColor = Color.white;
         }
 
