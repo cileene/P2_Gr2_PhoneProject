@@ -45,7 +45,11 @@ namespace Yarn.Unity.Example
         {
             dialogueBubblePrefab.SetActive(false);
             UpdateMessageBoxSettings();
+            // Adjust the position of the options container
+            RectTransform optionsRectTransform = optionsContainer.GetComponent<RectTransform>();
+            optionsRectTransform.anchoredPosition = new Vector2(optionsRectTransform.anchoredPosition.x, -200); // Adjust the y value as needed
         }
+        
 
         // YarnCommand <<Me>>, but does not use YarnCommand C# attribute, registers in Awake() instead
         public void SetSenderMe() 
