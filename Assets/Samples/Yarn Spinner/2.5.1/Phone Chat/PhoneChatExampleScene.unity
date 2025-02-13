@@ -1485,7 +1485,7 @@ MonoBehaviour:
   optionsContainer: {fileID: 1648787822509072982}
   optionPrefab: {fileID: 4898135292715651530, guid: f7bc3e33b24fb496dab285d98e122495, type: 3}
   dialogueBubblePrefab: {fileID: 6902517044659295361}
-  lettersPerSecond: 40
+  lettersPerSecond: 100
 --- !u!1 &3881870919509329350
 GameObject:
   m_ObjectHideFlags: 0

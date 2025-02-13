@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: 0,0
+position: -19,-535
 ---
 // <<Me>> and <<Them>> are custom commands implemented in PhoneChatDialogueHelper.cs
 
@@ -34,37 +34,45 @@ and there's a script that clones the message bubble
 you'll figure it out
 <<wait 4>>
 just read the documentation... www.yarnspinner.dev !
-<<wait 2>>
-but if you want my advice,
-<<wait 5>>
-you should maybe add an automatic delay before a message, based on the length of the message, in PhoneChatDialogueHelper.RunLine()
-<<wait 4>>
-otherwise you have to keep typing out "wait" instructions, which is annoying
 
 <<Me>>
-<<wait 1>>
--> Thanks!
-    Thanks!
-    <<wait 2>>
-    This conversation helped a lot
--> Thanks!... for nothing
-    Thanks!... for nothing
-    <<wait 4>>
-    Next time, make my entire game for me! The whole thing!
-
-
-<<jump Bye>>
+    -> Thanks!
+        <<jump Alt>>
+    -> Thanks!... for nothing
+        <<jump Bye>>
 ===
 
-
-title: Bye
-tags: 
+title: Alt
+tag:
+position: 222,-191
 colorID: 0
-position: 0,0
 ---
+<<Me>>
+Thanks!
+<<wait 2>>
+This conversation helped a lot
+
 <<Them>>
 <<wait 2>>
-sorry I have to go now, bye
+you're welcome
 <<wait 2>>
-good luck with your game!
+now get out of here
 ===
+
+title: Bye
+tag: 
+colorID: 0
+position: -161,-135
+---
+<<Me>>
+Thanks!... for nothing
+<<wait 4>>
+Next time, make my entire game for me! The whole thing!
+
+<<Them>>
+<<wait 2>>
+can't please everybody
+<<wait 2>>
+you get what you pay for
+===
+
