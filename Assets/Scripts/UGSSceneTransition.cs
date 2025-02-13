@@ -6,7 +6,8 @@ public static class UGSSceneTransition
     private enum SceneName // enum to store the scene names
     {
         TestAppScene,
-        TestScene
+        TestScene,
+        PhoneChatExampleScene
     }
     
     public static void HandleSceneCustomEvent(string sceneName)
@@ -21,6 +22,10 @@ public static class UGSSceneTransition
             
             case nameof(SceneName.TestScene):
                 customEventName = "testSceneLoaded";
+                break;
+            
+            case nameof(SceneName.PhoneChatExampleScene):
+                customEventName = "phoneChatSceneLoaded";
                 break;
         }
         AnalyticsService.Instance.RecordEvent(customEventName); // record the custom event
