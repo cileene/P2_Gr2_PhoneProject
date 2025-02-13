@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Standard button script to load a scene
+//TODO: Refactor to use new input system
 public class Button : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
@@ -40,7 +42,7 @@ public class Button : MonoBehaviour
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
             Debug.Log($"Loading scene: {sceneToLoad}");
-            UGS_SceneTransition.TestAppSceneCustomEvent(sceneToLoad);
+            UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); // send to Analytics
             SceneManager.LoadScene(sceneToLoad);
         }
         else

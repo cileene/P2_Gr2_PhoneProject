@@ -1,28 +1,24 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Services.Analytics;
 using Unity.Services.Core;
-using Unity.Services.Core.Analytics;
 
-
-public class UGS_Analytics : MonoBehaviour
+public class UGSAnalytics : MonoBehaviour
 {
-    async void Start()
+    private async void Start()
     {
         try
         {
             await UnityServices.InitializeAsync();
             GiveConsent(); //Get user consent according to various legislations
         }
-        catch (ConsentCheckException e)
+        catch (ConsentCheckException e) // ???
         {
             Debug.Log(e.ToString());
         }
     }
 
-    public void GiveConsent()
+    private void GiveConsent()
     {
         // Call if consent has been given by the user
         AnalyticsService.Instance.StartDataCollection();
