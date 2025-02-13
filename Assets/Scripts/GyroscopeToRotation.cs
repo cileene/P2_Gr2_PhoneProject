@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//TODO: Refactor to use new input system
 public class GyroscopeToRotation : MonoBehaviour
 {
     // translate the gyroscope input to rotation
