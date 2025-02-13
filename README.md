@@ -10,3 +10,7 @@
 
 ## Using
 - Unity 6 (60000.0.35f1)
+
+### Packages
+- Unity Analytics
+- Yarn Spinner

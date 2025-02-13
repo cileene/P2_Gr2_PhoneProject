@@ -38,15 +38,15 @@ you'll figure it out
 just read the documentation... www.yarnspinner.dev !
 
 <<Me>>
-    -> Thanks!
-        <<jump Alt>>
-    -> Thanks!... for nothing
-        <<jump Bye>>
+-> Thanks!
+    <<jump Alt>>
+-> Thanks!... for nothing
+    <<jump Bye>>
 ===
 
 title: Alt
 tag:
-position: 222,-191
+position: 91,-313
 colorID: 0
 ---
 <<Me>>
@@ -64,7 +64,7 @@ now get out of here
 title: Bye
 tag: 
 colorID: 0
-position: -161,-135
+position: -167,-316
 ---
 <<Me>>
 Thanks!... for nothing
