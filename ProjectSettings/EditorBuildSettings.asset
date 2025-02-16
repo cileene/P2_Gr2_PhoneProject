@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TestAppScene.unity
     guid: 020b2405e03d242b192deaf989b7287d
   - enabled: 1
-    path: Assets/Samples/Yarn Spinner/2.5.1/Phone Chat/PhoneChatExampleScene.unity
+    path: Assets/Scenes/PhoneChatExampleScene.unity
     guid: b9539ef39a36b0e4b93d84c72a301a6d
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 077e718e96be148b3a261fd7c71ebc58, type: 2}

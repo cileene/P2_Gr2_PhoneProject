@@ -8,13 +8,12 @@ public class GameManager : MonoBehaviour
     [Header("Progression")]
     public bool phoneUnlocked;
 
-
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            Instantiate(Resources.Load<GameObject>("Prefabs/UnityAnalytics"));
+            Instantiate(Resources.Load("Prefabs/UnityAnalytics"));
             DontDestroyOnLoad(gameObject);
         }
         else
