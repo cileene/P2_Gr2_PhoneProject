@@ -9,6 +9,8 @@ public class Button : MonoBehaviour
     [SerializeField, Range(0.1f, 1.5f)] private float transitionTime = 0.5f;
     private string _buttonName;
     private GameObject _transitionCamera;
+    
+    // read all the game manager variables and present them in editor as bools to set gating
 
     private void Awake()
     {
@@ -39,10 +41,10 @@ public class Button : MonoBehaviour
     private void LoadScene()
     {
         // if the scene to load is not empty, load the scene
-        if (!string.IsNullOrEmpty(sceneToLoad) && GameManager.PhoneUnlocked)
+        if (!string.IsNullOrEmpty(sceneToLoad) && GameManager.Instance.phoneUnlocked)
         {
             Debug.Log($"Loading scene: {sceneToLoad}");
-            UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); // send to Analytics
+            UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); //TODO: add nullcheck
             SceneManager.LoadScene(sceneToLoad);
         }
         else

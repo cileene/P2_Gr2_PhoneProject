@@ -9,7 +9,7 @@ public class LockUnlock : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.PhoneUnlocked)
+        if (GameManager.Instance.phoneUnlocked)
         {
             locked.SetActive(false);
             unlocked.SetActive(true);

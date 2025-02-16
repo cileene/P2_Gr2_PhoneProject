@@ -3,28 +3,21 @@ using Unity.Services.Analytics;
 // Static class to notify Analytics when a scene is loaded
 public static class UGSSceneTransition
 {
-    private enum SceneName // enum to store the scene names
-    {
-        TestAppScene,
-        TestScene,
-        PhoneChatExampleScene
-    }
-    
     public static void HandleSceneCustomEvent(string sceneName)
     {
         var customEventName = ""; // local variable to store the custom event name
         
         switch (sceneName) // switch statement to determine the custom event name based on the scene name
         {
-            case nameof(SceneName.TestAppScene):
+            case "TestAppScene":
                 customEventName = "testAppSceneLoaded";
                 break;
             
-            case nameof(SceneName.TestScene):
+            case "TestScene":
                 customEventName = "testSceneLoaded";
                 break;
             
-            case nameof(SceneName.PhoneChatExampleScene):
+            case "PhoneChatExampleScene":
                 customEventName = "phoneChatSceneLoaded";
                 break;
         }

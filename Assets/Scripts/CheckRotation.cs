@@ -4,7 +4,7 @@ public class CheckRotation : MonoBehaviour
 {
     private void Update()
     {
-        if (GameManager.PhoneUnlocked) return;
+        if (GameManager.Instance.phoneUnlocked) return;
         Invoke(nameof(DelayedCheckRotation), 2f);
     }
 
@@ -20,8 +20,8 @@ public class CheckRotation : MonoBehaviour
 
     private void UnlockPhone()
     {
-        if (GameManager.PhoneUnlocked) return;
-        GameManager.PhoneUnlocked = true;
-        Debug.Log($"Phone unlocked! {GameManager.PhoneUnlocked}");
+        if (GameManager.Instance.phoneUnlocked) return;
+        GameManager.Instance.phoneUnlocked = true;
+        Debug.Log($"Phone unlocked! {GameManager.Instance.phoneUnlocked}");
     }
 }
