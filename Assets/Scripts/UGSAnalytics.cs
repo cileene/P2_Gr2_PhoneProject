@@ -24,7 +24,6 @@ public class UGSAnalytics : MonoBehaviour
         AnalyticsService.Instance.StartDataCollection();
         Debug.Log($"Consent has been provided. The SDK is now collecting data!");
     }
-
 }
 
 internal class ConsentCheckException : Exception
