@@ -2285,7 +2285,7 @@ MonoBehaviour:
   _variableStorage: {fileID: 6902517045189658211}
   dialogueViews:
   - {fileID: 3828588392395502360}
-  startNode: Alt
+  startNode: Start
   startAutomatically: 1
   runSelectedOptionAsLine: 0
   lineProvider: {fileID: 0}
