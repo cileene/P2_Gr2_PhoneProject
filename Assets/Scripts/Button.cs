@@ -45,6 +45,8 @@ public class Button : MonoBehaviour
         {
             Debug.Log($"Loading scene: {sceneToLoad}");
             UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); //TODO: add nullcheck
+            GameManager.Instance.currentScene = sceneToLoad; // update the current scene in GameManager
+            GameManager.Instance.WriteSaveData();
             SceneManager.LoadScene(sceneToLoad);
         }
         else

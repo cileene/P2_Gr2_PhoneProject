@@ -5,15 +5,19 @@ using System;
 
 // Here we track the game state using a singleton pattern
 // And now we also write data to the player's device
+
+[Serializable]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
     [Header("Progression")] public bool phoneUnlocked;
+    public int currentLevel;
+    public string currentScene; // Default scene
 
     private string _dataPath;
-    private string _saveData;
-    private const string FileName = "SaveData.txt";
+    public string SaveData { get; private set; }
+    private const string FileName = "SaveData.json";
 
     private void Awake()
     {
@@ -24,8 +28,6 @@ public class GameManager : MonoBehaviour
             InitFileSystem();
             InitSaveData();
             InitAnalytics();
-            UpdateSaveData($"Game started: {DateTime.Now}");
-            ReadSaveData(_saveData);
         }
         else
         {
@@ -33,17 +35,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // Load the current scene from the save data
+        if (!string.IsNullOrEmpty(currentScene))
+        {
+            SceneManager.LoadScene(currentScene);
+        }
+        else
+        {
+            Debug.LogWarning("No current scene found in save data.");
+        }
+    }
+
     //TODO: we want to track the current open scene to make sure it will be opened on app restart
     //TODO: P2-57 refactor to use json serialization (chapter 12 in the book)
+    private void InitAnalytics()
+    {
+        Instantiate(Resources.Load("Prefabs/UnityAnalytics"));
+        Debug.Log("Analytics initialized");
+    }
 
-    private void InitFileSystem()
+    public void InitFileSystem()
     {
         _dataPath = Application.persistentDataPath + "/Player_Data/";
         Debug.Log(_dataPath);
 
         if (Directory.Exists(_dataPath))
         {
-            Debug.Log($"Directory already exists at {_dataPath}");
+            Debug.Log($"Found directory at {_dataPath}");
             return;
         }
 
@@ -51,46 +71,19 @@ public class GameManager : MonoBehaviour
         Debug.Log($"New directory created at {_dataPath}");
     }
 
-    private void InitAnalytics()
+    public void InitSaveData()
     {
-        Instantiate(Resources.Load("Prefabs/UnityAnalytics"));
-        Debug.Log("Analytics initialized");
-    }
+        SaveData = _dataPath + FileName;
 
-    private void InitSaveData()
-    {
-        _saveData = _dataPath + FileName;
-
-        if (File.Exists(_saveData))
+        if (File.Exists(SaveData)) // load existing file
         {
-            Debug.Log($"File already exists at {_saveData}");
+            Debug.Log($"SaveData found at {SaveData}");
+            SaveDataManager.ReadSaveData(SaveData);
+            Debug.Log($"Loaded SaveData {SaveData}");
             return;
         }
 
-        File.WriteAllText(_saveData, "<SAVE DATA>\n");
-        Debug.Log($"New file created at {_saveData}");
-    }
-
-    private void UpdateSaveData(string data)
-    {
-        if (!File.Exists(_saveData))
-        {
-            Debug.LogWarning("File does not exist!");
-            return;
-        }
-
-        File.AppendAllText(_saveData, data + "\n");
-    }
-
-    private void ReadSaveData(string saveData)
-    {
-        if (!File.Exists(saveData))
-        {
-            Debug.LogWarning("File does not exist!");
-            return;
-        }
-
-        string text = File.ReadAllText(saveData);
-        Debug.Log(text);
+        SaveDataManager.WriteSaveData();
+        Debug.Log($"New file created at {SaveData}");
     }
 }
