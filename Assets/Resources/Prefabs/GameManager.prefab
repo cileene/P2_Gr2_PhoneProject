@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8917efe5ea004f5cbf45e57b6652945a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneUnlocked: 0
+  useSaveData: 1
+  phoneUnlocked: 1
+  currentLevel: 0
+  currentScene: LockScreenScene
 --- !u!114 &1362341847433836075
 MonoBehaviour:
   m_ObjectHideFlags: 0

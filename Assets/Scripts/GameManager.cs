@@ -11,8 +11,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [Header("Progression")] 
     public bool useSaveData = true;
+
+    [Header("Progression")] 
     public bool phoneUnlocked;
     public int currentLevel;
     public string currentScene; // Default scene
@@ -50,8 +51,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //TODO: we want to track the current open scene to make sure it will be opened on app restart
-    //TODO: P2-57 refactor to use json serialization (chapter 12 in the book)
     private void InitAnalytics()
     {
         Instantiate(Resources.Load("Prefabs/UnityAnalytics"));

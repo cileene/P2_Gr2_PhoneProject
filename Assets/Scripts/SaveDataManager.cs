@@ -26,14 +26,14 @@ public static class SaveDataManager
         Debug.Log(text);
         DeserializeFromJson(text);
     }
-    
-    
+
+
     // JSON serialization methods
     private static string SerializeToJson()
     {
         return JsonUtility.ToJson(GameManager.Instance, true);
     }
-    
+
     private static void DeserializeFromJson(string data)
     {
         JsonUtility.FromJsonOverwrite(data, GameManager.Instance);

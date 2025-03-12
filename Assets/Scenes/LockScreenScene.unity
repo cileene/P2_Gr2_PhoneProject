@@ -3558,22 +3558,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: useSaveData
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: currentScene
-      value: LockScreenScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: phoneUnlocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: loadFromSaveData
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8566268782444468105, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: m_Name
       value: GameManager
