@@ -13,7 +13,7 @@ public class GoToScene : MonoBehaviour
             Debug.Log($"Loading scene: {sceneToLoad}");
             UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); // send to Analytics
             GameManager.Instance.currentScene = sceneToLoad; // update the current scene in GameManager
-            GameManager.Instance.WriteSaveData();
+            SaveDataManager.TriggerSave(); // save the current scene
             SceneManager.LoadScene(sceneToLoad);
         }
         else

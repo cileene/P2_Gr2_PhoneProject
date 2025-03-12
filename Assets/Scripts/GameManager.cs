@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [Header("Progression")] public bool phoneUnlocked;
+    [Header("Progression")] 
+    public bool useSaveData = true;
+    public bool phoneUnlocked;
     public int currentLevel;
     public string currentScene; // Default scene
 
@@ -75,15 +77,14 @@ public class GameManager : MonoBehaviour
     {
         SaveData = _dataPath + FileName;
 
-        if (File.Exists(SaveData)) // load existing file
+        if (File.Exists(SaveData) & useSaveData) // load existing file
         {
             Debug.Log($"SaveData found at {SaveData}");
             SaveDataManager.ReadSaveData(SaveData);
-            Debug.Log($"Loaded SaveData {SaveData}");
             return;
         }
 
-        SaveDataManager.WriteSaveData();
+        if (useSaveData) SaveDataManager.WriteSaveData();
         Debug.Log($"New file created at {SaveData}");
     }
 }

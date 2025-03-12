@@ -3,17 +3,15 @@ using System.IO;
 
 public static class SaveDataManager
 {
-    private static readonly string SaveData = GameManager.Instance.SaveData;
-    
+    public static void TriggerSave()
+    {
+        if (!GameManager.Instance.useSaveData) return;
+        WriteSaveData();
+    }
+
     public static void WriteSaveData()
     {
-        if (!File.Exists(SaveData))
-        {
-            GameManager.Instance.InitSaveData();
-            return;
-        }
-        
-        File.WriteAllText(SaveData, SerializeToJson());
+        File.WriteAllText(GameManager.Instance.SaveData, SerializeToJson());
     }
 
     public static void ReadSaveData(string data)
