@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //TODO: Make a separate class for handling scene management
     private void Start()
     {
         // Load the current scene from the save data
