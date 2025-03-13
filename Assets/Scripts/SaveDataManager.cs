@@ -27,7 +27,6 @@ public static class SaveDataManager
         DeserializeFromJson(text);
     }
 
-
     // JSON serialization methods
     private static string SerializeToJson()
     {
