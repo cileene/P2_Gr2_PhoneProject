@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Standard button script to load a scene
-//TODO: Refactor to use new input system
 public class Button : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
