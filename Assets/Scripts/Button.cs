@@ -37,8 +37,8 @@ public class Button : MonoBehaviour
         // wait for transitionTime seconds and then load the scene
         Invoke(nameof(LoadScene), transitionTime);
     }
-
-    private void LoadScene()
+    
+    private void LoadScene() //TODO: This should be centralized in a scenemanager
     {
         // if the scene to load is not empty, load the scene
         if (!string.IsNullOrEmpty(sceneToLoad) && GameManager.Instance.phoneUnlocked)
