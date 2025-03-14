@@ -26,17 +26,26 @@ public class Button : MonoBehaviour
 
     private void OnMouseUp()
     {
-        // activate the transition camera
-        if (!string.IsNullOrEmpty(sceneToLoad)) _transitionCamera.SetActive(true);
-
         // set material color to white
         GetComponent<Renderer>().material.color = Color.white;
         Debug.Log($"{_buttonName} released!");
+        Activate();
+    }
+
+    public void UIClick()
+    {
+        Activate();
+    }
+
+    private void Activate()
+    {
+        // activate the transition camera
+        if (!string.IsNullOrEmpty(sceneToLoad)) _transitionCamera.SetActive(true);
 
         // wait for transitionTime seconds and then load the scene
         Invoke(nameof(LoadScene), transitionTime);
     }
-    
+
     private void LoadScene() //TODO: This should be centralized in a scenemanager
     {
         // if the scene to load is not empty, load the scene
