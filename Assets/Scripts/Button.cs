@@ -48,18 +48,6 @@ public class Button : MonoBehaviour
 
     private void LoadScene() //TODO: This should be centralized in a scenemanager
     {
-        // if the scene to load is not empty, load the scene
-        if (!string.IsNullOrEmpty(sceneToLoad) && GameManager.Instance.phoneUnlocked)
-        {
-            Debug.Log($"Loading scene: {sceneToLoad}");
-            UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); //TODO: add nullcheck
-            GameManager.Instance.currentScene = sceneToLoad; // update the current scene in GameManager
-            SaveDataManager.TriggerSave(); // save the current scene
-            SceneManager.LoadSceneAsync(sceneToLoad);
-        }
-        else
-        {
-            Debug.LogWarning("Scene to load is not specified or phone is locked.");
-        }
+        SceneHandler.LoadScene(sceneToLoad);
     }
 }
