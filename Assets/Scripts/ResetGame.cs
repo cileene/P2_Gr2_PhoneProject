@@ -8,6 +8,6 @@ public class ResetGame : MonoBehaviour
         GameManager.Instance.currentScene = "LockScreenScene";
         GameManager.Instance.currentLevel = 0;
         SaveDataManager.TriggerSave(); // save the current scene
-        SceneManager.LoadScene("LockScreenScene");
+        SceneManager.LoadSceneAsync("LockScreenScene");
     }
 }

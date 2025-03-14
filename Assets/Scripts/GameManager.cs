@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         // Load the current scene from the save data
         if (!string.IsNullOrEmpty(currentScene))
         {
-            SceneManager.LoadScene(currentScene);
+            SceneManager.LoadSceneAsync(currentScene);
         }
         else
         {
