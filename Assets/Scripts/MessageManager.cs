@@ -140,7 +140,7 @@ public class MessageManager : MonoBehaviour
     }
 
     // Reset the conversation and delete the save file
-    private void ResetConversation()
+    public void ResetConversation()
     {
         string sceneName = SceneManager.GetActiveScene().name;
         string saveFileName = $"conversationState_{sceneName}.json";
