@@ -25,6 +25,18 @@ public static class UGSSceneTransition
             case "ScrollingTestScene":
                 customEventName = "scrollingTestSceneLoaded";
                 break;
+            
+            case "MessageSelect":
+                customEventName = "messageSelectLoaded";
+                break;
+            
+            case "MessageChatBente":
+                customEventName = "messageChatBenteLoaded";
+                break;
+            
+            case "MessageChatBobby":
+                customEventName = "messageChatBobbyLoaded";
+                break;
         }
         AnalyticsService.Instance.RecordEvent(customEventName); // record the custom event
         AnalyticsService.Instance.Flush(); // flush/upload the event to the server

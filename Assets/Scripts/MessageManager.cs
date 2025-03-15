@@ -94,7 +94,7 @@ public class MessageManager : MonoBehaviour
         };
 
         string json = JsonUtility.ToJson(saveData, true);
-        string path = Path.Combine(Application.persistentDataPath, saveFileName);
+        string path = Path.Combine(Application.persistentDataPath + "/Player_Data/", saveFileName);
         File.WriteAllText(path, json);
     }
 
@@ -103,7 +103,7 @@ public class MessageManager : MonoBehaviour
     {
         string sceneName = SceneManager.GetActiveScene().name;
         string saveFileName = $"conversationState_{sceneName}.json";
-        string path = Path.Combine(Application.persistentDataPath, saveFileName);
+        string path = Path.Combine(Application.persistentDataPath + "/Player_Data/", saveFileName);
 
         if (File.Exists(path))
         {
@@ -144,7 +144,7 @@ public class MessageManager : MonoBehaviour
     {
         string sceneName = SceneManager.GetActiveScene().name;
         string saveFileName = $"conversationState_{sceneName}.json";
-        string path = Path.Combine(Application.persistentDataPath, saveFileName);
+        string path = Path.Combine(Application.persistentDataPath + "/Player_Data/", saveFileName);
 
         if (File.Exists(path))
         {
