@@ -19,11 +19,11 @@ public class ChoiceButton : MonoBehaviour
             // Determine which choice this sprite represents (1 or 2)
             if (gameObject.name == "ChoiceSprite1") // For Sprite 1
             {
-                _choiceManager.OnChoiceSprite1Clicked();  // Call the method from the main manager
+                _choiceManager.OnChoice1Clicked();  // Call the method from the main manager
             }
             else if (gameObject.name == "ChoiceSprite2") // For Sprite 2
             {
-                _choiceManager.OnChoiceSprite2Clicked();  // Call the method from the main manager
+                _choiceManager.OnChoice2Clicked();  // Call the method from the main manager
             }
         }
     }
