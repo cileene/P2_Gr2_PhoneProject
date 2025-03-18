@@ -1164,7 +1164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 549.99945}
+  m_AnchoredPosition: {x: -392.5, y: 550}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1238,18 +1238,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceSprite1: {fileID: 1170484934}
   choiceSprite2: {fileID: 436358164}
+  playerButtonMessages:
+  - Hello
+  - What up
+  - what is going on
+  - who are you
+  - help
+  - getting angry
   playerMessages:
-  - Hi Bobby
-  - You wanna get icecream
-  - You Do
-  - I hate that
-  - Something is wrong
+  - Hello hows it going
+  - What up haw are you doing
+  - do you know what is going on here
+  - who are you really
+  - 'please i want to  '
   - Isnt it?
   botMessages:
-  - Hello! How can I help you today?
-  - I like icecream
-  - Not me tastes like poop
-  - Dont know what is happening
+  - Hello! How its going pretty okat i guess
+  - Hey man, yeah everything is cool... i guess
+  - 'what do you mean '
+  - what do you mean
   - Is it
   - I dont know
   playerMessagePrefab: {fileID: 9124171079006057124, guid: 5cc62392fac434cf8bdf16dd3f01a891, type: 3}
@@ -1459,8 +1466,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521768645}
   m_HandleRect: {fileID: 1521768644}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99999577
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

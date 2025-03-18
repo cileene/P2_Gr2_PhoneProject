@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MessageManager : MonoBehaviour
 {
-    public GameObject choiceSprite1;
-    public GameObject choiceSprite2;
+    public GameObject buttonChoice1;
+    public GameObject buttonChoice2;
+    public List<string> playerButtonMessages;
     public List<string> playerMessages;
     public List<string> botMessages;
     public TextMeshProUGUI playerMessagePrefab;
@@ -23,28 +24,20 @@ public class MessageManager : MonoBehaviour
         DisplayChoices(); // Show the first set of choices
     }
 
-    // ReSharper disable Unity.PerformanceAnalysis
     private void DisplayChoices()
     {
-        // Show choices, handle index out of bounds
-        if (_currentChoiceIndex < playerMessages.Count)
+        if (_currentChoiceIndex < playerButtonMessages.Count)
         {
-            choiceSprite1.GetComponentInChildren<TextMeshProUGUI>().text = playerMessages[_currentChoiceIndex];
-            // Check if there is a second choice before accessing it
-            if (_currentChoiceIndex + 1 < playerMessages.Count)
-            {
-                choiceSprite2.GetComponentInChildren<TextMeshProUGUI>().text = playerMessages[_currentChoiceIndex + 1];
-            }
-            else
-            {
-                choiceSprite2.GetComponentInChildren<TextMeshProUGUI>().text = ""; // No second choice, set empty
-            }
+            buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
+ 
+            buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex + 1];
         }
         else
         {
-            choiceSprite1.SetActive(false);
-            choiceSprite2.SetActive(false);
+            buttonChoice1.SetActive(false);
+            buttonChoice2.SetActive(false);
         }
+  
     }
 
     public void OnChoice1Clicked()
