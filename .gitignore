@@ -74,4 +74,9 @@ crashlytics-build.properties
 Assets/.DS_Store
 Assets/Samples/.DS_Store
 ProjectSettings/.DS_Store
+
+
+!/Builds/iOS_Build/
 !/Builds/iOS_Build/Unity-iPhone.xcodeproj/
+
+
