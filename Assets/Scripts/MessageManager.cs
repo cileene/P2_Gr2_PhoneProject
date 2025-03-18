@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -44,22 +45,34 @@ public class MessageManager : MonoBehaviour
     {
         _playerChoices.Add(_currentChoiceIndex); // Save the choice
         DisplayMessage(playerMessages[_currentChoiceIndex]);
-        DisplayBotMessage(botMessages[_currentChoiceIndex]);
-
-        _currentChoiceIndex += 2; // Move to the next choices
-        SaveConversationState();
-        DisplayChoices(); // Show the next set of choices
+        StartCoroutine(RunChoice1AfterDelay());
+        
     }
+    IEnumerator RunChoice1AfterDelay()
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+       
+        DisplayBotMessage(botMessages[_currentChoiceIndex]);
+        _currentChoiceIndex += 2; // Move to the next choices
+        DisplayChoices(); // Show the next set of choices
+        SaveConversationState();
+    }
+    
 
     public void OnChoice2Clicked()
     {
         _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
         DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
-        DisplayBotMessage(botMessages[_currentChoiceIndex + 1]);
+        StartCoroutine(RunChoice2AfterDelay());
 
+    }
+    IEnumerator RunChoice2AfterDelay()
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+        DisplayBotMessage(botMessages[_currentChoiceIndex + 1]);
         _currentChoiceIndex += 2; // Move to the next choices
+        DisplayChoices();
         SaveConversationState();
-        DisplayChoices(); // Show the next set of choices
     }
 
     private void DisplayMessage(string message)
