@@ -23,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScrollingTestScene.unity
     guid: f70be6636684d4352941b3114d68682f
-  - enabled: 0
-    path: Assets/Scenes/MessageChat.unity
-    guid: ca2fa63c9c4a046fa8ed41f0dd4a9b8a
   - enabled: 1
     path: Assets/Scenes/MessageSelect.unity
     guid: 14ea5e560689c495d822d54ee646e050
