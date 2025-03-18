@@ -27,18 +27,27 @@ public class MessageManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        if (_currentChoiceIndex < playerButtonMessages.Count)
+        if (_currentChoiceIndex >= playerButtonMessages.Count)
         {
-            buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
- 
+            // No more choices left, hide buttons and exit
+            buttonChoice1.SetActive(false);
+            buttonChoice2.SetActive(false);
+            return;
+        }
+
+        // Display the current choice safely
+        buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
+
+        // Check if the next choice is valid before accessing it
+        if (_currentChoiceIndex + 1 < playerButtonMessages.Count)
+        {
             buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex + 1];
         }
         else
         {
-            buttonChoice1.SetActive(false);
-            buttonChoice2.SetActive(false);
+            buttonChoice2.SetActive(false); // Hide if no second choice available
         }
-  
+
     }
 
     public void OnChoice1Clicked()
@@ -46,6 +55,8 @@ public class MessageManager : MonoBehaviour
         _playerChoices.Add(_currentChoiceIndex); // Save the choice
         DisplayMessage(playerMessages[_currentChoiceIndex]);
         StartCoroutine(RunChoice1AfterDelay());
+        buttonChoice1.SetActive(false);
+        buttonChoice2.SetActive(false);
         
     }
     IEnumerator RunChoice1AfterDelay()
@@ -56,6 +67,13 @@ public class MessageManager : MonoBehaviour
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices(); // Show the next set of choices
         SaveConversationState();
+        if (_currentChoiceIndex < playerButtonMessages.Count)
+        {
+            buttonChoice1.SetActive(true);
+            buttonChoice2.SetActive(true);
+        }
+        
+     
     }
     
 
@@ -64,6 +82,8 @@ public class MessageManager : MonoBehaviour
         _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
         DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
         StartCoroutine(RunChoice2AfterDelay());
+        buttonChoice1.SetActive(false);
+        buttonChoice2.SetActive(false);
 
     }
     IEnumerator RunChoice2AfterDelay()
@@ -73,6 +93,12 @@ public class MessageManager : MonoBehaviour
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices();
         SaveConversationState();
+        if (_currentChoiceIndex < playerButtonMessages.Count)
+        {
+            buttonChoice1.SetActive(true);
+            buttonChoice2.SetActive(true);
+        }
+ 
     }
 
     private void DisplayMessage(string message)
