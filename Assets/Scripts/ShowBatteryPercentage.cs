@@ -5,9 +5,9 @@ using TMPro;
 // Here we get the battery percentage and display it
 public class ShowBatteryPercentage : MonoBehaviour
 {
-    [SerializeField, Range(0f, 1f)] public float batteryLevel = 0.5f; // Default battery level
-    private Slider _batterySlider; // Reference to the UI Slider component
-    private TextMeshProUGUI _batteryText; // Reference to the UI Text component
+    [SerializeField, Range(0f, 1f)] public float batteryLevel = 0.5f;
+    private Slider _batterySlider;
+    private TextMeshProUGUI _batteryText;
     
     private void Start()
     {
@@ -23,7 +23,7 @@ public class ShowBatteryPercentage : MonoBehaviour
 
         if (_batteryText != null)
         {
-            _batteryText.text = (batteryLevel * 100).ToString("F0") + "%"; // Display battery percentage
+            _batteryText.text = (batteryLevel * 100).ToString("F0") + "%";
         }
     }
 }

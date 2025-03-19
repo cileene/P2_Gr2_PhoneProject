@@ -4,20 +4,18 @@ using UnityEngine.UI;
     // Set device brightness
     public class SetBrightness : MonoBehaviour
     {
-        private float _brightness; // Default brightness value
+        private float _brightness;
         
         private void Start()
         {
-            _brightness = Screen.brightness; // Get the current brightness value
+            _brightness = Screen.brightness;
             
-            // Set slider value to current brightness
             Slider brightnessSlider = GetComponent<Slider>();
             if (brightnessSlider != null) brightnessSlider.value = _brightness;
         }
         
         private void Update()
         {
-            // Set the brightness when the script starts
             SetDeviceBrightness(_brightness);
         }
 
