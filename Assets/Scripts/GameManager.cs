@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     private string _dataPath;
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
+    public string selfiePicture;
 
     private void Awake()
     {
