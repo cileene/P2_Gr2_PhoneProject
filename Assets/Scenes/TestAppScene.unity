@@ -535,6 +535,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1364392662697089897, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4221741865363086911, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
       propertyPath: m_Name
       value: Standard Canvas
