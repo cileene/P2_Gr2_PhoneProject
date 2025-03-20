@@ -7,7 +7,7 @@ public class DeathYearTester : MonoBehaviour
     public TextMeshProUGUI resultText;
     
     // You can set these values in the Inspector for testing
-    public UserInput testUserInput = new UserInput
+    public DeathUserInput testDeathUserInput = new DeathUserInput
     {
         Age = 30,
         Smokes = true,
@@ -24,7 +24,7 @@ public class DeathYearTester : MonoBehaviour
     public void Start()
     {
         int currentYear = DateTime.Now.Year;
-        int deathYear = DeathCalculator.CalculateDeathYear(testUserInput, currentYear);
+        int deathYear = DeathCalculator.CalculateDeathYear(testDeathUserInput, currentYear);
         Debug.Log($"Predicted Death Year: {deathYear}");
         resultText.text = $"Predicted Death Year: {deathYear}";
     }

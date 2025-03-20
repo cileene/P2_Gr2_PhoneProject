@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class Background : MonoBehaviour
+namespace FlappyBirdScripts
 {
-    private MeshRenderer meshRenderer;
-
-    public float animationSpeed = 0.06f;
-
-    private void Awake()
+    public class Background : MonoBehaviour
     {
-        meshRenderer = GetComponent <MeshRenderer>();
+        private MeshRenderer meshRenderer;
+
+        public float animationSpeed = 0.06f;
+
+        private void Awake()
+        {
+            meshRenderer = GetComponent <MeshRenderer>();
+        }
+
+        private void Update()
+        {
+            meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0);
+
+        } 
     }
-
-    private void Update()
-    {
-        meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0);
-
-    } 
 }

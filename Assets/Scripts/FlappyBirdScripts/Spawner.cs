@@ -1,30 +1,32 @@
-using Unity.Mathematics;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+namespace FlappyBirdScripts
 {
-    public GameObject prefab;
-    public float spawnRate = 1f;
-    public float minHeight = -1f;
-    public float maxHeight = 2f;
-    public float verticalGap = 3f;
-
-    private void OnEnable()
+    public class Spawner : MonoBehaviour
     {
-        InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
-    }
+        public GameObject prefab;
+        public float spawnRate = 1f;
+        public float minHeight = -1f;
+        public float maxHeight = 2f;
+        public float verticalGap = 3f;
 
-    private void OnDisable()
-    {
-        CancelInvoke(nameof(Spawn));
-    }
+        private void OnEnable()
+        {
+            InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
+        }
 
-    private void Spawn()
-    {
-        GameObject pipes = Instantiate(prefab, transform.position, Quaternion.identity);
-        pipes.transform.position += Vector3.up * UnityEngine.Random.Range(minHeight, maxHeight);
-        //pipes.gap = verticalGap;
-    }
+        private void OnDisable()
+        {
+            CancelInvoke(nameof(Spawn));
+        }
 
+        private void Spawn()
+        {
+            GameObject pipes = Instantiate(prefab, transform.position, Quaternion.identity);
+            pipes.transform.position += Vector3.up * UnityEngine.Random.Range(minHeight, maxHeight);
+            //pipes.gap = verticalGap;
+        }
+
+    }
 }
 

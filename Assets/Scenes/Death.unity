@@ -753,17 +753,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultText: {fileID: 511210173}
-  testUserInput:
-    Age: 33
-    Smokes: 0
-    CigarettesPerDay: 3
-    AlcoholPerWeek: 2
-    ExerciseSessionsPerWeek: 3
-    DietRating: 10
-    SleepHours: 7
-    RiskRating: 1
+  testDeathUserInput:
+    Age: 30
+    Smokes: 1
+    CigarettesPerDay: 10
+    AlcoholPerWeek: 10
+    ExerciseSessionsPerWeek: 2
+    DietRating: 4
+    SleepHours: 6
+    RiskRating: 7
     LivingEnvironment: Urban
-    HasFamilyHistory: 0
+    HasFamilyHistory: 1
 --- !u!224 &713458124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6530106773029499481, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
@@ -1335,7 +1335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: currentScene
-      value: ScrollingTestScene
+      value: Death
       objectReference: {fileID: 0}
     - target: {fileID: 8566268782444468105, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: m_Name
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2034505702}
   m_Direction: 2
   m_Value: 1.0000002
-  m_Size: 0.5994746
+  m_Size: 0.5995309
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

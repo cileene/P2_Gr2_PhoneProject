@@ -1,7 +1,7 @@
 using System;
 
 [Serializable]
-public class UserInput
+public class DeathUserInput
 {
     public int Age;
     public bool Smokes;

@@ -1,80 +1,81 @@
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-
-[DefaultExecutionOrder(-1)]
-public class FlappyBirdManager : MonoBehaviour
+namespace FlappyBirdScripts
 {
-    public static FlappyBirdManager Instance { get; private set; }
-
-    [SerializeField] private Player player;
-    [SerializeField] private Spawner spawner;
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private GameObject playButton;
-    [SerializeField] private GameObject gameOver;
-
-    public int score { get; private set; } = 0;
-
-    private void Awake()
+    [DefaultExecutionOrder(-1)]
+    public class FlappyBirdManager : MonoBehaviour
     {
-        if (Instance != null) {
-            DestroyImmediate(gameObject);
-        } else {
-            Instance = this;
+        public static FlappyBirdManager Instance { get; private set; }
+
+        [SerializeField] private Player player;
+        [SerializeField] private Spawner spawner;
+        [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] private GameObject playButton;
+        [SerializeField] private GameObject gameOver;
+
+        public int score { get; private set; } = 0;
+
+        private void Awake()
+        {
+            if (Instance != null) {
+                DestroyImmediate(gameObject);
+            } else {
+                Instance = this;
+            }
         }
-    }
 
-    private void OnDestroy()
-    {
-        if (Instance == this) {
-            Instance = null;
+        private void OnDestroy()
+        {
+            if (Instance == this) {
+                Instance = null;
+            }
         }
-    }
 
-    private void Start()
-    {
-        Pause();
-    }
+        private void Start()
+        {
+            Pause();
+        }
 
-    public void Pause()
-    {
-        Time.timeScale = 0f;
-        player.enabled = false;
-    }
+        public void Pause()
+        {
+            Time.timeScale = 0f;
+            player.enabled = false;
+        }
 
- public void Play()
-{
-    score = 0;
-    scoreText.text = score.ToString();
+        public void Play()
+        {
+            score = 0;
+            scoreText.text = score.ToString();
 
-    playButton.SetActive(false);
-    gameOver.SetActive(false);
+            playButton.SetActive(false);
+            gameOver.SetActive(false);
 
-    Time.timeScale = 1f;
-    player.enabled = true;
+            Time.timeScale = 1f;
+            player.enabled = true;
 
-  // Pipes[] pipes = Object.FindObjectsbyType<Pipes>();
+            // Pipes[] pipes = Object.FindObjectsbyType<Pipes>();
 //foreach (Pipes pipe in pipes)
 //{
- //   Destroy(pipe.gameObject);
+            //   Destroy(pipe.gameObject);
 //}
-}
+        }
 
-    public void GameOver()
-    {
-        playButton.SetActive(true);
-        gameOver.SetActive(true);
+        public void GameOver()
+        {
+            playButton.SetActive(true);
+            gameOver.SetActive(true);
 
-        Pause();
+            Pause();
+        }
+
+        public void IncreaseScore()
+        {
+            score++;
+            scoreText.text = score.ToString();
+        }
+
     }
-
-    public void IncreaseScore()
-    {
-        score++;
-        scoreText.text = score.ToString();
-    }
-
 }
 
 

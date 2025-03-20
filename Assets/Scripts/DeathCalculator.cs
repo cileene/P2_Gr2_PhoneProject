@@ -16,65 +16,65 @@ public static class DeathCalculator
     private const int SuburbanPenalty = 1;               // penalty for living in a suburban area
     private const int FamilyHistoryPenalty = 3;          // penalty if there is a family history of serious illness
 
-    public static int CalculateDeathYear(UserInput userInput, int currentYear)
+    public static int CalculateDeathYear(DeathUserInput deathUserInput, int currentYear)
     {
         // Start with a base remaining life expectancy (in years)
-        float remainingYears = BaseExpectancy - userInput.Age;
+        float remainingYears = BaseExpectancy - deathUserInput.Age;
 
         // ----- Lifestyle Adjustments -----
         // Smoking penalty: subtract 5 years for every 10 cigarettes per day
-        if (userInput.Smokes)
+        if (deathUserInput.Smokes)
         {
-            remainingYears -= 5f * (userInput.CigarettesPerDay / 10f);
+            remainingYears -= 5f * (deathUserInput.CigarettesPerDay / 10f);
         }
 
         // Alcohol consumption: subtract years for drinking above the moderate threshold
-        if (userInput.AlcoholPerWeek > ModerateAlcoholThreshold)
+        if (deathUserInput.AlcoholPerWeek > ModerateAlcoholThreshold)
         {
-            remainingYears -= AlcoholPenaltyFactor * (userInput.AlcoholPerWeek - ModerateAlcoholThreshold);
+            remainingYears -= AlcoholPenaltyFactor * (deathUserInput.AlcoholPerWeek - ModerateAlcoholThreshold);
         }
 
         // Exercise bonus: add bonus years if exercising at least 3 times a week
-        if (userInput.ExerciseSessionsPerWeek >= 3)
+        if (deathUserInput.ExerciseSessionsPerWeek >= 3)
         {
             remainingYears += 3f;
         }
 
         // Diet: adjust remaining years based on diet rating (scale 1-10)
-        if (userInput.DietRating > DietBonusThreshold)
+        if (deathUserInput.DietRating > DietBonusThreshold)
         {
-            remainingYears += (userInput.DietRating - DietBonusThreshold) * DietMultiplier;
+            remainingYears += (deathUserInput.DietRating - DietBonusThreshold) * DietMultiplier;
         }
         else
         {
-            remainingYears -= (DietBonusThreshold - userInput.DietRating) * DietPenaltyMultiplier;
+            remainingYears -= (DietBonusThreshold - deathUserInput.DietRating) * DietPenaltyMultiplier;
         }
 
         // Sleep: subtract years if sleep hours are below recommended 7 hours
-        if (userInput.SleepHours < 7f)
+        if (deathUserInput.SleepHours < 7f)
         {
             remainingYears -= SleepPenaltyFactor;
         }
 
         // ----- Risk & Environmental Adjustments -----
         // High risk-taking: subtract years for risk ratings above 5
-        if (userInput.RiskRating > 5)
+        if (deathUserInput.RiskRating > 5)
         {
-            remainingYears -= RiskFactor * (userInput.RiskRating - 5);
+            remainingYears -= RiskFactor * (deathUserInput.RiskRating - 5);
         }
 
         // Living environment adjustments: urban and suburban might add stress factors
-        if (userInput.LivingEnvironment.Equals("Urban", StringComparison.OrdinalIgnoreCase))
+        if (deathUserInput.LivingEnvironment.Equals("Urban", StringComparison.OrdinalIgnoreCase))
         {
             remainingYears -= UrbanPenalty;
         }
-        else if (userInput.LivingEnvironment.Equals("Suburban", StringComparison.OrdinalIgnoreCase))
+        else if (deathUserInput.LivingEnvironment.Equals("Suburban", StringComparison.OrdinalIgnoreCase))
         {
             remainingYears -= SuburbanPenalty;
         }
 
         // Family medical history: subtract years if there is a history of serious illnesses
-        if (userInput.HasFamilyHistory)
+        if (deathUserInput.HasFamilyHistory)
         {
             remainingYears -= FamilyHistoryPenalty;
         }
