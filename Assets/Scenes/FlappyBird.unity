@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 719110592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -441,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 1127174962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -4.55, z: -0.061931252}
+  m_LocalPosition: {x: -0.03, y: -4.55, z: -5}
   m_LocalScale: {x: 15, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -476,6 +476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf43dd53d4bae400f97252f0016ba072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1235677955}
+  spawner: {fileID: 719110593}
+  scoreText: {fileID: 1372315335}
+  playButton: {fileID: 1285844106}
+  gameOver: {fileID: 1216011307}
 --- !u!4 &1132754968
 Transform:
   m_ObjectHideFlags: 0
@@ -699,7 +704,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4b4a57de377138e4e8369d8145550062, type: 3}
   - {fileID: 21300000, guid: 47a1c54c1427e10458e1e21315a00666, type: 3}
   - {fileID: 21300000, guid: 477a76ff29832b2499b9244de7070326, type: 3}
-  strength: 10
+  strength: 5
   gravity: -9.81
   tilt: 5
 --- !u!58 &1235677956
@@ -819,7 +824,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285844109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1132754967}
+        m_TargetAssemblyTypeName: FlappyBirdManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1285844109
 MonoBehaviour:
   m_ObjectHideFlags: 0
