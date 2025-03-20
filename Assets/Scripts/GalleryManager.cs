@@ -4,31 +4,31 @@ using UnityEngine.UI;
 public class GalleryManager : MonoBehaviour
 {
     public Image fullScreenImage;
-    public GameObject ImageViewPanel;
+    public GameObject imageViewPanel;
     public Sprite[] images;
-    private int currentIndex = 0;
+    private int _currentIndex = 0;
    
     public void OpenImage(int index)
     {
-        currentIndex = index;
-        fullScreenImage.sprite = images[currentIndex];
-        ImageViewPanel.SetActive(true);
+        _currentIndex = index;
+        fullScreenImage.sprite = images[_currentIndex];
+        imageViewPanel.SetActive(true);
     }
 
     public void NextImage()
     {
-        currentIndex = (currentIndex + 1) % images.Length;
-        fullScreenImage.sprite = images[currentIndex];
+        _currentIndex = (_currentIndex + 1) % images.Length;
+        fullScreenImage.sprite = images[_currentIndex];
     }
 
     public void PreviousImage()
     {
-        currentIndex = ( currentIndex - 1 ) % images.Length;
-        fullScreenImage.sprite = images[currentIndex];
+        _currentIndex = ( _currentIndex - 1 ) % images.Length;
+        fullScreenImage.sprite = images[_currentIndex];
     }
 
     public void CloseImageView()
     {
-        ImageViewPanel.SetActive(false);
+        imageViewPanel.SetActive(false);
     }
 }
