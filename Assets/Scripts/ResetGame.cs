@@ -7,6 +7,7 @@ public class ResetGame : MonoBehaviour
     {
         GameManager.Instance.currentScene = "LockScreenScene";
         GameManager.Instance.currentLevel = 0;
+        GameManager.Instance.phoneUnlocked = false;
         SaveDataManager.TriggerSave(); // save the current scene
         SceneManager.LoadSceneAsync("LockScreenScene");
     }

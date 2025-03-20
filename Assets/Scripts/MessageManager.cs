@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,8 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class MessageManager : MonoBehaviour
 {
-    public GameObject choiceSprite1;
-    public GameObject choiceSprite2;
+    public GameObject buttonChoice1;
+    public GameObject buttonChoice2;
+    public List<string> playerButtonMessages;
     public List<string> playerMessages;
     public List<string> botMessages;
     public TextMeshProUGUI playerMessagePrefab;
@@ -17,59 +19,93 @@ public class MessageManager : MonoBehaviour
     private int _currentChoiceIndex = 0;
     private List<int> _playerChoices = new List<int>(); // Keep track of choices made
 
-    void Start()
+    private void Start()
     {
         LoadConversationState(); // Load the previous state, if any
         DisplayChoices(); // Show the first set of choices
     }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetConversation();
+        }
+    }
 
-    // ReSharper disable Unity.PerformanceAnalysis
     private void DisplayChoices()
     {
-        // Show choices, handle index out of bounds
-        if (_currentChoiceIndex < playerMessages.Count)
+        if (_currentChoiceIndex >= playerButtonMessages.Count)
         {
-            choiceSprite1.GetComponentInChildren<TextMeshProUGUI>().text = playerMessages[_currentChoiceIndex];
-            // Check if there is a second choice before accessing it
-            if (_currentChoiceIndex + 1 < playerMessages.Count)
-            {
-                choiceSprite2.GetComponentInChildren<TextMeshProUGUI>().text = playerMessages[_currentChoiceIndex + 1];
-            }
-            else
-            {
-                choiceSprite2.GetComponentInChildren<TextMeshProUGUI>().text = ""; // No second choice, set empty
-            }
+            // No more choices left, hide buttons and exit
+            buttonChoice1.SetActive(false);
+            buttonChoice2.SetActive(false);
+            return;
+        }
+
+        // Display the current choice safely
+        buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
+
+        // Check if the next choice is valid before accessing it
+        if (_currentChoiceIndex + 1 < playerButtonMessages.Count)
+        {
+            buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text =
+                playerButtonMessages[_currentChoiceIndex + 1];
         }
         else
         {
-            choiceSprite1.SetActive(false);
-            choiceSprite2.SetActive(false);
+            buttonChoice2.SetActive(false); // Hide if no second choice available
         }
     }
 
-    public void OnChoice1Clicked()
+    public void OnChoice1Clicked() //TODO: refactor multiple repeated methods into one
     {
         _playerChoices.Add(_currentChoiceIndex); // Save the choice
         DisplayMessage(playerMessages[_currentChoiceIndex]);
-        DisplayBotMessage(botMessages[_currentChoiceIndex]);
-
-        _currentChoiceIndex += 2; // Move to the next choices
-        SaveConversationState();
-        DisplayChoices(); // Show the next set of choices
+        StartCoroutine(RunChoice1AfterDelay());
+        buttonChoice1.SetActive(false);
+        buttonChoice2.SetActive(false);
     }
-
+    
     public void OnChoice2Clicked()
     {
         _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
         DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
-        DisplayBotMessage(botMessages[_currentChoiceIndex + 1]);
-
-        _currentChoiceIndex += 2; // Move to the next choices
-        SaveConversationState();
-        DisplayChoices(); // Show the next set of choices
+        StartCoroutine(RunChoice2AfterDelay());
+        buttonChoice1.SetActive(false);
+        buttonChoice2.SetActive(false);
     }
 
-    private void DisplayMessage(string message)
+    IEnumerator RunChoice1AfterDelay() //TODO: refactor multiple repeated methods into one
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+
+        DisplayBotMessage(botMessages[_currentChoiceIndex]);
+        _currentChoiceIndex += 2; // Move to the next choices
+        DisplayChoices(); // Show the next set of choices
+        SaveConversationState();
+        if (_currentChoiceIndex < playerButtonMessages.Count)
+        {
+            buttonChoice1.SetActive(true);
+            buttonChoice2.SetActive(true);
+        }
+    }
+
+    IEnumerator RunChoice2AfterDelay()
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+        DisplayBotMessage(botMessages[_currentChoiceIndex + 1]);
+        _currentChoiceIndex += 2; // Move to the next choices
+        DisplayChoices();
+        SaveConversationState();
+        if (_currentChoiceIndex < playerButtonMessages.Count)
+        {
+            buttonChoice1.SetActive(true);
+            buttonChoice2.SetActive(true);
+        }
+    }
+
+    private void DisplayMessage(string message) //TODO: refactor multiple repeated methods into one
     {
         TextMeshProUGUI playerMessage = Instantiate(playerMessagePrefab, messageContainer);
         playerMessage.text = message;
@@ -130,17 +166,8 @@ public class MessageManager : MonoBehaviour
         }
     }
 
-    // Reset the conversation on pressing R
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetConversation();
-        }
-    }
-
     // Reset the conversation and delete the save file
-    private void ResetConversation()
+    public void ResetConversation()
     {
         string sceneName = SceneManager.GetActiveScene().name;
         string saveFileName = $"conversationState_{sceneName}.json";

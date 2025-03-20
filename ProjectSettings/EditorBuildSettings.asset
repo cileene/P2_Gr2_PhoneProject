@@ -23,18 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScrollingTestScene.unity
     guid: f70be6636684d4352941b3114d68682f
-  - enabled: 0
-    path: Assets/Scenes/MessageChat.unity
-    guid: ca2fa63c9c4a046fa8ed41f0dd4a9b8a
   - enabled: 1
     path: Assets/Scenes/MessageSelect.unity
     guid: 14ea5e560689c495d822d54ee646e050
   - enabled: 1
-    path: Assets/Scenes/MessageChatBente.unity
-    guid: 4be44f65a24b746e29aed5bde1cc80b0
-  - enabled: 1
     path: Assets/Scenes/MessageChatBobby.unity
     guid: 58cefc9d431714ad5950b2570e565c1c
+  - enabled: 1
+    path: Assets/Scenes/Photos.unity
+    guid: 6b8ee598587b94aecad480104924eac3
+  - enabled: 1
+    path: Assets/Scenes/PhotoAlbum.unity
+    guid: 414467af760eea349a43165ce0c5e368
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 077e718e96be148b3a261fd7c71ebc58, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: df700abf3843c45c3905032f4f6e49fe, type: 2}
