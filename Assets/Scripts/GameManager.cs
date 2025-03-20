@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Progression")] 
     public bool phoneUnlocked;
+    public bool shuffleHomeScreen;
     public int currentLevel;
     public string currentScene; // Default scene
 
