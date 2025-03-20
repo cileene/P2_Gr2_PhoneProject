@@ -306,6 +306,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 246717436559603925, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 246717436559603925, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -396,11 +400,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 246717436559603925, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: 5522867259617775715, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
+      insertIndex: 0
       addedObject: {fileID: 1609668973}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
+--- !u!224 &708996498 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5522867259617775715, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
+  m_PrefabInstance: {fileID: 708996497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1128009315
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,13 +568,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609668972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1921283402}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 708996498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -619,11 +628,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609668972}
   m_CullTransparentMesh: 1
---- !u!224 &1921283402 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 246717436559603925, guid: c02ec7ea4220d405f851552ba3ad92c2, type: 3}
-  m_PrefabInstance: {fileID: 708996497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

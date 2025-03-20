@@ -16,10 +16,11 @@ public class CaptureSelfie : MonoBehaviour
         _dataPath = Application.persistentDataPath + "/Player_Data/Selfie.png";
 
         WebCamDevice[] devices = WebCamTexture.devices;
-        if (devices.Length > 0)
-        {
-            _webCamTexture = new WebCamTexture(devices[0].name);
-            _webCamTexture.Play();
+        foreach (var device in devices) {
+            if (device.isFrontFacing) {
+                _webCamTexture = new WebCamTexture(device.name);
+                _webCamTexture.Play();
+            }
         }
     }
     

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.IO;
 
 // Display the selfie picture in the UI
+//TODO: PROTOTYPE CODE
 public class SetSelfiePicture : MonoBehaviour
 {
     public Texture2D selfieTexture;
