@@ -3,14 +3,14 @@ using System;
 [Serializable]
 public class DeathUserInput
 {
-    public int Age;
-    public bool Smokes;
-    public float CigarettesPerDay;
-    public float AlcoholPerWeek;
-    public int ExerciseSessionsPerWeek;
-    public int DietRating;          // Scale: 1 (poor) to 10 (excellent)
-    public float SleepHours;
-    public int RiskRating;          // Scale: 1 (very cautious) to 10 (very risky)
-    public string LivingEnvironment; // e.g., "Urban", "Suburban", "Rural"
-    public bool HasFamilyHistory;
+    public int age;
+    public bool smokes;
+    public float cigarettesPerDay;
+    public float alcoholPerWeek;
+    public int exerciseSessionsPerWeek;
+    public int dietRating;          // Scale: 1 (poor) to 10 (excellent)
+    public float sleepHours;
+    public int riskRating;          // Scale: 1 (very cautious) to 10 (very risky)
+    public string livingEnvironment; // e.g., "Urban", "Suburban", "Rural"
+    public bool hasFamilyHistory;
 }

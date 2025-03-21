@@ -9,16 +9,16 @@ public class DeathYearTester : MonoBehaviour
     // You can set these values in the Inspector for testing
     public DeathUserInput testDeathUserInput = new DeathUserInput
     {
-        Age = 30,
-        Smokes = true,
-        CigarettesPerDay = 10,
-        AlcoholPerWeek = 10,
-        ExerciseSessionsPerWeek = 2,
-        DietRating = 4,
-        SleepHours = 6,
-        RiskRating = 7,
-        LivingEnvironment = "Urban",
-        HasFamilyHistory = true
+        age = 30,
+        smokes = true,
+        cigarettesPerDay = 10,
+        alcoholPerWeek = 10,
+        exerciseSessionsPerWeek = 2,
+        dietRating = 4,
+        sleepHours = 6,
+        riskRating = 7,
+        livingEnvironment = "Urban",
+        hasFamilyHistory = true
     };
 
     public void Start()
