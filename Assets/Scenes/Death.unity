@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 591081}
   - component: {fileID: 591080}
   m_Layer: 5
-  m_Name: Rules
+  m_Name: RULES------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 58176892}
   - component: {fileID: 58176891}
   m_Layer: 5
-  m_Name: SPACER (2)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 176089475}
   - component: {fileID: 176089474}
   m_Layer: 5
-  m_Name: Do you smoke
+  m_Name: DO YOU SMOKE---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 227817436}
   - component: {fileID: 227817435}
   m_Layer: 5
-  m_Name: SPACER (9)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 249889167}
   - component: {fileID: 249889168}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: AgeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 310775386}
   - component: {fileID: 310775385}
   m_Layer: 5
-  m_Name: SPACER (7)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1571,7 +1571,7 @@ GameObject:
   - component: {fileID: 334963108}
   - component: {fileID: 334963107}
   m_Layer: 5
-  m_Name: SPACER (6)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2089,7 +2089,7 @@ GameObject:
   - component: {fileID: 465324181}
   - component: {fileID: 465324180}
   m_Layer: 5
-  m_Name: SPACER
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,7 +3101,7 @@ GameObject:
   - component: {fileID: 728244014}
   - component: {fileID: 728244013}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ResultsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3411,7 +3411,7 @@ GameObject:
   - component: {fileID: 800950140}
   - component: {fileID: 800950139}
   m_Layer: 5
-  m_Name: SPACER (1)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3486,7 +3486,7 @@ GameObject:
   - component: {fileID: 901041007}
   - component: {fileID: 901041006}
   m_Layer: 5
-  m_Name: TITLE
+  m_Name: TITLE-------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3659,7 +3659,7 @@ GameObject:
   - component: {fileID: 993070664}
   - component: {fileID: 993070663}
   m_Layer: 5
-  m_Name: SPACER (11)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4038,7 +4038,7 @@ GameObject:
   - component: {fileID: 1102171761}
   - component: {fileID: 1102171760}
   m_Layer: 5
-  m_Name: Slider (2)
+  m_Name: DietSLider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4525,7 +4525,7 @@ GameObject:
   - component: {fileID: 1153678666}
   - component: {fileID: 1153678665}
   m_Layer: 5
-  m_Name: SPACER (10)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4600,7 +4600,7 @@ GameObject:
   - component: {fileID: 1156366149}
   - component: {fileID: 1156366148}
   m_Layer: 5
-  m_Name: How old
+  m_Name: HOW OLD---------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5341,7 +5341,7 @@ GameObject:
   - component: {fileID: 1408323090}
   - component: {fileID: 1408323091}
   m_Layer: 5
-  m_Name: DrinkToggle
+  m_Name: DringToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5440,7 +5440,7 @@ GameObject:
   - component: {fileID: 1439196848}
   - component: {fileID: 1439196847}
   m_Layer: 5
-  m_Name: SPACER (4)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5682,7 +5682,7 @@ GameObject:
   - component: {fileID: 1550617772}
   - component: {fileID: 1550617771}
   m_Layer: 5
-  m_Name: SPACER (8)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5757,7 +5757,7 @@ GameObject:
   - component: {fileID: 1565407753}
   - component: {fileID: 1565407752}
   m_Layer: 5
-  m_Name: Diet
+  m_Name: DIET-----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5933,7 +5933,7 @@ GameObject:
   - component: {fileID: 1580848282}
   - component: {fileID: 1580848281}
   m_Layer: 5
-  m_Name: More info
+  m_Name: MORE INFO-------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6070,7 +6070,7 @@ GameObject:
   - component: {fileID: 1589598330}
   - component: {fileID: 1589598329}
   m_Layer: 5
-  m_Name: SPACER (3)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6635,7 +6635,7 @@ GameObject:
   - component: {fileID: 1745125760}
   - component: {fileID: 1745125759}
   m_Layer: 5
-  m_Name: 2
+  m_Name: RESULTS-------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6771,7 +6771,7 @@ GameObject:
   - component: {fileID: 1754044937}
   - component: {fileID: 1754044936}
   m_Layer: 5
-  m_Name: SPACER (5)
+  m_Name: spacer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6846,7 +6846,7 @@ GameObject:
   - component: {fileID: 1829325209}
   - component: {fileID: 1829325208}
   m_Layer: 5
-  m_Name: Do you smoke (1)
+  m_Name: DO YOU DRINK-----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7169,7 +7169,7 @@ GameObject:
   - component: {fileID: 1902277734}
   - component: {fileID: 1902277733}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: ExcerciseSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7367,7 +7367,7 @@ GameObject:
   - component: {fileID: 1941211427}
   - component: {fileID: 1941211426}
   m_Layer: 5
-  m_Name: Excercise?
+  m_Name: EXCERCISE---------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
