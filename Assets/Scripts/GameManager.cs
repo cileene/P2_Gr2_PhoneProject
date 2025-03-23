@@ -15,12 +15,14 @@ public class GameManager : MonoBehaviour
 
     [Header("Progression")] 
     public bool phoneUnlocked;
+    public bool shuffleHomeScreen;
     public int currentLevel;
     public string currentScene; // Default scene
 
     private string _dataPath;
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
+    public string selfiePicture;
 
     private void Awake()
     {

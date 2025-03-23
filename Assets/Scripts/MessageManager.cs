@@ -19,10 +19,18 @@ public class MessageManager : MonoBehaviour
     private int _currentChoiceIndex = 0;
     private List<int> _playerChoices = new List<int>(); // Keep track of choices made
 
-    void Start()
+    private void Start()
     {
         LoadConversationState(); // Load the previous state, if any
         DisplayChoices(); // Show the first set of choices
+    }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetConversation();
+        }
     }
 
     private void DisplayChoices()
@@ -41,28 +49,37 @@ public class MessageManager : MonoBehaviour
         // Check if the next choice is valid before accessing it
         if (_currentChoiceIndex + 1 < playerButtonMessages.Count)
         {
-            buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex + 1];
+            buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text =
+                playerButtonMessages[_currentChoiceIndex + 1];
         }
         else
         {
             buttonChoice2.SetActive(false); // Hide if no second choice available
         }
-
     }
 
-    public void OnChoice1Clicked()
+    public void OnChoice1Clicked() //TODO: refactor multiple repeated methods into one
     {
         _playerChoices.Add(_currentChoiceIndex); // Save the choice
         DisplayMessage(playerMessages[_currentChoiceIndex]);
         StartCoroutine(RunChoice1AfterDelay());
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
-        
     }
-    IEnumerator RunChoice1AfterDelay()
+    
+    public void OnChoice2Clicked()
+    {
+        _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
+        DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
+        StartCoroutine(RunChoice2AfterDelay());
+        buttonChoice1.SetActive(false);
+        buttonChoice2.SetActive(false);
+    }
+
+    IEnumerator RunChoice1AfterDelay() //TODO: refactor multiple repeated methods into one
     {
         yield return new WaitForSeconds(2f); // Wait for 2 seconds
-       
+
         DisplayBotMessage(botMessages[_currentChoiceIndex]);
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices(); // Show the next set of choices
@@ -72,20 +89,8 @@ public class MessageManager : MonoBehaviour
             buttonChoice1.SetActive(true);
             buttonChoice2.SetActive(true);
         }
-        
-     
     }
-    
 
-    public void OnChoice2Clicked()
-    {
-        _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
-        DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
-        StartCoroutine(RunChoice2AfterDelay());
-        buttonChoice1.SetActive(false);
-        buttonChoice2.SetActive(false);
-
-    }
     IEnumerator RunChoice2AfterDelay()
     {
         yield return new WaitForSeconds(2f); // Wait for 2 seconds
@@ -98,10 +103,9 @@ public class MessageManager : MonoBehaviour
             buttonChoice1.SetActive(true);
             buttonChoice2.SetActive(true);
         }
- 
     }
 
-    private void DisplayMessage(string message)
+    private void DisplayMessage(string message) //TODO: refactor multiple repeated methods into one
     {
         TextMeshProUGUI playerMessage = Instantiate(playerMessagePrefab, messageContainer);
         playerMessage.text = message;
@@ -159,15 +163,6 @@ public class MessageManager : MonoBehaviour
                 DisplayMessage(playerMessages[choiceIndex]);
                 DisplayBotMessage(botMessages[choiceIndex]);
             }
-        }
-    }
-
-    // Reset the conversation on pressing R
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetConversation();
         }
     }
 
