@@ -12,8 +12,10 @@ public class MessageManager : MonoBehaviour
     public List<string> playerButtonMessages;
     public List<string> playerMessages;
     public List<string> botMessages;
+    public List<string> loadingDots;
     public TextMeshProUGUI playerMessagePrefab;
     public TextMeshProUGUI botMessagePrefab;
+    public TextMeshProUGUI loadingDotsPrefab;
     public Transform messageContainer;
 
     private int _currentChoiceIndex = 0;
@@ -62,6 +64,7 @@ public class MessageManager : MonoBehaviour
     {
         _playerChoices.Add(_currentChoiceIndex); // Save the choice
         DisplayMessage(playerMessages[_currentChoiceIndex]);
+        StartCoroutine(DisplayLoadingDots());
         StartCoroutine(RunChoice1AfterDelay());
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
@@ -71,11 +74,21 @@ public class MessageManager : MonoBehaviour
     {
         _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
         DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
+        StartCoroutine(DisplayLoadingDots());
         StartCoroutine(RunChoice2AfterDelay());
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
     }
-
+    IEnumerator DisplayLoadingDots()
+    {
+        TextMeshProUGUI loadingDotsInstance = Instantiate(loadingDotsPrefab, messageContainer);
+        foreach (string dot in loadingDots)
+        {
+            loadingDotsInstance.text = dot;
+            yield return new WaitForSeconds(0.2f);
+        }
+        Destroy(loadingDotsInstance.gameObject);
+    }
     IEnumerator RunChoice1AfterDelay() //TODO: refactor multiple repeated methods into one
     {
         yield return new WaitForSeconds(2f); // Wait for 2 seconds
