@@ -81,7 +81,7 @@ public static class DeathCalculator
 
         // ----- Random Chance Element -----
         // Introduce a random adjustment to simulate unpredictable events (using UnityEngine.Random)
-        int randomAdjustment = UnityEngine.Random.Range(-5, 6); // returns an integer between -5 and 5 (inclusive)
+        int randomAdjustment = UnityEngine.Random.Range(-5, 6); // returns an integer between -5 and 5
         remainingYears += randomAdjustment;
 
         // Calculate the predicted death year
