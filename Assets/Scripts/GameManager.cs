@@ -23,6 +23,21 @@ public class GameManager : MonoBehaviour
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
     public string selfiePicture;
+    
+    [Header("Player Info")]
+    public string playerName;
+    public int playerAge;
+    public bool playerSmokes;
+    public int playerCigarettesPerDay;
+    public bool playerDrinks;
+    public int playerDrinksPerWeek;
+    public int playerExerciseSessionsPerWeek;
+    public int playerDietRating;
+    public int playerSleepHours;
+    public int playerRiskRating;
+    public string playerLivingEnvironment;
+    public bool playerFamilyHistory;
+    public int playerDeathYear;
 
     private void Awake()
     {
