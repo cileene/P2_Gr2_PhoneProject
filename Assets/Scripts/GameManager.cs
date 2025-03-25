@@ -11,9 +11,8 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
-    public bool useSaveData = true;
-
+    
+    // --------- Variables ---------
     [Header("Progression")] 
     public bool phoneUnlocked;
     public bool shuffleHomeScreen;
@@ -21,6 +20,8 @@ public class GameManager : MonoBehaviour
     public string currentScene; // Default scene
     public bool progressStory;
 
+    [Header("Data Paths")]
+    public bool useSaveData = true;
     public string dataPath;
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
@@ -45,6 +46,8 @@ public class GameManager : MonoBehaviour
     public bool playerFamilyHistory;
     public int playerDeathYear;
 
+    
+    // --------- METHODS ---------
     private void Awake()
     {
         if (Instance == null)

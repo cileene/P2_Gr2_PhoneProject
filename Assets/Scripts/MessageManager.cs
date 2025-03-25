@@ -13,14 +13,14 @@ public class MessageManager : MonoBehaviour
     public List<string> playerMessages;
     public List<string> botMessages;
     public List<string> loadingDots;
+    public List<int> progressMessages;
     public TextMeshProUGUI playerMessagePrefab;
     public TextMeshProUGUI botMessagePrefab;
     public TextMeshProUGUI loadingDotsPrefab;
     public Transform messageContainer;
-    public List<int> progressMessages;
 
-    private int _currentChoiceIndex;
     private List<int> _playerChoices = new List<int>(); // Keep track of choices made
+    private int _currentChoiceIndex;
     private string _saveFileName;
     private string _saveFilePath;
 
@@ -33,7 +33,7 @@ public class MessageManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"Current Choice Index: {_currentChoiceIndex}");
+        //Debug.Log($"Current Choice Index: {_currentChoiceIndex}");
         if (GameManager.Instance.progressStory)
         {
             DisplayChoices(); // Show the first set of choices
