@@ -88,22 +88,23 @@ public class MessageManager : MonoBehaviour
         }
     }
 
-    public void OnChoice1Clicked() //TODO: refactor multiple repeated methods into one
+    public void OnChoice1Clicked() 
     {
-        _playerChoices.Add(_currentChoiceIndex); // Save the choice
-        DisplayMessage(playerMessages[_currentChoiceIndex]);
-        StartCoroutine(DisplayLoadingDots());
-        StartCoroutine(RunChoice1AfterDelay());
-        buttonChoice1.SetActive(false);
-        buttonChoice2.SetActive(false);
+        OnChoiceClicked(0);
+        StartCoroutine(RunChoiceAfterDelay(0));
     }
 
     public void OnChoice2Clicked()
     {
-        _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
-        DisplayMessage(playerMessages[_currentChoiceIndex + 1]);
+        OnChoiceClicked(1);
+        StartCoroutine(RunChoiceAfterDelay(1));
+    }
+
+    public void OnChoiceClicked(int choiceIndex)
+    {
+        _playerChoices.Add(_currentChoiceIndex + choiceIndex); // Save the second choice
+        DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
         StartCoroutine(DisplayLoadingDots());
-        StartCoroutine(RunChoice2AfterDelay());
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
     }
@@ -119,27 +120,11 @@ public class MessageManager : MonoBehaviour
 
         Destroy(loadingDotsInstance.gameObject);
     }
-
-    IEnumerator RunChoice1AfterDelay() //TODO: refactor multiple repeated methods into one
+    
+    IEnumerator RunChoiceAfterDelay(int choiceIndex)
     {
         yield return new WaitForSeconds(2f); // Wait for 2 seconds
-
-        DisplayBotMessage(botMessages[_currentChoiceIndex]);
-        if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
-        _currentChoiceIndex += 2; // Move to the next choices
-        DisplayChoices(); // Show the next set of choices
-        SaveConversationState();
-        if (_currentChoiceIndex < playerButtonMessages.Count)
-        {
-            buttonChoice1.SetActive(true);
-            buttonChoice2.SetActive(true);
-        }
-    }
-
-    IEnumerator RunChoice2AfterDelay()
-    {
-        yield return new WaitForSeconds(2f); // Wait for 2 seconds
-        DisplayBotMessage(botMessages[_currentChoiceIndex + 1]);
+        DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
         if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices();
@@ -150,6 +135,7 @@ public class MessageManager : MonoBehaviour
             buttonChoice2.SetActive(true);
         }
     }
+    
 
     private void DisplayMessage(string message) //TODO: refactor multiple repeated methods into one
     {
