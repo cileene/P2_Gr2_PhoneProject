@@ -64,27 +64,22 @@ public class MessageManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        // if (_currentChoiceIndex >= playerButtonMessages.Count && GameManager.Instance.progressStory)
-        // {
-        //     // No more choices left, hide buttons and exit
-        //     buttonChoice1.SetActive(false);
-        //     buttonChoice2.SetActive(false);
-        //     return;
-        // }
-
-        // Display the current choice safely
-        buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
-
-        // Check if the next choice is valid before accessing it
-        if (_currentChoiceIndex + 1 < playerButtonMessages.Count && GameManager.Instance.progressStory)
+        if (_currentChoiceIndex < playerButtonMessages.Count)
         {
-            buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text =
-                playerButtonMessages[_currentChoiceIndex + 1];
+            buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
         }
         else
         {
             buttonChoice1.SetActive(false);
-            buttonChoice2.SetActive(false); // Hide if no second choice available
+        }
+        
+        if (_currentChoiceIndex + 1 < playerButtonMessages.Count)
+        {
+            buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex + 1];
+        }
+        else
+        {
+            buttonChoice2.SetActive(false);
         }
     }
 

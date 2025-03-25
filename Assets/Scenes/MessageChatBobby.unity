@@ -1111,11 +1111,16 @@ MonoBehaviour:
   - .
   - ..
   - ...
+  - .
+  - ..
+  - ...
+  - .
+  - ..
   playerMessagePrefab: {fileID: 9124171079006057124, guid: 5cc62392fac434cf8bdf16dd3f01a891, type: 3}
   botMessagePrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
-  progressMessages: 0000000002000000
+  progressMessages: 02000000
 --- !u!4 &589953924
 Transform:
   m_ObjectHideFlags: 0
@@ -1321,7 +1326,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1521768644}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999905
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
