@@ -2,6 +2,7 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
 using System;
+using System.Collections.Generic;
 
 // Here we track the game state using a singleton pattern
 // And now we also write data to the player's device
@@ -18,11 +19,16 @@ public class GameManager : MonoBehaviour
     public bool shuffleHomeScreen;
     public int currentLevel;
     public string currentScene; // Default scene
+    public bool progressStory;
 
-    private string _dataPath;
+    public string dataPath;
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
     public string selfiePicture;
+    
+    [Header("Message State")]
+    public int currentChoiceIndex;
+    public List<int> playerChoices;
     
     [Header("Player Info")]
     public string playerName;
@@ -77,22 +83,22 @@ public class GameManager : MonoBehaviour
 
     public void InitFileSystem()
     {
-        _dataPath = Application.persistentDataPath + "/Player_Data/";
-        Debug.Log(_dataPath);
+        dataPath = Application.persistentDataPath + "/Player_Data/";
+        Debug.Log(dataPath);
 
-        if (Directory.Exists(_dataPath))
+        if (Directory.Exists(dataPath))
         {
-            Debug.Log($"Found directory at {_dataPath}");
+            Debug.Log($"Found directory at {dataPath}");
             return;
         }
 
-        Directory.CreateDirectory(_dataPath);
-        Debug.Log($"New directory created at {_dataPath}");
+        Directory.CreateDirectory(dataPath);
+        Debug.Log($"New directory created at {dataPath}");
     }
 
     public void InitSaveData()
     {
-        SaveData = _dataPath + FileName;
+        SaveData = dataPath + FileName;
 
         if (File.Exists(SaveData) & useSaveData) // load existing file
         {

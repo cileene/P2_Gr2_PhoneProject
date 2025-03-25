@@ -1115,6 +1115,7 @@ MonoBehaviour:
   botMessagePrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
+  progressMessages: 0000000002000000
 --- !u!4 &589953924
 Transform:
   m_ObjectHideFlags: 0

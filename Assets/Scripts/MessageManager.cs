@@ -17,45 +17,73 @@ public class MessageManager : MonoBehaviour
     public TextMeshProUGUI botMessagePrefab;
     public TextMeshProUGUI loadingDotsPrefab;
     public Transform messageContainer;
+    public List<int> progressMessages;
 
-    private int _currentChoiceIndex = 0;
+    private int _currentChoiceIndex;
     private List<int> _playerChoices = new List<int>(); // Keep track of choices made
+    private string _saveFileName;
+    private string _saveFilePath;
 
     private void Start()
     {
+        _saveFileName = $"conversationState_{GameManager.Instance.currentScene}.json";
+        _saveFilePath = Path.Combine(GameManager.Instance.dataPath, _saveFileName);
         LoadConversationState(); // Load the previous state, if any
-        DisplayChoices(); // Show the first set of choices
     }
-    
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        Debug.Log($"Current Choice Index: {_currentChoiceIndex}");
+        if (GameManager.Instance.progressStory)
         {
-            ResetConversation();
+            DisplayChoices(); // Show the first set of choices
+        }
+        else
+        {
+            buttonChoice1.SetActive(false);
+            buttonChoice2.SetActive(false); // Hide buttons if not progressing
+        }
+    }
+    
+    private void CheckProgression()
+    {
+        if (GameManager.Instance.progressStory)
+        {
+            // Check if the current choice index is within bounds
+            if (_currentChoiceIndex < playerButtonMessages.Count)
+            {
+                DisplayChoices();
+            }
+            else
+            {
+                buttonChoice1.SetActive(false);
+                buttonChoice2.SetActive(false); // Hide buttons if no choices left
+            }
         }
     }
 
     private void DisplayChoices()
     {
-        if (_currentChoiceIndex >= playerButtonMessages.Count)
-        {
-            // No more choices left, hide buttons and exit
-            buttonChoice1.SetActive(false);
-            buttonChoice2.SetActive(false);
-            return;
-        }
+        // if (_currentChoiceIndex >= playerButtonMessages.Count && GameManager.Instance.progressStory)
+        // {
+        //     // No more choices left, hide buttons and exit
+        //     buttonChoice1.SetActive(false);
+        //     buttonChoice2.SetActive(false);
+        //     return;
+        // }
 
         // Display the current choice safely
         buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
 
         // Check if the next choice is valid before accessing it
-        if (_currentChoiceIndex + 1 < playerButtonMessages.Count)
+        if (_currentChoiceIndex + 1 < playerButtonMessages.Count && GameManager.Instance.progressStory)
         {
             buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text =
                 playerButtonMessages[_currentChoiceIndex + 1];
         }
         else
         {
+            buttonChoice1.SetActive(false);
             buttonChoice2.SetActive(false); // Hide if no second choice available
         }
     }
@@ -69,7 +97,7 @@ public class MessageManager : MonoBehaviour
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
     }
-    
+
     public void OnChoice2Clicked()
     {
         _playerChoices.Add(_currentChoiceIndex + 1); // Save the second choice
@@ -79,6 +107,7 @@ public class MessageManager : MonoBehaviour
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
     }
+
     IEnumerator DisplayLoadingDots()
     {
         TextMeshProUGUI loadingDotsInstance = Instantiate(loadingDotsPrefab, messageContainer);
@@ -87,13 +116,16 @@ public class MessageManager : MonoBehaviour
             loadingDotsInstance.text = dot;
             yield return new WaitForSeconds(0.2f);
         }
+
         Destroy(loadingDotsInstance.gameObject);
     }
+
     IEnumerator RunChoice1AfterDelay() //TODO: refactor multiple repeated methods into one
     {
         yield return new WaitForSeconds(2f); // Wait for 2 seconds
 
         DisplayBotMessage(botMessages[_currentChoiceIndex]);
+        if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices(); // Show the next set of choices
         SaveConversationState();
@@ -108,6 +140,7 @@ public class MessageManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f); // Wait for 2 seconds
         DisplayBotMessage(botMessages[_currentChoiceIndex + 1]);
+        if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices();
         SaveConversationState();
@@ -133,30 +166,22 @@ public class MessageManager : MonoBehaviour
     // Save the current conversation state to a JSON file
     private void SaveConversationState()
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-        string saveFileName = $"conversationState_{sceneName}.json";
-
         SaveData saveData = new SaveData
         {
             CurrentChoiceIndex = _currentChoiceIndex,
             PlayerChoices = _playerChoices
         };
 
-        string json = JsonUtility.ToJson(saveData, true);
-        string path = Path.Combine(Application.persistentDataPath + "/Player_Data/", saveFileName);
-        File.WriteAllText(path, json);
+        string json = JsonUtility.ToJson(saveData, true); //TODO: centralize json handling
+        File.WriteAllText(_saveFilePath, json);
     }
 
     // Load the saved conversation state
     private void LoadConversationState()
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-        string saveFileName = $"conversationState_{sceneName}.json";
-        string path = Path.Combine(Application.persistentDataPath + "/Player_Data/", saveFileName);
-
-        if (File.Exists(path))
+        if (File.Exists(_saveFilePath))
         {
-            string json = File.ReadAllText(path);
+            string json = File.ReadAllText(_saveFilePath);
             SaveData saveData = JsonUtility.FromJson<SaveData>(json);
 
             _currentChoiceIndex = saveData.CurrentChoiceIndex;
@@ -193,6 +218,7 @@ public class MessageManager : MonoBehaviour
 
         _currentChoiceIndex = 0;
         _playerChoices.Clear();
+        progressMessages.Clear();
         DisplayChoices();
     }
 
@@ -202,5 +228,6 @@ public class MessageManager : MonoBehaviour
     {
         public int CurrentChoiceIndex;
         public List<int> PlayerChoices;
+        public List<bool> ProgressMessages;
     }
 }
