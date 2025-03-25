@@ -4,7 +4,7 @@ using UnityEngine;
 public static class DeathCalculator
 {
     // Constants used in the algorithm
-    private const int BaseExpectancy = 80;
+    private const int BaseExpectancy = 81;
     private const float ModerateAlcoholThreshold = 7f; // moderate threshold (drinks per week)
     private const float AlcoholPenaltyFactor = 0.5f;     // penalty per drink above threshold
     private const int DietBonusThreshold = 5;            // neutral diet rating value

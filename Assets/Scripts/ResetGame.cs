@@ -1,14 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//TODO: Move to settings app
 public class ResetGame : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
-        GameManager.Instance.currentScene = "LockScreenScene";
-        GameManager.Instance.currentLevel = 0;
-        GameManager.Instance.phoneUnlocked = false;
-        SaveDataManager.TriggerSave(); // save the current scene
+        // Delete the save data file
+        string path = GameManager.Instance.SaveData;
+        if (System.IO.File.Exists(path)) System.IO.File.Delete(path);
+        
+        //TODO: Delete the message history
+        
+        Destroy(GameManager.Instance.gameObject);
+        
         SceneManager.LoadSceneAsync("LockScreenScene");
     }
 }
