@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 // Standard button script to load a scene
 public class LoadSceneButton : MonoBehaviour
