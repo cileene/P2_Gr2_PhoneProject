@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using static System.Enum;
 
 public class AppEventHandler : MonoBehaviour
@@ -11,35 +12,30 @@ public class AppEventHandler : MonoBehaviour
         Death,
         Flappy
     }
-    
+
     private string _name;
     private bool _isLoading;
     private bool _showBadge;
     private GameObject _loadingObject;
     private GameObject _badgeObject;
-    
+
     private void Start()
     {
-        _name = gameObject.name; 
+        _name = gameObject.name;
         _loadingObject = transform.Find("Loading").gameObject;
         _badgeObject = transform.Find("Badge").gameObject;
-        
+
         CheckAppBools();
         SetLoadingState();
         SetBadgeState();
-        
     }
-    
+
     private void SetLoadingState()
     {
         _loadingObject.SetActive(_isLoading);
-       if (_isLoading)
-        {
-            _loadingObject.GetComponent<Animator>().SetTrigger("Loading");
-        }
-        
+        GetComponent<Button>().enabled = !_isLoading;
     }
-    
+
     private void SetBadgeState()
     {
         _badgeObject.SetActive(_showBadge);
@@ -50,7 +46,7 @@ public class AppEventHandler : MonoBehaviour
         foreach (Apps app in GetValues(typeof(Apps)))
         {
             if (app.ToString() != _name) continue;
-            
+
             switch (app)
             {
                 case Apps.Messages:
