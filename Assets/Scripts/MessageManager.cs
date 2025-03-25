@@ -129,7 +129,12 @@ public class MessageManager : MonoBehaviour
         _currentChoiceIndex += 2; // Move to the next choices
         DisplayChoices();
         SaveConversationState();
-        if (_currentChoiceIndex < playerButtonMessages.Count)
+        if (!GameManager.Instance.progressStory)
+        {
+            buttonChoice1.SetActive(false);
+            buttonChoice2.SetActive(false);
+        }
+        else if (_currentChoiceIndex < playerButtonMessages.Count)
         {
             buttonChoice1.SetActive(true);
             buttonChoice2.SetActive(true);
