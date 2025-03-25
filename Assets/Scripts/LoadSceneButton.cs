@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Standard button script to load a scene
-public class Button : MonoBehaviour
+public class LoadSceneButton : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
     [SerializeField, Range(0.1f, 1.5f)] private float transitionTime = 0.5f;

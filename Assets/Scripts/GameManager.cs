@@ -11,14 +11,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public enum Apps //TODO: List all apps here
-    {
-        Messages,
-        Photos,
-        Settings,
-        Death,
-        Flappy
-    }
     
     // ------------------ VARIABLES ------------------
     [Header("Progression")] 
@@ -29,9 +21,11 @@ public class GameManager : MonoBehaviour
     public bool progressStory;
 
     [Header("App Badges")] 
-    public bool showMessagesBadge;
-    public bool showPhotosBadge; 
-    public bool showSettingsBadge;
+    public bool messagesBadge;
+    public bool photosBadge; 
+    public bool settingsBadge;
+    public bool deathBadge;
+    public bool flappyBadge;
 
     [Header("App Loading")] 
     public bool messagesLoading;
