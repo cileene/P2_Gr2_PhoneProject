@@ -1,8 +1,8 @@
-using UnityEngine;
-using System.IO;
-using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Here we track the game state using a singleton pattern
 // And now we also write data to the player's device
@@ -11,8 +11,16 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public enum Apps //TODO: List all apps here
+    {
+        Messages,
+        Photos,
+        Settings,
+        Death,
+        Flappy
+    }
     
-    // --------- Variables ---------
+    // ------------------ VARIABLES ------------------
     [Header("Progression")] 
     public bool phoneUnlocked;
     public bool shuffleHomeScreen;
@@ -20,12 +28,17 @@ public class GameManager : MonoBehaviour
     public string currentScene; // Default scene
     public bool progressStory;
 
-    [Header("Data Paths")]
-    public bool useSaveData = true;
-    public string dataPath;
-    public string SaveData { get; private set; }
-    private const string FileName = "SaveData.json";
-    public string selfiePicture;
+    [Header("App Badges")] 
+    public bool showMessagesBadge;
+    public bool showPhotosBadge; 
+    public bool showSettingsBadge;
+
+    [Header("App Loading")] 
+    public bool messagesLoading;
+    public bool photosLoading;
+    public bool settingsLoading;
+    public bool deathLoading;
+    public bool flappyLoading;
     
     [Header("Message State")]
     public int currentChoiceIndex;
@@ -46,8 +59,14 @@ public class GameManager : MonoBehaviour
     public bool playerFamilyHistory;
     public int playerDeathYear;
 
+    [Header("Data Paths")]
+    public bool useSaveData = true;
+    public string dataPath;
+    public string SaveData { get; private set; }
+    private const string FileName = "SaveData.json";
+    public string selfiePicture;
     
-    // --------- METHODS ---------
+    // ------------------ METHODS ------------------
     private void Awake()
     {
         if (Instance == null)
