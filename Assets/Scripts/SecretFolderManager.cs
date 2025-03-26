@@ -7,7 +7,7 @@ public class SecretFolderManager : MonoBehaviour
     public GameObject passwordPanel;
     public TMP_InputField passwordInput;
     public GameObject secretFolderPanel;
-    private string correctPassword = "1234"; // Skift koden til hvad du vil
+    public string correctPassword = "1234"; //TODO: set to birthyear
 
     public void OpenPasswordPrompt()
     {

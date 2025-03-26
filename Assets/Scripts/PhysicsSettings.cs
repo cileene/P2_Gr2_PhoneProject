@@ -5,7 +5,7 @@ public class PhysicsSettings : MonoBehaviour
     [Tooltip("Set the multiplier to adjust the gravity")]
     public float gravityMultiplier = 1f;
     [Tooltip("Select the desired fixed update frames per second")]
-    public FPS fixedUpdateFPS = FPS.FPS50;
+    public FPS fixedUpdateFPS = FPS.FPS60;
     
     private float _baseGravity = -9.81f;
     private float _calculatedGravity;
