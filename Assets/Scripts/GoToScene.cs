@@ -7,6 +7,6 @@ public class GoToScene : MonoBehaviour
     
     public void LoadScene()
     {
-        SceneHandler.LoadScene(sceneToLoad);
+        if (GameManager.Instance.phoneUnlocked) SceneHandler.LoadScene(sceneToLoad);
     }
 }

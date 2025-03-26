@@ -22,6 +22,7 @@ public class CaptureSelfie : MonoBehaviour
                 _webCamTexture.Play();
             }
         }
+        CaptureSelfieNow();
     }
     
     public void CaptureSelfieNow()
