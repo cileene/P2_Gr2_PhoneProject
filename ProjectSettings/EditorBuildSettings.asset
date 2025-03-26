@@ -6,38 +6,41 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LockScreenScene.unity
+    path: Assets/Scenes/LockScreen.unity
     guid: 6021d6c6ccd35427a8602c1bcd5733b8
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/Scenes/Home.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/TestAppScene.unity
+    path: Assets/Scenes/Gyro.unity
     guid: 020b2405e03d242b192deaf989b7287d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PhoneChatExampleScene.unity
     guid: b9539ef39a36b0e4b93d84c72a301a6d
   - enabled: 1
-    path: Assets/Scenes/ResetScene.unity
+    path: Assets/Scenes/RESET.unity
     guid: 1d10d9489a5a2476ca65d34f017c52d3
   - enabled: 1
-    path: Assets/Scenes/ScrollingTestScene.unity
+    path: Assets/Scenes/Settings.unity
     guid: f70be6636684d4352941b3114d68682f
   - enabled: 1
-    path: Assets/Scenes/MessageSelect.unity
+    path: Assets/Scenes/Messages.unity
     guid: 14ea5e560689c495d822d54ee646e050
   - enabled: 1
-    path: Assets/Scenes/MessageChatBobby.unity
+    path: Assets/Scenes/Sandra.unity
     guid: 58cefc9d431714ad5950b2570e565c1c
   - enabled: 1
-    path: Assets/Scenes/Photos.unity
+    path: Assets/Scenes/oldPhotos.unity
     guid: 6b8ee598587b94aecad480104924eac3
   - enabled: 1
-    path: Assets/Scenes/PhotoAlbum.unity
+    path: Assets/Scenes/Photos.unity
     guid: 414467af760eea349a43165ce0c5e368
   - enabled: 1
     path: Assets/Scenes/Death.unity
     guid: 0b48e62126ecb4279990bb5bce6d10f2
+  - enabled: 1
+    path: Assets/Scenes/HappyBird.unity
+    guid: b6755aadaae6246bb8dd3e7a5eb89cc9
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 077e718e96be148b3a261fd7c71ebc58, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: df700abf3843c45c3905032f4f6e49fe, type: 2}

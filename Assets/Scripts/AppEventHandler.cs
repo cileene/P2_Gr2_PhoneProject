@@ -10,7 +10,9 @@ public class AppEventHandler : MonoBehaviour
         Photos,
         Settings,
         Death,
-        Flappy
+        HappyBird,
+        Gyro,
+        OldPhotos
     }
 
     private string _name;
@@ -65,9 +67,17 @@ public class AppEventHandler : MonoBehaviour
                     _isLoading = GameManager.Instance.deathLoading;
                     _showBadge = GameManager.Instance.deathBadge;
                     break;
-                case Apps.Flappy:
-                    _isLoading = GameManager.Instance.flappyLoading;
-                    _showBadge = GameManager.Instance.flappyBadge;
+                case Apps.HappyBird:
+                    _isLoading = GameManager.Instance.happyBirdLoading;
+                    _showBadge = GameManager.Instance.happyBirdBadge;
+                    break;
+                case Apps.Gyro:
+                    _isLoading = GameManager.Instance.gyroLoading;
+                    _showBadge = GameManager.Instance.gyroBadge;
+                    break;
+                case Apps.OldPhotos:
+                    _isLoading = GameManager.Instance.oldPhotosLoading;
+                    _showBadge = GameManager.Instance.oldPhotosBadge;
                     break;
                 default:
                     _isLoading = false;

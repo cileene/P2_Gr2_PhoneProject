@@ -414,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: sceneToLoad
-      value: MessageSelect
+      value: Messages
       objectReference: {fileID: 0}
     - target: {fileID: 2731214549157799205, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
@@ -970,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: sceneToLoad
-      value: ResetScene
+      value: RESET
       objectReference: {fileID: 0}
     - target: {fileID: 2731214549157799205, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
@@ -1096,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: sceneToLoad
-      value: PhotoAlbum
+      value: Photos
       objectReference: {fileID: 0}
     - target: {fileID: 6589890284525415357, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_Color.b
@@ -1233,11 +1233,11 @@ RectTransform:
   - {fileID: 251487719}
   - {fileID: 364202280}
   - {fileID: 1453377706}
+  - {fileID: 627115553}
   - {fileID: 147966088}
   - {fileID: 587216801}
   - {fileID: 3303395246507741631}
   - {fileID: 342716865}
-  - {fileID: 627115553}
   - {fileID: 1526566863}
   - {fileID: 880735512}
   - {fileID: 1940914254}
@@ -1302,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: sceneToLoad
-      value: Photos
+      value: oldPhotos
       objectReference: {fileID: 0}
     - target: {fileID: 2731214549157799205, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
@@ -1425,16 +1425,36 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145751369552874892, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_Name
-      value: App Button (7)
+      value: HappyBird
       objectReference: {fileID: 0}
     - target: {fileID: 145751369552874892, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 186630580221178254, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
+      propertyPath: m_text
+      value: Happy Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
+      propertyPath: sceneToLoad
+      value: HappyBird
       objectReference: {fileID: 0}
     - target: {fileID: 2731214549157799205, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
       value: 
       objectReference: {fileID: 173862297}
+    - target: {fileID: 6589890284525415357, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.15566039
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589890284525415357, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9511813
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589890284525415357, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1449,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1457,15 +1477,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 225
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 225
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1497,11 +1517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 190
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -862.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005795930853383387, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2325,7 +2345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4556247697014340520, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
       propertyPath: sceneToLoad
-      value: 
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 6530106773029499481, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
       propertyPath: m_Pivot.x
@@ -3891,7 +3911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: sceneToLoad
-      value: ScrollingTestScene
+      value: Settings
       objectReference: {fileID: 0}
     - target: {fileID: 2731214549157799205, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
@@ -4021,15 +4041,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145751369552874892, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_Name
-      value: Gyro Test
+      value: Gyro
       objectReference: {fileID: 0}
     - target: {fileID: 186630580221178254, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_text
-      value: Gyro Test
+      value: Gyro
       objectReference: {fileID: 0}
     - target: {fileID: 829633563090965274, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: sceneToLoad
-      value: TestAppScene
+      value: Gyro
       objectReference: {fileID: 0}
     - target: {fileID: 2731214549157799205, guid: c7fb5ac3eceac4b39a1c62ee349eadc2, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh

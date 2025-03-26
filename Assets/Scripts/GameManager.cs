@@ -25,14 +25,18 @@ public class GameManager : MonoBehaviour
     public bool photosBadge; 
     public bool settingsBadge;
     public bool deathBadge;
-    public bool flappyBadge;
+    public bool happyBirdBadge;
+    public bool gyroBadge;
+    public bool oldPhotosBadge;
 
     [Header("App Loading")] 
     public bool messagesLoading;
     public bool photosLoading;
     public bool settingsLoading;
     public bool deathLoading;
-    public bool flappyLoading;
+    public bool happyBirdLoading;
+    public bool gyroLoading;
+    public bool oldPhotosLoading;
     
     [Header("Message State")]
     public int currentChoiceIndex;

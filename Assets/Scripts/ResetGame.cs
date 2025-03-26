@@ -14,6 +14,6 @@ public class ResetGame : MonoBehaviour
         
         Destroy(GameManager.Instance.gameObject);
         
-        SceneManager.LoadSceneAsync("LockScreenScene");
+        SceneManager.LoadSceneAsync("LockScreen");
     }
 }
