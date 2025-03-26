@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public bool happyBirdBadge;
     public bool gyroBadge;
     public bool oldPhotosBadge;
+    public bool notesBadge;
+    public bool calendarBadge;
 
     [Header("App Loading")] 
     public bool messagesLoading;
@@ -37,6 +39,8 @@ public class GameManager : MonoBehaviour
     public bool happyBirdLoading;
     public bool gyroLoading;
     public bool oldPhotosLoading;
+    public bool notesLoading;
+    public bool calendarLoading;
     
     [Header("Message State")]
     public int currentChoiceIndex;

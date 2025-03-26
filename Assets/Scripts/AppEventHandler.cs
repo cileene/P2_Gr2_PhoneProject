@@ -12,7 +12,9 @@ public class AppEventHandler : MonoBehaviour
         Death,
         HappyBird,
         Gyro,
-        OldPhotos
+        OldPhotos,
+        Notes,
+        Calendar
     }
 
     private string _name;
@@ -78,6 +80,14 @@ public class AppEventHandler : MonoBehaviour
                 case Apps.OldPhotos:
                     _isLoading = GameManager.Instance.oldPhotosLoading;
                     _showBadge = GameManager.Instance.oldPhotosBadge;
+                    break;
+                case Apps.Notes:
+                    _isLoading = GameManager.Instance.notesLoading;
+                    _showBadge = GameManager.Instance.notesBadge;
+                    break;
+                case Apps.Calendar:
+                    _isLoading = GameManager.Instance.calendarLoading;
+                    _showBadge = GameManager.Instance.calendarBadge;
                     break;
                 default:
                     _isLoading = false;

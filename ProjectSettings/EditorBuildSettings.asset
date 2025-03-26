@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Sandra.unity
     guid: 58cefc9d431714ad5950b2570e565c1c
   - enabled: 1
-    path: Assets/Scenes/oldPhotos.unity
+    path: Assets/Scenes/OldPhotos.unity
     guid: 6b8ee598587b94aecad480104924eac3
   - enabled: 1
     path: Assets/Scenes/Photos.unity
