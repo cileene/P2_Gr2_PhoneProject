@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "P2_Gr2_PhoneProject.sln"
+    "dotnet.defaultSolution": "P2_Gr2_PhoneProjectx.sln"
 }

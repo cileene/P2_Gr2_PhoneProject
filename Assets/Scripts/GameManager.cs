@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public bool settingsBadge;
     public bool deathBadge;
     public bool flappyBadge;
+    public bool idMojiBadge;
 
     [Header("App Loading")] 
     public bool messagesLoading;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     public bool settingsLoading;
     public bool deathLoading;
     public bool flappyLoading;
+    public bool idMojiLoading;
     
     [Header("Message State")]
     public int currentChoiceIndex;
