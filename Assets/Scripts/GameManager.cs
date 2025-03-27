@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
     {
         SaveData = dataPath + FileName;
 
-        if (File.Exists(SaveData) & useSaveData) // load existing file
+        if (File.Exists(SaveData) && useSaveData) // load existing file
         {
             Debug.Log($"SaveData found at {SaveData}");
             SaveDataManager.ReadSaveData(SaveData);
