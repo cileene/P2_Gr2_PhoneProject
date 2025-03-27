@@ -84,6 +84,15 @@ public class UIInputToVar : MonoBehaviour
             case "PlayerName":
                 GameManager.Instance.playerName = text.text;
                 break;
+            case "UrbanToggle":
+                GameManager.Instance.playerLivingEnvironment = "Urban";
+                break;
+            case "SuburbanToggle":
+                GameManager.Instance.playerLivingEnvironment = "Suburban";
+                break;
+            case "RuralToggle":
+                GameManager.Instance.playerLivingEnvironment = "Rural";
+                break;
         }
 
         SaveDataManager.TriggerSave();

@@ -33,6 +33,9 @@ public class DeathYearTester : MonoBehaviour
         GameManager.Instance.playerDeathYear = deathYear;
         SaveDataManager.TriggerSave();
         Debug.Log($"Predicted Death Year: {deathYear}");
-        resultText.text = $"Predicted Death Year: {deathYear}";
+        resultText.text = $"In the year of {deathYear} you, {GameManager.Instance.playerName}, will die.\n" +
+                          $"But, if you're still alive in {deathYear+1} then you win the game!\n" +
+                          $"Good luck {GameManager.Instance.playerName}!";
+        GameManager.Instance.progressStory = true;
     }
 }
