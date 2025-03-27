@@ -11,10 +11,11 @@ namespace FlappyBirdScripts
         [SerializeField] private Player player;
         [SerializeField] private Spawner spawner;
         [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] private TextMeshProUGUI highScoreText;
         [SerializeField] private GameObject playButton;
         [SerializeField] private GameObject gameOver;
 
-        public int score { get; private set; } = 0;
+        public int Score { get; private set; } = 0;
 
         private void Awake()
         {
@@ -36,6 +37,7 @@ namespace FlappyBirdScripts
         private void Start()
         {
             Pause();
+            highScoreText.text = GameManager.Instance.birdHighScore.ToString();
         }
 
         public void Pause()
@@ -46,8 +48,8 @@ namespace FlappyBirdScripts
 
         public void Play()
         {
-            score = 0;
-            scoreText.text = score.ToString();
+            Score = 0;
+            scoreText.text = Score.ToString();
 
             playButton.SetActive(false);
             gameOver.SetActive(false);
@@ -64,6 +66,8 @@ namespace FlappyBirdScripts
 
         public void GameOver()
         {
+            UpdateHighScore();
+            highScoreText.text = GameManager.Instance.birdHighScore.ToString();
             playButton.SetActive(true);
             gameOver.SetActive(true);
 
@@ -72,8 +76,17 @@ namespace FlappyBirdScripts
 
         public void IncreaseScore()
         {
-            score++;
-            scoreText.text = score.ToString();
+            Score++;
+            scoreText.text = Score.ToString();
+        }
+
+        private void UpdateHighScore() // record the highscore in the GameManager
+        {
+            int highScore = GameManager.Instance.birdHighScore;
+            if (Score > highScore)
+            {
+                GameManager.Instance.birdHighScore = Score;
+            }
         }
 
     }

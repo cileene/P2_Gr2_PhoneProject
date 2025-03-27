@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int currentLevel;
     public string currentScene; // Default scene
     public bool progressStory;
+    public int birdHighScore;
 
     [Header("App Badges")] 
     public bool messagesBadge;
