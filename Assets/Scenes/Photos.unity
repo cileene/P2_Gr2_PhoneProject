@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6907031495140639372, guid: 10659f6d550524a31a54f68370c5ba4e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1080
+      value: 1082
       objectReference: {fileID: 0}
     - target: {fileID: 6907031495140639372, guid: 10659f6d550524a31a54f68370c5ba4e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3186,7 +3186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6530106773029499481, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1080
+      value: 1082
       objectReference: {fileID: 0}
     - target: {fileID: 6530106773029499481, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
       propertyPath: m_SizeDelta.y
@@ -4987,6 +4987,7 @@ MonoBehaviour:
   passwordPanel: {fileID: 735282010}
   passwordInput: {fileID: 2115801626}
   secretFolderPanel: {fileID: 28465384}
+  correctPassword: 1234
 --- !u!114 &1809278291
 MonoBehaviour:
   m_ObjectHideFlags: 0
