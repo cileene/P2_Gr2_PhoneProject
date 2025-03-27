@@ -2173,6 +2173,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: gyroBadge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: photosBadge
       value: 0
       objectReference: {fileID: 0}
@@ -2182,11 +2186,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: currentScene
-      value: TestScene
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: deathLoading
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: notesLoading
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: flappyLoading
@@ -2205,8 +2213,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: settingsLoading
+      propertyPath: progressStory
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: calendarLoading
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: settingsLoading
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: shuffleHomeScreen

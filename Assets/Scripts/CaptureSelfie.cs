@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using System.IO;
@@ -10,33 +11,15 @@ public class CaptureSelfie : MonoBehaviour
     private Texture2D _selfieTexture;
     private string _dataPath;
 
-    private IEnumerator Start()
+    private void Start()
     {
-        // Request camera permission
-        yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
+        _dataPath = Application.persistentDataPath + "/Player_Data/Selfie.png";
 
-        if (Application.HasUserAuthorization(UserAuthorization.WebCam))
-        {
-            _dataPath = Application.persistentDataPath + "/Player_Data/Selfie.png";
-            InitializeCamera();
-            CaptureSelfieNow();
-        }
-        else
-        {
-            Debug.Log("Camera access denied.");
-        }
-    }
-
-    private void InitializeCamera()
-    {
         WebCamDevice[] devices = WebCamTexture.devices;
-        foreach (var device in devices)
-        {
-            if (device.isFrontFacing)
-            {
+        foreach (var device in devices) {
+            if (device.isFrontFacing) {
                 _webCamTexture = new WebCamTexture(device.name);
                 _webCamTexture.Play();
-                break; // Use the first available front-facing camera
             }
         }
     }

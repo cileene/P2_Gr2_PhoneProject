@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5be6bf5dbbdd1dd449209e66b2a9074a
+guid: 57462b6e0cbf7cd428226ce5de8ab97a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8122749733422192677
-    second: Gallery_0
+      213: 2304356653976398602
+    second: DeathGame_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,17 +122,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gallery_0
+      name: DeathGame_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 30
-        width: 400
-        height: 400
+        x: 18
+        y: 14
+        width: 144
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd7a8f35722364f80800000000000000
-      internalID: -8122749733422192677
+      spriteID: a0b2214fa28baff10800000000000000
+      internalID: 2304356653976398602
       vertices: []
       indices: 
       edges: []
@@ -160,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DeathGame_0: 2304356653976398602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -27,6 +27,7 @@ namespace FlappyBirdScripts
 
         private void OnDestroy()
         {
+            Time.timeScale = 1f; // This should fix freezing the phone
             if (Instance == this) {
                 Instance = null;
             }
