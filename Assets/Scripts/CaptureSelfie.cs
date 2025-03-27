@@ -4,14 +4,14 @@ using UnityEngine;
 using System.IO;
 
 // Use the script to capture a selfie with the device's webcam
-//TODO: Prototype script
+//TODO: Fix this
 public class CaptureSelfie : MonoBehaviour
 {
     private WebCamTexture _webCamTexture;
     private Texture2D _selfieTexture;
     private string _dataPath;
-
-    private void Start()
+    
+    public void CaptureSelfieNow()
     {
         _dataPath = Application.persistentDataPath + "/Player_Data/Selfie.png";
 
@@ -22,10 +22,6 @@ public class CaptureSelfie : MonoBehaviour
                 _webCamTexture.Play();
             }
         }
-    }
-    
-    public void CaptureSelfieNow()
-    {
         StartCoroutine(CaptureWithDelay());
     }
 
