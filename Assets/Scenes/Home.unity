@@ -2385,7 +2385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4556247697014340520, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
       propertyPath: sceneToLoad
-      value: Home
+      value: LockScreen
       objectReference: {fileID: 0}
     - target: {fileID: 6530106773029499481, guid: 8b3eff736d8df49d8b8cf6d68c0869e5, type: 3}
       propertyPath: m_Pivot.x
