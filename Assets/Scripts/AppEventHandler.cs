@@ -14,7 +14,8 @@ public class AppEventHandler : MonoBehaviour
         Gyro,
         OldPhotos,
         Notes,
-        Calendar
+        Calendar,
+        IDMoji
     }
 
     private string _name;
@@ -88,6 +89,10 @@ public class AppEventHandler : MonoBehaviour
                 case Apps.Calendar:
                     _isLoading = GameManager.Instance.calendarLoading;
                     _showBadge = GameManager.Instance.calendarBadge;
+                    break;
+                case Apps.IDMoji:
+                    _isLoading = GameManager.Instance.idMojiLoading;
+                    _showBadge = GameManager.Instance.idMojiBadge;
                     break;
                 default:
                     _isLoading = false;

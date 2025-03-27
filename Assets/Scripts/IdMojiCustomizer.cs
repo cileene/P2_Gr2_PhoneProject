@@ -35,7 +35,7 @@ public GridLayoutGroup colorGridHair;
 public GridLayoutGroup optionsGridHair;
    
 
-    void Start()
+    private void Start()
     {
         // Ensure only the start canvas is visible
         startCanvas.gameObject.SetActive(true);
@@ -63,7 +63,7 @@ public GridLayoutGroup optionsGridHair;
     }
 
     // Function to start customization
-    void OpenCustomizer()
+    private void OpenCustomizer()
     {
         startCanvas.gameObject.SetActive(false);
         customizerCanvas.gameObject.SetActive(true);
@@ -88,7 +88,7 @@ public GridLayoutGroup optionsGridHair;
        // selectedScroll.gameObject.SetActive(true);
     }
     // Function to finish customization
-    void FinishCustomization()
+    private void FinishCustomization()
     {
         startCanvas.gameObject.SetActive(false);
         customizerCanvas.gameObject.SetActive(false);
@@ -96,13 +96,13 @@ public GridLayoutGroup optionsGridHair;
     }
 
     // Function to exit app (you can replace this with a proper quit function)
-    void ExitApp()
+    private void ExitApp()
     {
         Application.Quit();
     }
 
     // Hide all scroll rects
-    void HideAllScrollRects()
+    private void HideAllScrollRects()
     {
         faceScroll.gameObject.SetActive(false);
         hairScroll.gameObject.SetActive(false);
@@ -111,7 +111,7 @@ public GridLayoutGroup optionsGridHair;
     }
 
     // Function to toggle scroll rects
-    void ToggleScroll(ScrollRect scrollToShow)
+    private void ToggleScroll(ScrollRect scrollToShow)
     {
         HideAllScrollRects();
         scrollToShow.gameObject.SetActive(true);

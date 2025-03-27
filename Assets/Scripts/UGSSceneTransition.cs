@@ -49,6 +49,10 @@ public static class UGSSceneTransition
             case "Calendar":
                 customEventName = "calendarSceneLoaded";
                 break;
+            
+            case "IDMoji":
+                customEventName = "idMojiSceneLoaded";
+                break;
         }
         AnalyticsService.Instance.RecordEvent(customEventName); // record the custom event
         AnalyticsService.Instance.Flush(); // flush/upload the event to the server

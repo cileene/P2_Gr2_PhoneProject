@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public bool oldPhotosBadge;
     public bool notesBadge;
     public bool calendarBadge;
+    public bool idMojiBadge;
 
     [Header("App Loading")] 
     public bool messagesLoading;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     public bool oldPhotosLoading;
     public bool notesLoading;
     public bool calendarLoading;
+    public bool idMojiLoading;
     
     [Header("Message State")]
     public int currentChoiceIndex;
