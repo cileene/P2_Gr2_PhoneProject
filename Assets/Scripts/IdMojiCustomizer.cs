@@ -98,7 +98,7 @@ public GridLayoutGroup optionsGridHair;
     // Function to exit app (you can replace this with a proper quit function)
     private void ExitApp()
     {
-        Application.Quit();
+        SceneHandler.LoadScene("Home");
     }
 
     // Hide all scroll rects
