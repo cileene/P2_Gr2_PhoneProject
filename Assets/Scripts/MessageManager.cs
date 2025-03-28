@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MessageManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class MessageManager : MonoBehaviour
     public TextMeshProUGUI botMessagePrefab;
     public TextMeshProUGUI loadingDotsPrefab;
     public Transform messageContainer;
+    public ScrollRect scrollRect;
 
     private List<int> _playerChoices = new List<int>(); // Keep track of choices made
     private int _currentChoiceIndex;
@@ -29,6 +31,7 @@ public class MessageManager : MonoBehaviour
         _saveFileName = $"conversationState_{GameManager.Instance.currentScene}.json";
         _saveFilePath = Path.Combine(GameManager.Instance.dataPath, _saveFileName);
         if(GameManager.Instance.useSaveData) LoadConversationState(); // Load the previous state, if any
+        ScrollToBottom();
     }
 
     private void Update()
@@ -47,6 +50,7 @@ public class MessageManager : MonoBehaviour
             buttonChoice1.SetActive(false);
             buttonChoice2.SetActive(false); // Hide buttons if not progressing
         }
+        
     }
     
     private void CheckProgression()
@@ -106,6 +110,7 @@ public class MessageManager : MonoBehaviour
         StartCoroutine(DisplayLoadingDots());
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
+        ScrollToBottom();
     }
 
     IEnumerator DisplayLoadingDots()
@@ -118,6 +123,7 @@ public class MessageManager : MonoBehaviour
         }
 
         Destroy(loadingDotsInstance.gameObject);
+        ScrollToBottom();
     }
     
     IEnumerator RunChoiceAfterDelay(int choiceIndex)
@@ -138,9 +144,13 @@ public class MessageManager : MonoBehaviour
             buttonChoice1.SetActive(true);
             buttonChoice2.SetActive(true);
         }
+        ScrollToBottom();
     }
-    
-
+    private void ScrollToBottom()
+    {
+        Canvas.ForceUpdateCanvases();
+        scrollRect.verticalNormalizedPosition = 0f;
+    }
     private void DisplayMessage(string message) //TODO: refactor multiple repeated methods into one
     {
         TextMeshProUGUI playerMessage = Instantiate(playerMessagePrefab, messageContainer);

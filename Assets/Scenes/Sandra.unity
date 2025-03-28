@@ -1389,6 +1389,7 @@ MonoBehaviour:
   botMessagePrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
+  ScrollbarVertical: {fileID: 908064027}
 --- !u!4 &589953924
 Transform:
   m_ObjectHideFlags: 0
@@ -1806,7 +1807,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1521768644}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99972177
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2712,7 +2713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: useSaveData
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: progressStory
