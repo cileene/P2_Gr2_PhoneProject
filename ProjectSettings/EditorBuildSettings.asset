@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Messages.unity
     guid: 14ea5e560689c495d822d54ee646e050
   - enabled: 1
-    path: Assets/Scenes/Sandra.unity
+    path: Assets/Scenes/SandraOld.unity
     guid: 58cefc9d431714ad5950b2570e565c1c
   - enabled: 1
     path: Assets/Scenes/oldPhotos.unity
@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IDMoji.unity
     guid: c2ce72536f6f5480bbd6c589da0220ea
+  - enabled: 1
+    path: Assets/Scenes/Sandra.unity
+    guid: 0a351a3d0795a4c23a3c7f930e88e615
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 077e718e96be148b3a261fd7c71ebc58, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: df700abf3843c45c3905032f4f6e49fe, type: 2}

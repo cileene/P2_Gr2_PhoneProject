@@ -37,5 +37,6 @@ public class DeathYearTester : MonoBehaviour
                           $"But, if you're still alive in {deathYear+1} then you win the game!\n" +
                           $"Good luck {GameManager.Instance.playerName}!";
         GameManager.Instance.progressStory = true;
+        GameManager.Instance.deathBadge = false;
     }
 }

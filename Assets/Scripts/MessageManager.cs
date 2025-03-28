@@ -28,7 +28,7 @@ public class MessageManager : MonoBehaviour
     {
         _saveFileName = $"conversationState_{GameManager.Instance.currentScene}.json";
         _saveFilePath = Path.Combine(GameManager.Instance.dataPath, _saveFileName);
-        LoadConversationState(); // Load the previous state, if any
+        if(GameManager.Instance.useSaveData) LoadConversationState(); // Load the previous state, if any
     }
 
     private void Update()
@@ -40,6 +40,10 @@ public class MessageManager : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.deathLoading = false; //TODO: this is a hack
+            GameManager.Instance.deathBadge = true; //TODO: more hack
+            GameManager.Instance.messagesBadge = false; //TODO: also a hack
+            
             buttonChoice1.SetActive(false);
             buttonChoice2.SetActive(false); // Hide buttons if not progressing
         }

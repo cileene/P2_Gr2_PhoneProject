@@ -72,6 +72,10 @@ namespace FlappyBirdScripts
             gameOver.SetActive(true);
 
             Pause();
+            if (Score > 0)
+            {
+                SceneHandler.LoadScene("HappyBird");
+            }
         }
 
         public void IncreaseScore()
