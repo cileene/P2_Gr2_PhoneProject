@@ -482,7 +482,7 @@ MonoBehaviour:
   m_text: 'Thank you for playing!
 
 
-    Pleaso go to the following link and fill
+    Please go to the following link and fill
     out the questionnaire to help us improve :D'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
