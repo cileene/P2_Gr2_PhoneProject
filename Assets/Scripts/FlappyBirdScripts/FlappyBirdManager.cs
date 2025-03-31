@@ -70,6 +70,8 @@ namespace FlappyBirdScripts
             highScoreText.text = GameManager.Instance.birdHighScore.ToString();
             playButton.SetActive(true);
             gameOver.SetActive(true);
+            
+            UGSSnitch();
 
             Pause();
             if (Score > 0)
@@ -91,6 +93,15 @@ namespace FlappyBirdScripts
             {
                 GameManager.Instance.birdHighScore = Score;
             }
+        }
+        
+        private void UGSSnitch()
+        {
+            PlayedBirdGame playedBirdGame = new PlayedBirdGame
+            {
+                HighScore = GameManager.Instance.birdHighScore,
+            };
+            Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(playedBirdGame);
         }
 
     }

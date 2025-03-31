@@ -8,7 +8,7 @@ public static class UGSSceneTransition
     //TODO: Add all scenes here or automate it somehow
     public static void HandleSceneCustomEvent(string sceneName)
     {
-        var customEventName = ""; // local variable to store the custom event name
+        /*var customEventName = ""; // local variable to store the custom event name
         
         switch (sceneName) // switch statement to determine the custom event name based on the scene name
         {
@@ -55,9 +55,14 @@ public static class UGSSceneTransition
             case "IDMoji":
                 customEventName = "idMojiSceneLoaded";
                 break;
-        }
+        }*/
+
+        SceneLoaded sceneLoaded = new SceneLoaded(sceneName)
+        {
+            SceneName = sceneName
+        };
         
-        AnalyticsService.Instance.
+        AnalyticsService.Instance.RecordEvent(sceneLoaded);
         
         //AnalyticsService.Instance.RecordEvent(customEventName); // record the custom event
         //AnalyticsService.Instance.Flush(); // flush/upload the event to the server

@@ -5,6 +5,8 @@ using TMPro;
 using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Unity.Services;
+using Unity.Services.Analytics;
 
 public class MessageManager : MonoBehaviour
 {
@@ -106,12 +108,27 @@ public class MessageManager : MonoBehaviour
     public void OnChoiceClicked(int choiceIndex)
     {
         _playerChoices.Add(_currentChoiceIndex + choiceIndex); // Save the second choice
-        //TODO: call to UGS here
+
+        UGSSnitch(choiceIndex); // Call home to UGS
+        
         DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
         StartCoroutine(DisplayLoadingDots());
         buttonChoice1.SetActive(false);
         buttonChoice2.SetActive(false);
         ScrollToBottom();
+    }
+
+    private void UGSSnitch(int choiceIndex)
+    {
+        MessageSent messageSent = new MessageSent
+        {
+            Conversation = GameManager.Instance.currentScene,
+            CurrentChoiceIndex = _currentChoiceIndex,
+            ChoiceIndex = choiceIndex
+        };
+        
+        AnalyticsService.Instance.RecordEvent(messageSent);
+
     }
 
     IEnumerator DisplayLoadingDots()

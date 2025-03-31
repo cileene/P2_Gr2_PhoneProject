@@ -38,5 +38,27 @@ public class DeathYearTester : MonoBehaviour
                           $"Good luck {GameManager.Instance.playerName}!";
         GameManager.Instance.progressStory = true;
         GameManager.Instance.deathBadge = false;
+        UGSSnitch();
+    }
+
+    private void UGSSnitch()
+    {
+        PlayedDeathGame playedDeathGame = new PlayedDeathGame
+        {
+            PlayerName = GameManager.Instance.playerName,
+            PlayerAge = GameManager.Instance.playerAge,
+            PlayerSmokes = GameManager.Instance.playerSmokes,
+            PlayerCigarettesPerDay = GameManager.Instance.playerCigarettesPerDay,
+            PlayerDrinks = GameManager.Instance.playerDrinks,
+            PlayerDrinksPerWeek = GameManager.Instance.playerDrinksPerWeek,
+            PlayerExerciseSessionsPerWeek = GameManager.Instance.playerExerciseSessionsPerWeek,
+            PlayerDietRating = GameManager.Instance.playerDietRating,
+            PlayerSleepHours = GameManager.Instance.playerSleepHours,
+            PlayerRiskRating = GameManager.Instance.playerRiskRating,
+            PlayerLivingEnvironment = GameManager.Instance.playerLivingEnvironment,
+            PlayerFamilyHistory = GameManager.Instance.playerFamilyHistory,
+            PlayerDeathYear = GameManager.Instance.playerDeathYear
+        };
+        Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(playedDeathGame);
     }
 }
