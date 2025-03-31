@@ -8,6 +8,9 @@ public class GoToURL : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(url))
         {
+            Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("playerClickedLink");
+            Unity.Services.Analytics.AnalyticsService.Instance.Flush();
+            
             Application.OpenURL(url);
         }
         else
