@@ -1225,7 +1225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 710.7007}
+  m_AnchoredPosition: {x: -392.5, y: 710.6998}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1357,8 +1357,8 @@ MonoBehaviour:
   - so.. what did you think about my new game??
   - "my dude, you\u2019ve used that lie before. try a bit harder"
   - "Come on! you\u2019ve been stringing me on for weeks now"
-  - Go play the game NOW and get back to me
-  - Go play the game NOW and get back to me
+  - It's called "Death", go play it NOW and then get back to me
+  - It's called "Death", go play it NOW and then get back to me
   - so, what did you think???
   - so, what did you think???
   - Whatever. If you're just gonna mock it, then forget it.
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521768645}
   m_HandleRect: {fileID: 1521768644}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
