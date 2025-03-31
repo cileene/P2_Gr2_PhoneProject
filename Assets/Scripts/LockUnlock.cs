@@ -6,24 +6,18 @@ public class LockUnlock : MonoBehaviour
     [SerializeField] private GameObject locked;
     [SerializeField] private GameObject unlocked;
     private bool _alreadySent;
+    
+    private void Start()
+    {
+        UGSSceneTransition.HandleSceneCustomEvent("LockScreen");
+    }
 
-    void Update()
+    private void Update()
     {
         if (GameManager.Instance.phoneUnlocked)
         {
             locked.SetActive(false);
             unlocked.SetActive(true);
-            SendAnalytics();
         }
-    }
-    
-    // Send to analytics
-   
-    private void SendAnalytics()
-    {
-        if (_alreadySent) return;
-        AnalyticsService.Instance.RecordEvent("lockScreenDone"); // record the custom event
-        AnalyticsService.Instance.Flush(); // flush/upload the event to the server
-        _alreadySent = true;
     }
 }
