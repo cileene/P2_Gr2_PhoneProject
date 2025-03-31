@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
     public bool useSaveData = true;
     public string dataPath;
     public string SaveData { get; private set; }
+    public string messagesDataPath;
     private const string FileName = "SaveData.json";
     public string selfiePicture;
     
@@ -100,6 +101,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("No current scene found in save data.");
         }
+    }
+    
+    public void DestroyGameManager()
+    {
+        Destroy(gameObject);
     }
 
     private void InitAnalytics()

@@ -34,6 +34,7 @@ public class MessageManager : MonoBehaviour
     {
         _saveFileName = $"conversationState_{GameManager.Instance.currentScene}.json";
         _saveFilePath = Path.Combine(GameManager.Instance.dataPath, _saveFileName);
+        GameManager.Instance.messagesDataPath = _saveFilePath;
         if(GameManager.Instance.useSaveData) LoadConversationState(); // Load the previous state, if any
         ScrollToBottom();
     }
@@ -168,6 +169,7 @@ public class MessageManager : MonoBehaviour
         else
         {
             // Wait for 2 seconds
+            ScrollToBottom();
             yield return new WaitForSeconds(2f);
             // Load the next scene if there are no more choices
             SceneHandler.LoadScene(nextSceneName);
