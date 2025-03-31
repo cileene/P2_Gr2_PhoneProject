@@ -167,8 +167,10 @@ public class MessageManager : MonoBehaviour
         }
         else
         {
+            // Wait for 2 seconds
+            yield return new WaitForSeconds(2f);
             // Load the next scene if there are no more choices
-            SceneManager.LoadScene(nextSceneName);
+            SceneHandler.LoadScene(nextSceneName);
         }
         ScrollToBottom();
         
