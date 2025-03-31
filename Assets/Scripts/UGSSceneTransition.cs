@@ -1,4 +1,6 @@
 using Unity.Services.Analytics;
+using Unity.Services.Core;
+using Unity.Services.Core.Analytics;
 
 // Static class to notify Analytics when a scene is loaded
 public static class UGSSceneTransition
@@ -54,7 +56,10 @@ public static class UGSSceneTransition
                 customEventName = "idMojiSceneLoaded";
                 break;
         }
-        AnalyticsService.Instance.RecordEvent(customEventName); // record the custom event
-        AnalyticsService.Instance.Flush(); // flush/upload the event to the server
+        
+        AnalyticsService.Instance.
+        
+        //AnalyticsService.Instance.RecordEvent(customEventName); // record the custom event
+        //AnalyticsService.Instance.Flush(); // flush/upload the event to the server
     }
 }

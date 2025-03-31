@@ -106,6 +106,7 @@ public class MessageManager : MonoBehaviour
     public void OnChoiceClicked(int choiceIndex)
     {
         _playerChoices.Add(_currentChoiceIndex + choiceIndex); // Save the second choice
+        //TODO: call to UGS here
         DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
         StartCoroutine(DisplayLoadingDots());
         buttonChoice1.SetActive(false);
