@@ -1302,12 +1302,12 @@ MonoBehaviour:
   playerButtonMessages:
   - Lie
   - Honest
-  - ...
-  - ...
+  - '...'
+  - '...'
   - Lie
   - Honest
-  - ...
-  - ...
+  - '...'
+  - '...'
   - Alright...
   - Done...
   - 'Depressing... '
@@ -1320,19 +1320,19 @@ MonoBehaviour:
   - ??
   - ???
   - ???
-  - ...
-  - ...
-  - ...
-  - ...
+  - '...'
+  - '...'
+  - '...'
+  - '...'
   playerMessages:
   - "Sorry, I\u2019ve been feeling off lately..."
   - "I don\u2019t know who this is."
-  - ...
-  - ...
+  - '...'
+  - '...'
   - It was great!
   - "I didn\u2019t get to play it.. sorry"
-  - ...
-  - ...
+  - '...'
+  - '...'
   - Alright, I played your game
   - Done, I just finished it
   - Wow. Super uplifting. Just what I needed to spiral today.
@@ -1345,10 +1345,10 @@ MonoBehaviour:
   - WHAT ARE YOU TALKING ABOUT
   - did something happen?
   - did something happen?
-  - ...
-  - ...
-  - ...
-  - ...
+  - '...'
+  - '...'
+  - '...'
+  - '...'
   botMessages:
   - Yeah, You kinda dropped off the grid again.  I figured something was up after
     what happened.
@@ -1378,10 +1378,10 @@ MonoBehaviour:
   loadingDots:
   - .
   - ..
-  - ...
+  - '...'
   - .
   - ..
-  - ...
+  - '...'
   - .
   - ..
   progressMessages: 06000000
@@ -1390,6 +1390,7 @@ MonoBehaviour:
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
   scrollRect: {fileID: 911259209}
+  nextSceneName: ThanksForPlaying
 --- !u!4 &589953924
 Transform:
   m_ObjectHideFlags: 0

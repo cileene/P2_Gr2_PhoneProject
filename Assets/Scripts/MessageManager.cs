@@ -27,6 +27,8 @@ public class MessageManager : MonoBehaviour
     private int _currentChoiceIndex;
     private string _saveFileName;
     private string _saveFilePath;
+    
+    [SerializeField] private string nextSceneName;
 
     private void Start()
     {
@@ -54,6 +56,7 @@ public class MessageManager : MonoBehaviour
         }
         
     }
+    
     
     private void CheckProgression()
     {
@@ -162,7 +165,13 @@ public class MessageManager : MonoBehaviour
             buttonChoice1.SetActive(true);
             buttonChoice2.SetActive(true);
         }
+        else
+        {
+            // Load the next scene if there are no more choices
+            SceneManager.LoadScene(nextSceneName);
+        }
         ScrollToBottom();
+        
     }
     private void ScrollToBottom()
     {

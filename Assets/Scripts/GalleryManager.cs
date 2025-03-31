@@ -18,15 +18,22 @@ public class GalleryManager : MonoBehaviour
 
     public void NextImage()
     {
-        _currentIndex = (_currentIndex + 1) % images.Length;
-        fullScreenImage.sprite = images[_currentIndex];
+        if (_currentIndex < images.Length - 1) // Stop at last image
+        {
+            _currentIndex++;
+            fullScreenImage.sprite = images[_currentIndex];
+        }
         UGSSnitch();
     }
 
     public void PreviousImage()
     {
-        _currentIndex = ( _currentIndex - 1 ) % images.Length;
-        fullScreenImage.sprite = images[_currentIndex];
+        if (_currentIndex > 0) // Stop at first image
+        {
+            _currentIndex--;
+            fullScreenImage.sprite = images[_currentIndex];
+        }
+
         UGSSnitch();
     }
 
