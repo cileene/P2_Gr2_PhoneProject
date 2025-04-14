@@ -7,11 +7,12 @@ public class HomeButton : MonoBehaviour
     public delegate void HomeButtonPressed();
     public static event HomeButtonPressed OnHomeButtonPressed;
 
-    public void PressButton()
+    public void PressButton() // call this from UI button
     {
         OnHomeButtonPressed?.Invoke();
     }
     
+    // the following could be used to handle the event in another class
     private void OnEnable()
     {
         // Subscribe to the event
