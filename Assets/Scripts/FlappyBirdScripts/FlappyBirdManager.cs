@@ -19,9 +19,12 @@ namespace FlappyBirdScripts
 
         private void Awake()
         {
-            if (Instance != null) {
+            if (Instance != null)
+            {
                 DestroyImmediate(gameObject);
-            } else {
+            }
+            else
+            {
                 Instance = this;
             }
         }
@@ -29,7 +32,8 @@ namespace FlappyBirdScripts
         private void OnDestroy()
         {
             Time.timeScale = 1f; // This should fix freezing the phone
-            if (Instance == this) {
+            if (Instance == this)
+            {
                 Instance = null;
             }
         }
@@ -70,7 +74,7 @@ namespace FlappyBirdScripts
             highScoreText.text = GameManager.Instance.birdHighScore.ToString();
             playButton.SetActive(true);
             gameOver.SetActive(true);
-            
+
             UGSSnitch();
 
             Pause();
@@ -84,6 +88,11 @@ namespace FlappyBirdScripts
         {
             Score++;
             scoreText.text = Score.ToString();
+            if (GameManager.Instance.birdFriction)
+            {
+                Screen.brightness -= 0.1f;
+                Time.timeScale += 0.1f;
+            }
         }
 
         private void UpdateHighScore() // record the highscore in the GameManager
@@ -94,7 +103,7 @@ namespace FlappyBirdScripts
                 GameManager.Instance.birdHighScore = Score;
             }
         }
-        
+
         private void UGSSnitch()
         {
             PlayedBirdGame playedBirdGame = new PlayedBirdGame
@@ -103,10 +112,5 @@ namespace FlappyBirdScripts
             };
             Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(playedBirdGame);
         }
-
     }
 }
-
-
-
-    

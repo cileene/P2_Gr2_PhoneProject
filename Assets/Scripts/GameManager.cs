@@ -15,11 +15,14 @@ public class GameManager : MonoBehaviour
     // ------------------ VARIABLES ------------------
     [Header("Progression")] 
     public bool phoneUnlocked;
-    public bool shuffleHomeScreen;
     public int currentLevel;
     public string currentScene; // Default scene
     public bool progressStory;
     public int birdHighScore;
+    
+    [Header("Friction Strategies")]
+    public bool shuffleHomeScreen;
+    public bool birdFriction; // Lower brightness and raise game speed linked to score
 
     [Header("App Badges")] 
     public bool messagesBadge;
@@ -116,7 +119,7 @@ public class GameManager : MonoBehaviour
 
     public void InitFileSystem()
     {
-        dataPath = Application.persistentDataPath + "/Player_Data/";
+        dataPath = Application.persistentDataPath + "/Player_Data/"; //TODO: rename to system_data
         Debug.Log(dataPath);
 
         if (Directory.Exists(dataPath))
@@ -129,7 +132,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"New directory created at {dataPath}");
     }
 
-    public void InitSaveData()
+    public void InitSaveData()//TODO: Encrypt this
     {
         SaveData = dataPath + FileName;
 
