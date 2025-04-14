@@ -197,6 +197,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -785,7 +798,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Asset 51@2x_0: 2802685610529827892
+      Asset 51@2x_1: -1348577540420828453
+      Asset 51@2x_10: -3021283642737001526
+      Asset 51@2x_11: -6767863868519374681
+      Asset 51@2x_12: -8236405824155099439
+      Asset 51@2x_13: 5308344420067607430
+      Asset 51@2x_14: -1225140623822905237
+      Asset 51@2x_15: 8604002473947186253
+      Asset 51@2x_16: 6872370473513067932
+      Asset 51@2x_17: -7307477419133710117
+      Asset 51@2x_18: 3752280226199408444
+      Asset 51@2x_19: -6018168192119498702
+      Asset 51@2x_2: 4101518662332739448
+      Asset 51@2x_20: -6136112282838389244
+      Asset 51@2x_21: -5882586785522338785
+      Asset 51@2x_22: -8912670303085898260
+      Asset 51@2x_23: 6047600829272360727
+      Asset 51@2x_24: -2153918763114081288
+      Asset 51@2x_25: 6558323366579109982
+      Asset 51@2x_3: -1801141032767129108
+      Asset 51@2x_4: 8228231258910224724
+      Asset 51@2x_5: 3938109939391773156
+      Asset 51@2x_6: -3175496846791357468
+      Asset 51@2x_7: -9138483693155309390
+      Asset 51@2x_8: -1442828032868300367
+      Asset 51@2x_9: 2842748929028903835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
