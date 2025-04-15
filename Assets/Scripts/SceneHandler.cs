@@ -1,3 +1,4 @@
+using CustomUnityAnalytics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

@@ -1,3 +1,4 @@
+using CustomUnityAnalytics;
 using Unity.Services.Analytics;
 using UnityEngine;
 

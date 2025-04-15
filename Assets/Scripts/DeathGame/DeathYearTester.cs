@@ -1,4 +1,5 @@
 using System;
+using CustomUnityAnalytics;
 using TMPro;
 using UnityEngine;
 
