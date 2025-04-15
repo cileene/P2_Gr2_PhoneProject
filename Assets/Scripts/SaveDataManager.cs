@@ -31,11 +31,23 @@ public static class SaveDataManager
     // JSON serialization methods
     private static string SerializeToJson()
     {
-        return JsonUtility.ToJson(GameManager.Instance, true);
+        string json = JsonUtility.ToJson(GameManager.Instance, true);
+        if (GameManager.Instance.obfuscateData)
+        {
+            byte[] jsonBytes = System.Text.Encoding.UTF8.GetBytes(json);
+            return System.Convert.ToBase64String(jsonBytes);
+        }
+        return json;
     }
 
     private static void DeserializeFromJson(string data)
     {
-        JsonUtility.FromJsonOverwrite(data, GameManager.Instance);
+        string json;
+        if (GameManager.Instance.obfuscateData)
+            json = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(data));
+        else
+            json = data;
+
+        JsonUtility.FromJsonOverwrite(json, GameManager.Instance);
     }
 }

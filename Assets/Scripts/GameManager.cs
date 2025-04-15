@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Data Paths")]
     public bool useSaveData = true;
+    public bool obfuscateData = true;
     public string dataPath;
     public string SaveData { get; private set; }
     public string messagesDataPath;

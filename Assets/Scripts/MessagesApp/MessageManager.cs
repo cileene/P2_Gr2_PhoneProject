@@ -205,7 +205,13 @@ namespace MessagesApp
                 PlayerChoices = _playerChoices
             };
 
-            string json = JsonUtility.ToJson(saveData, true); //TODO: centralize json handling
+            string json = JsonUtility.ToJson(saveData, true);
+            if (GameManager.Instance.obfuscateData)
+            {
+                byte[] jsonBytes = System.Text.Encoding.UTF8.GetBytes(json);
+                json = System.Convert.ToBase64String(jsonBytes);
+            }
+
             File.WriteAllText(_saveFilePath, json);
         }
 
@@ -215,6 +221,12 @@ namespace MessagesApp
             if (File.Exists(_saveFilePath))
             {
                 string json = File.ReadAllText(_saveFilePath);
+                if (GameManager.Instance.obfuscateData)
+                {
+                    byte[] decodedBytes = System.Convert.FromBase64String(json);
+                    json = System.Text.Encoding.UTF8.GetString(decodedBytes);
+                }
+
                 SaveData saveData = JsonUtility.FromJson<SaveData>(json);
 
                 _currentChoiceIndex = saveData.CurrentChoiceIndex;
