@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [Header("Friction Strategies")]
     public bool shuffleHomeScreen;
     public bool birdFriction; // Lower brightness and raise game speed linked to score
+    public bool textFriction;
 
     [Header("App Badges")] 
     public bool messagesBadge;
