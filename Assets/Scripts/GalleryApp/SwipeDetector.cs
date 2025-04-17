@@ -9,13 +9,13 @@ namespace GalleryApp
         public ScrollRect scrollRect;
         public GalleryManager galleryManager; // Reference to GalleryManager (tried to call by making static but it didn't work)
         private Vector2 _startDragPosition;
-        private bool _isDragging = false;
+        
         private float _swipeThreshold = 50f; // Minimum swipe distance to detect
 
         public void OnBeginDrag(PointerEventData eventData)
         {
             _startDragPosition = eventData.position;
-            _isDragging = true;
+          
             scrollRect.OnBeginDrag(eventData); 
         }
 
@@ -26,7 +26,7 @@ namespace GalleryApp
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            _isDragging = false;
+          
             float deltaX = eventData.position.x - _startDragPosition.x;
         
             if (Mathf.Abs(deltaX) > _swipeThreshold)

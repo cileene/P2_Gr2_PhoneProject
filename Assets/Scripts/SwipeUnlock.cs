@@ -7,13 +7,13 @@ public class SwipeDetector : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 {
     public ScrollRect scrollRect;
     private Vector2 _startDragPosition;
-    private bool _isDragging = false;
+    
     private float _swipeThreshold = 50f; // Minimum swipe distance to detect
     
     public void OnBeginDrag(PointerEventData eventData)
     {
             _startDragPosition = eventData.position;
-            _isDragging = true;
+            
             scrollRect.OnBeginDrag(eventData); 
     }
     public void OnDrag(PointerEventData eventData)
@@ -23,7 +23,7 @@ public class SwipeDetector : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        _isDragging = false;
+       
         float deltaX = eventData.position.y - _startDragPosition.y;
         
         if (Mathf.Abs(deltaX) > _swipeThreshold)
