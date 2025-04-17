@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using GeneralUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     public bool shuffleHomeScreen;
     public bool birdFriction; // Lower brightness and raise game speed linked to score
     public bool textFriction;
+    public FindAndEditTMPElements findAndEditTMPElements;
 
     [Header("App Badges")] 
     public bool messagesBadge;
@@ -112,6 +114,8 @@ public class GameManager : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    
+    
 
     private void InitAnalytics()
     {

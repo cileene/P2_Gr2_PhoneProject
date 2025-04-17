@@ -188,12 +188,14 @@ namespace MessagesApp
         {
             TextMeshProUGUI playerMessage = Instantiate(playerMessagePrefab, messageContainer);
             playerMessage.text = message;
+            StartCoroutine(GameManager.Instance.findAndEditTMPElements.DelayAndEditTMPElements());
         }
 
         private void DisplayBotMessage(string message)
         {
             TextMeshProUGUI botMessage = Instantiate(botMessagePrefab, messageContainer);
             botMessage.text = message;
+            StartCoroutine(GameManager.Instance.findAndEditTMPElements.DelayAndEditTMPElements());
         }
 
         // Save the current conversation state to a JSON file

@@ -4,8 +4,21 @@ namespace GeneralUtils
     {
         private static System.Random CreateDeterministicRng(string input)
         {
-            int hash = input.GetHashCode();
+            int hash = DeterministicHash(input);
             return new System.Random(hash);
+        }
+
+        private static int DeterministicHash(string input)
+        {
+            unchecked
+            {
+                int hash = 23;
+                foreach (char c in input)
+                {
+                    hash = hash * 31 + c;
+                }
+                return hash;
+            }
         }
 
         public static string ToGibberish(string input)
