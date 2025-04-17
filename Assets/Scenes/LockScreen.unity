@@ -940,102 +940,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: gyroBadge
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: gyroLoading
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: photosBadge
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: useSaveData
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: birdFriction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: currentScene
-      value: LockScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: deathLoading
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: notesLoading
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: playerDrinks
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: playerSmokes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: textFriction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: calendarBadge
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: idMojiLoading
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: messagesBadge
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: obfuscateData
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: phoneUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: progressStory
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: calendarLoading
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: settingsLoading
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: oldPhotosLoading
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: shuffleHomeScreen
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: findAndEditTMPElements
-      value: 
-      objectReference: {fileID: 1716131201}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: birdScoreSetsBrightness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      propertyPath: playerLivingEnvironment
-      value: Urban
-      objectReference: {fileID: 0}
     - target: {fileID: 8566268782444468105, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1043,10 +947,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8566268782444468105, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1716131201}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
 --- !u!1 &1545822130
 GameObject:
@@ -31235,23 +31136,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1716131197 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8566268782444468105, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
-  m_PrefabInstance: {fileID: 1478661033}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1716131201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716131197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a65607fa3840e3bee43253bead8ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1910417079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31341,50 +31225,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5860851136111721526, guid: 1d6110aea54254bc78ec15222e035fb9, type: 3}
   m_PrefabInstance: {fileID: 1018841576720327471}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2045442893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045442895}
-  - component: {fileID: 2045442894}
-  m_Layer: 0
-  m_Name: HomeButton Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2045442894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045442893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509c6bd520a04d7fa01d2dcbe4bd493e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2045442895
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045442893}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1018841576720327471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31492,7 +31332,7 @@ PrefabInstance:
     - target: {fileID: 4395469564159445901, guid: 1d6110aea54254bc78ec15222e035fb9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2045442894}
+      objectReference: {fileID: 0}
     - target: {fileID: 4395469564159445901, guid: 1d6110aea54254bc78ec15222e035fb9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -31582,5 +31422,4 @@ SceneRoots:
   - {fileID: 246163947}
   - {fileID: 1478661033}
   - {fileID: 1018841576720327471}
-  - {fileID: 2045442895}
   - {fileID: 659638139}

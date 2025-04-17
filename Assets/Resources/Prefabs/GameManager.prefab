@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2976668727819382677}
   - component: {fileID: 3254911076850724050}
   - component: {fileID: 1362341847433836075}
+  - component: {fileID: 750249020288364184}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,10 +46,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8917efe5ea004f5cbf45e57b6652945a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useSaveData: 1
   phoneUnlocked: 1
   currentLevel: 0
-  currentScene: LockScreenScene
+  currentScene: LockScreen
+  progressStory: 1
+  birdHighScore: 0
+  shuffleHomeScreen: 1
+  birdFriction: 1
+  textFriction: 0
+  findAndEditTMPElements: {fileID: 750249020288364184}
+  messagesBadge: 1
+  photosBadge: 0
+  settingsBadge: 0
+  deathBadge: 0
+  happyBirdBadge: 0
+  gyroBadge: 0
+  oldPhotosBadge: 0
+  notesBadge: 0
+  calendarBadge: 0
+  idMojiBadge: 0
+  messagesLoading: 0
+  photosLoading: 0
+  settingsLoading: 0
+  deathLoading: 0
+  happyBirdLoading: 0
+  gyroLoading: 0
+  oldPhotosLoading: 1
+  notesLoading: 1
+  calendarLoading: 1
+  idMojiLoading: 0
+  currentChoiceIndex: 0
+  playerChoices: 
+  playerName: 
+  playerAge: 0
+  playerSmokes: 0
+  playerCigarettesPerDay: 0
+  playerDrinks: 0
+  playerDrinksPerWeek: 0
+  playerExerciseSessionsPerWeek: 0
+  playerDietRating: 0
+  playerSleepHours: 0
+  playerRiskRating: 0
+  playerLivingEnvironment: Urban
+  playerFamilyHistory: 0
+  playerDeathYear: 0
+  useSaveData: 1
+  obfuscateData: 1
+  dataPath: 
+  messagesDataPath: 
+  selfiePicture: 
 --- !u!114 &1362341847433836075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,3 +109,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetFrameRate: 60
   vSync: 1
+--- !u!114 &750249020288364184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566268782444468105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a65607fa3840e3bee43253bead8ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
