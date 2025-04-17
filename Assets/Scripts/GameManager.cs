@@ -25,8 +25,11 @@ public class GameManager : MonoBehaviour
     public bool shuffleHomeScreen;
     public bool birdFriction; // Lower brightness and raise game speed linked to score
     public bool textFriction;
-    public FindAndEditTMPElements findAndEditTMPElements;
 
+    [Header("Data Paths")]
+    public bool useSaveData = true;
+    public bool obfuscateData = true;
+    
     [Header("App Badges")] 
     public bool messagesBadge;
     public bool photosBadge; 
@@ -70,14 +73,13 @@ public class GameManager : MonoBehaviour
     public bool playerFamilyHistory;
     public int playerDeathYear;
 
-    [Header("Data Paths")]
-    public bool useSaveData = true;
-    public bool obfuscateData = true;
-    public string dataPath;
+    
+    [HideInInspector] public string dataPath;
+    [HideInInspector] public string messagesDataPath;
+    [HideInInspector] public string selfiePicture;
+    [HideInInspector] public FindAndEditTMPElements findAndEditTMPElements;
     public string SaveData { get; private set; }
-    public string messagesDataPath;
     private const string FileName = "SaveData.json";
-    public string selfiePicture;
     
     // ------------------ METHODS ------------------
     private void Awake()
@@ -85,6 +87,8 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            if (findAndEditTMPElements == null)
+                findAndEditTMPElements = GetComponent<FindAndEditTMPElements>();
             DontDestroyOnLoad(gameObject);
             InitFileSystem();
             InitSaveData();

@@ -10,14 +10,16 @@ public class SetSelfiePicture : MonoBehaviour
     
     private void Start()
     {
-        //Load the selfie picture when the script starts
         LoadSelfiePicture();
-        SetDimensions();
 
-        // Set the selfie picture as the texture of the RawImage component
         if (selfieTexture != null)
         {
+            SetDimensions();
             GetComponent<RawImage>().texture = selfieTexture;
+        }
+        else
+        {
+            Debug.LogWarning("Selfie texture not loaded. No selfie file found?");
         }
     }
     
@@ -31,6 +33,7 @@ public class SetSelfiePicture : MonoBehaviour
             byte[] imageData = File.ReadAllBytes(selfiePath);
             selfieTexture = new Texture2D(2, 2);
             selfieTexture.LoadImage(imageData);
+            Debug.Log("Trying to load selfie from path: " + selfiePath);
         }
     }
     
