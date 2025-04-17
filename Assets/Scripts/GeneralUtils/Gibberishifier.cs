@@ -2,28 +2,8 @@ namespace GeneralUtils
 {
     public static class Gibberishifier
     {
-        private static System.Random CreateDeterministicRng(string input)
-        {
-            int hash = DeterministicHash(input);
-            return new System.Random(hash);
-        }
-
-        private static int DeterministicHash(string input)
-        {
-            unchecked
-            {
-                int hash = 23;
-                foreach (char c in input)
-                {
-                    hash = hash * 31 + c;
-                }
-                return hash;
-            }
-        }
-
         public static string ToGibberish(string input)
         {
-            var rng = CreateDeterministicRng(input);
             var result = new char[input.Length];
             bool inPlaceholder = false;
 
@@ -41,7 +21,7 @@ namespace GeneralUtils
                 else if (c == '}') inPlaceholder = false;
 
                 if (!inPlaceholder && char.IsLetter(c))
-                    result[i] = RandomCharSameCase(c, rng);
+                    result[i] = ShiftCharTwoPositions(c);
                 else
                     result[i] = c;
             }
@@ -49,11 +29,12 @@ namespace GeneralUtils
             return new string(result);
         }
 
-        private static char RandomCharSameCase(char c, System.Random rng)
+        private static char ShiftCharTwoPositions(char c)
         {
-            bool isUpper = char.IsUpper(c);
-            char baseChar = isUpper ? 'A' : 'a';
-            return (char)(baseChar + rng.Next(0, 26));
+            if (char.IsUpper(c))
+                return (char)('A' + (c - 'A' + 2) % 26);
+            else
+                return (char)('a' + (c - 'a' + 2) % 26);
         }
     }
 }
