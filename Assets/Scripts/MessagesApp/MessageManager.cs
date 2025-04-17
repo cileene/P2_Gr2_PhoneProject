@@ -5,6 +5,7 @@ using CustomUnityAnalytics;
 using TMPro;
 using Unity.Services.Analytics;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,6 +13,9 @@ namespace MessagesApp
 {
     public class MessageManager : MonoBehaviour
     {
+        public AudioClip messageSendSound;
+        public AudioClip messageReceiveSound;
+        
         public GameObject buttonChoice1;
         public GameObject buttonChoice2;
         public List<string> playerButtonMessages;
@@ -116,6 +120,8 @@ namespace MessagesApp
             _playerChoices.Add(_currentChoiceIndex + choiceIndex); // Save the second choice
 
             UGSSnitch(choiceIndex); // Call home to UGS
+            
+            SoundManager.Instance.PlaySound(messageSendSound);
         
             DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
             StartCoroutine(DisplayLoadingDots());
@@ -153,6 +159,7 @@ namespace MessagesApp
         IEnumerator RunChoiceAfterDelay(int choiceIndex)
         {
             yield return new WaitForSeconds(2f); // Wait for 2 seconds
+            SoundManager.Instance.PlaySound(messageReceiveSound);
             DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
             if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
             _currentChoiceIndex += 2; // Move to the next choices
