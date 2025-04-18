@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Home
+  homeSound: {fileID: 8300000, guid: 67f05535cb4e84da086c9e2fa106fd74, type: 3}
 --- !u!4 &324965326
 Transform:
   m_ObjectHideFlags: 0
@@ -856,6 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: MessageChatBente
+  homeSound: {fileID: 8300000, guid: e1711347a665d47d39bb97609633774f, type: 3}
 --- !u!4 &355503595
 Transform:
   m_ObjectHideFlags: 0
@@ -1656,6 +1658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Sandra
+  homeSound: {fileID: 8300000, guid: e1711347a665d47d39bb97609633774f, type: 3}
 --- !u!4 &1302717358
 Transform:
   m_ObjectHideFlags: 0
