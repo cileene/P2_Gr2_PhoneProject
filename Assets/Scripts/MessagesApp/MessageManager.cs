@@ -263,7 +263,7 @@ namespace MessagesApp
         {
             string sceneName = SceneManager.GetActiveScene().name;
             string saveFileName = $"conversationState_{sceneName}.json";
-            string path = Path.Combine(Application.persistentDataPath + "/Player_Data/", saveFileName);
+            string path = Path.Combine(GameManager.Instance.dataPath, saveFileName);
 
             if (File.Exists(path))
             {

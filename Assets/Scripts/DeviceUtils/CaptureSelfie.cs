@@ -13,7 +13,7 @@ namespace DeviceUtils
         private void Start()
         {
             // check if there's already a selfie saved
-            if (File.Exists(Application.persistentDataPath + "/Player_Data/Selfie.png"))
+            if (File.Exists(GameManager.Instance.dataPath + "/Selfie.png"))
             {
                 return;
             }
@@ -23,7 +23,7 @@ namespace DeviceUtils
 
         public void CaptureSelfieNow()
         {
-            _dataPath = Application.persistentDataPath + "/Player_Data/Selfie.png";
+            _dataPath = GameManager.Instance.dataPath + "/Selfie.png";
             StartCoroutine(InitializeCameraAndCapture());
         }
 

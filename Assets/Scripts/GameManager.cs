@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
 
     public void InitFileSystem()
     {
-        dataPath = Application.persistentDataPath + "/Player_Data/"; //TODO: rename to system_data
+        dataPath = Application.persistentDataPath + "/system_data/"; //TODO: rename to system_data
         Debug.Log(dataPath);
 
         if (Directory.Exists(dataPath))
