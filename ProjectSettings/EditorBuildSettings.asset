@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/oldPhotos.unity
     guid: 6b8ee598587b94aecad480104924eac3
+  - enabled: 1
+    path: Assets/Scenes/Paris.unity
+    guid: 2d2443c988a224827afa2de732675231
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 077e718e96be148b3a261fd7c71ebc58, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: df700abf3843c45c3905032f4f6e49fe, type: 2}
