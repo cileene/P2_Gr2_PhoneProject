@@ -7,14 +7,22 @@ public class GoToScene : MonoBehaviour
     public AudioClip homeSound;
     public void LoadScene()
     {
-        if (SoundManager.Instance != null)
+        if (SoundManager.Instance != null && homeSound != null)
         {
             SoundManager.Instance.PlaySound(homeSound);
         }
-        else 
+        else if (SoundManager.Instance == null)
         {
-            Debug.LogWarning("no sound");
+            Debug.LogWarning("SoundManager is missing.");
         }
-        if (GameManager.Instance.phoneUnlocked) SceneHandler.LoadScene(sceneToLoad);
+        else if (homeSound == null)
+        {
+            Debug.LogWarning("HomeSound clip is not assigned.");
+        }
+
+        if (GameManager.Instance.phoneUnlocked)
+        {
+            SceneHandler.LoadScene(sceneToLoad);
+        }
     }
 }
