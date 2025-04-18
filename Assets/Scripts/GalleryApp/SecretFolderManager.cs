@@ -8,7 +8,12 @@ namespace GalleryApp
         public GameObject passwordPanel;
         public TMP_InputField passwordInput;
         public GameObject secretFolderPanel;
-        private string correctPassword = GameManager.Instance.playerDeathYear.ToString();
+        private string correctPassword;
+
+        private void Start()
+        {
+            correctPassword = GameManager.Instance.playerDeathYear.ToString();
+        }
 
         public void OpenPasswordPrompt()
         {
