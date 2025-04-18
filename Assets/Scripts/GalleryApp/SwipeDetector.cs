@@ -81,7 +81,6 @@ namespace GalleryApp
                     Zoom(scrollValue * _zoomSpeed);
                 }
             }
- 
             // Zoom using keyboard arrow keys for testing
             if (Keyboard.current != null)
             {
