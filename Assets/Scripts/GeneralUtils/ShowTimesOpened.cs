@@ -8,7 +8,8 @@ namespace GeneralUtils
         private enum OpenedType
         {
             Apps,
-            Conversations
+            Conversations,
+            Photos
         }
 
         [SerializeField]
@@ -34,6 +35,11 @@ namespace GeneralUtils
                     int openedConvCount = OpenTrackerUtils.GetOpenedCount(GameManager.Instance.conversationCounts);
                     int totalConvCount = OpenTrackerUtils.GetTotalCount(GameManager.Instance.conversationNames);
                     textComponent.text = $"{openedConvCount} / {totalConvCount}";
+                    break;
+                case OpenedType.Photos:
+                    int openedPhotoCount = OpenTrackerUtils.GetOpenedCount(GameManager.Instance.photoCounts);
+                    int totalPhotoCount = OpenTrackerUtils.GetTotalCount(GameManager.Instance.photoNames);
+                    textComponent.text = $"{openedPhotoCount} / {totalPhotoCount}";
                     break;
             }
         }

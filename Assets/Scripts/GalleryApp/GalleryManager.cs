@@ -1,6 +1,7 @@
 using CustomUnityAnalytics;
 using UnityEngine;
 using UnityEngine.UI;
+using GeneralUtils;
 
 namespace GalleryApp
 {
@@ -16,7 +17,8 @@ namespace GalleryApp
             _currentIndex = index;
             fullScreenImage.sprite = images[_currentIndex];
             imageViewPanel.SetActive(true);
-            UGSSnitch();
+            UGSSnitch(); // remote tracking
+            TrackPhotoOpen(); // local tracking
         }
 
         public void NextImage()
@@ -27,6 +29,7 @@ namespace GalleryApp
                 fullScreenImage.sprite = images[_currentIndex];
             }
             UGSSnitch();
+            TrackPhotoOpen();
         }
 
         public void PreviousImage()
@@ -38,6 +41,7 @@ namespace GalleryApp
             }
 
             UGSSnitch();
+            TrackPhotoOpen();
         }
 
         public void CloseImageView()
@@ -52,6 +56,18 @@ namespace GalleryApp
                 PhotoIndex = _currentIndex
             };
             Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(photoViewed);
+        }
+
+        /// <summary>Track the currently displayed photo as opened.</summary>
+        private void TrackPhotoOpen()
+        {
+            string photoName = images[_currentIndex].name;
+            if (GameManager.Instance.photoNames.Contains(photoName))
+            {
+                OpenTrackerUtils.Register(GameManager.Instance.photoNames, GameManager.Instance.photoCounts, photoName);
+                if (GameManager.Instance.useSaveData)
+                    SaveDataManager.WriteSaveData();
+            }
         }
     }
 }

@@ -5,7 +5,6 @@ using GeneralUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 [Serializable]
 public class GameManager : MonoBehaviour
 {
@@ -71,14 +70,6 @@ public class GameManager : MonoBehaviour
     public bool playerFamilyHistory;
     public int playerDeathYear;
 
-    
-    [HideInInspector] public string dataPath;
-    [HideInInspector] public string messagesDataPath;
-    [HideInInspector] public string selfiePicture;
-    [HideInInspector] public FindAndEditTMPElements findAndEditTMPElements;
-    public string SaveData { get; private set; }
-    private const string FileName = "SaveData.json";
-    
     [Header("App Tracking")]
     public List<string> appNames = new List<string>
     {
@@ -89,9 +80,25 @@ public class GameManager : MonoBehaviour
     public List<int> appCounts = new List<int>();
 
     [Header("Conversation Tracking")]
-    public List<string> conversationNames = new List<string> { "Sandra", "Paris" };
+    public List<string> conversationNames = new List<string>
+    {
+        "Sandra", "Paris"
+    };
     [SerializeField]
     public List<int> conversationCounts = new List<int>();
+
+    [Header("Photo Tracking")]
+    public List<string> photoNames = new List<string>();
+    [SerializeField]
+    public List<int> photoCounts = new List<int>();
+    
+    [HideInInspector] public string dataPath;
+    [HideInInspector] public string messagesDataPath;
+    [HideInInspector] public string selfiePicture;
+    [HideInInspector] public FindAndEditTMPElements findAndEditTMPElements;
+    public string SaveData { get; private set; }
+    private const string FileName = "SaveData.json";
+    
     
     // ------------------ METHODS ------------------
     private void Awake()
@@ -105,15 +112,32 @@ public class GameManager : MonoBehaviour
             
             OpenTrackerUtils.Init(appNames, appCounts);
             OpenTrackerUtils.Init(conversationNames, conversationCounts);
+            OpenTrackerUtils.Init(photoNames, photoCounts);
             
             InitFileSystem();
             InitSaveData();
             InitAnalytics();
+            
+            // subscribe to scene loaded event
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void InitPhotoNames()
+    {
+        // initialize photo tracking names and counts
+        if (photoNames.Count == 0)
+        {
+            var gallery = UnityEngine.Object.FindAnyObjectByType<GalleryApp.GalleryManager>();
+            if (gallery != null)
+            {
+                foreach (var sprite in gallery.images)
+                    photoNames.Add(sprite.name);
+            }
         }
     }
 
@@ -133,16 +157,22 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // count app or conversation opens generically
+        // count app or conversation opens 
         if (OpenTrackerUtils.Register(appNames, appCounts, scene.name))
         {
-            Debug.Log($"App {scene.name} opened {OpenTrackerUtils.GetTimes(appNames, appCounts, scene.name)} time(s).");
             if (useSaveData) SaveDataManager.WriteSaveData();
         }
         else if (OpenTrackerUtils.Register(conversationNames, conversationCounts, scene.name))
         {
-            Debug.Log($"Conversation {scene.name} opened {OpenTrackerUtils.GetTimes(conversationNames, conversationCounts, scene.name)} time(s).");
             if (useSaveData) SaveDataManager.WriteSaveData();
+        }
+        // when entering the Photos scene, build the photo list
+        if (scene.name == "Photos")
+        {
+            InitPhotoNames();
+            OpenTrackerUtils.Init(photoNames, photoCounts);
+            if (useSaveData)
+                SaveDataManager.WriteSaveData();
         }
     }
     
@@ -172,7 +202,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"New directory created at {dataPath}");
     }
 
-    public void InitSaveData()//TODO: Encrypt this
+    public void InitSaveData()
     {
         SaveData = dataPath + FileName;
 
