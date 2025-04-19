@@ -5,8 +5,6 @@ using GeneralUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Here we track the game state using a singleton pattern
-// And now we also write data to the player's device
 
 [Serializable]
 public class GameManager : MonoBehaviour
@@ -81,6 +79,20 @@ public class GameManager : MonoBehaviour
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
     
+    [Header("App Tracking")]
+    public List<string> appNames = new List<string>
+    {
+        "Messages", "Photos", "Settings", "Death", "HappyBird",
+        "Gyro", "oldPhotos", "Notes", "Calendar", "IDMoji"
+    };
+    [SerializeField]
+    public List<int> appCounts = new List<int>();
+
+    [Header("Conversation Tracking")]
+    public List<string> conversationNames = new List<string> { "Sandra", "Paris" };
+    [SerializeField]
+    public List<int> conversationCounts = new List<int>();
+    
     // ------------------ METHODS ------------------
     private void Awake()
     {
@@ -90,9 +102,14 @@ public class GameManager : MonoBehaviour
             if (findAndEditTMPElements == null)
                 findAndEditTMPElements = GetComponent<FindAndEditTMPElements>();
             DontDestroyOnLoad(gameObject);
+            
+            OpenTrackerUtils.Init(appNames, appCounts);
+            OpenTrackerUtils.Init(conversationNames, conversationCounts);
+            
             InitFileSystem();
             InitSaveData();
             InitAnalytics();
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -113,13 +130,26 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("No current scene found in save data.");
         }
     }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // count app or conversation opens generically
+        if (OpenTrackerUtils.Register(appNames, appCounts, scene.name))
+        {
+            Debug.Log($"App {scene.name} opened {OpenTrackerUtils.GetTimes(appNames, appCounts, scene.name)} time(s).");
+            if (useSaveData) SaveDataManager.WriteSaveData();
+        }
+        else if (OpenTrackerUtils.Register(conversationNames, conversationCounts, scene.name))
+        {
+            Debug.Log($"Conversation {scene.name} opened {OpenTrackerUtils.GetTimes(conversationNames, conversationCounts, scene.name)} time(s).");
+            if (useSaveData) SaveDataManager.WriteSaveData();
+        }
+    }
     
     public void DestroyGameManager()
     {
         Destroy(gameObject);
     }
-    
-    
 
     private void InitAnalytics()
     {
@@ -156,4 +186,17 @@ public class GameManager : MonoBehaviour
         if (useSaveData) SaveDataManager.WriteSaveData();
         Debug.Log($"New file created at {SaveData}");
     }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
+    // also save on application quit
+    private void OnApplicationQuit()
+    {
+        if (useSaveData)
+            SaveDataManager.WriteSaveData();
+    }
+
 }
