@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool birdFriction; // Lower brightness and raise game speed linked to score
     public bool textFriction;
     public bool rotationFriction;
+    public float rotationChance = 0.1f; // 10% chance to apply rotation friction
 
     [Header("Data Paths")]
     public bool useSaveData = true;
