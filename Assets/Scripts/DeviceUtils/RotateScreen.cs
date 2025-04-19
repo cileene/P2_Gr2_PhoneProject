@@ -18,8 +18,15 @@ namespace DeviceUtils
             float roll = Random.value;
             rectTransform = GetComponent<RectTransform>();
             
-            // 1) 180° flip chance
-            if (GameManager.Instance.rotationFriction && roll < GameManager.Instance.rotationChance)
+            // continuous spin chance (smaller chance first)
+            if (GameManager.Instance.rotationFriction && roll < _spinChance)
+            {
+                _isSpinning = true;
+                // choose random spin direction
+                _spinDirection = Random.value < 0.5f ? 1f : -1f;
+            }
+            // 180° flip chance
+            else if (GameManager.Instance.rotationFriction && roll < GameManager.Instance.rotationChance)
             {
                 if (rectTransform != null)
                 {
@@ -30,14 +37,6 @@ namespace DeviceUtils
                     Debug.LogWarning("RectTransform component not found on this GameObject.");
                 }
             }
-            // 2) continuous spin chance
-            else if (GameManager.Instance.rotationFriction && roll < _spinChance)
-            {
-                _isSpinning = true;
-                // choose random spin direction
-                _spinDirection = Random.value < 0.5f ? 1f : -1f;
-            }
-            // 3) otherwise, do nothing
         }
 
         private void Update()
