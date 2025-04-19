@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public bool shuffleHomeScreen;
     public bool birdFriction; // Lower brightness and raise game speed linked to score
     public bool textFriction;
+    public bool rotationFriction;
 
     [Header("Data Paths")]
     public bool useSaveData = true;
