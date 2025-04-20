@@ -69,18 +69,19 @@ namespace GalleryApp
         
             scrollRect.OnEndDrag(eventData); 
         }
-
+        
+        public void zoomIn()
+        {
+            Zoom(0.5f);
+        }
+        public void zoomOut()
+        {
+            Zoom(-0.5f);
+            
+        }
         private void Update()
         {
-            // Zoom with mouse scroll wheel
-            if (Mouse.current != null)
-            {
-                float scrollValue = Mouse.current.scroll.ReadValue().y;
-                if (Mathf.Abs(scrollValue) > 0.01f)
-                {
-                    Zoom(scrollValue * _zoomSpeed);
-                }
-            }
+       
             // Zoom using keyboard arrow keys for testing
             if (Keyboard.current != null)
             {
