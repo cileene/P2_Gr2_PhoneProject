@@ -16,11 +16,8 @@ namespace GalleryApp
         private Vector2 _startDragPosition;
 
         private float _swipeThreshold = 50f; // Minimum swipe distance to detect
-        private float _zoomSpeed = 0.01f;
-        private float _minZoom = 0.5f;
         private float _maxZoom = 4f;
         private RectTransform _contentRect;
-        private float? lastPinchDistance = null;
         private float _originalZoom;
 
         void Start()

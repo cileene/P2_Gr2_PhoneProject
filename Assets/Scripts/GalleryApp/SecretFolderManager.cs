@@ -12,7 +12,7 @@ namespace GalleryApp
 
         private void Start()
         {
-            correctPassword = GameManager.Instance.playerDeathYear.ToString();
+            correctPassword = GameManager.Instance.playerBirthYear.ToString();
         }
 
         public void OpenPasswordPrompt()
@@ -24,6 +24,7 @@ namespace GalleryApp
         {
             if (passwordInput.text == correctPassword)
             {
+                GameManager.Instance.seenGyroHint = true;
                 secretFolderPanel.SetActive(true);
                 passwordPanel.SetActive(false);
             }

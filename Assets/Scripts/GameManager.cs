@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
     public string currentScene; // Default scene
     public bool progressStory;
     public int birdHighScore;
+    public bool deathGamePlayed;
+    public bool lastSandraMessage;
+    public bool wasShaken;
+    public bool seenGyroHint;
+    public bool gyroCodeSeen;
+    public bool playerIsTrapped;
     
     [Header("Friction Strategies")]
     public bool shuffleHomeScreen;
@@ -60,6 +66,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Info")]
     public string playerName;
     public int playerAge;
+    public int playerBirthYear;
     public bool playerSmokes;
     public int playerCigarettesPerDay;
     public bool playerDrinks;
