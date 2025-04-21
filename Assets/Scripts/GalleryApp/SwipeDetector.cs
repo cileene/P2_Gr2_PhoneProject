@@ -15,7 +15,7 @@ namespace GalleryApp
         private float _swipeThreshold = 50f; // Minimum swipe distance to detect
         private float _zoomSpeed = 0.01f;
         private float _minZoom = 0.5f;
-        private float _maxZoom = 2f;
+        private float _maxZoom = 4f;
         private RectTransform _contentRect;
         private float? lastPinchDistance = null;
         private float _originalZoom;
@@ -69,18 +69,19 @@ namespace GalleryApp
         
             scrollRect.OnEndDrag(eventData); 
         }
-
+        
+        public void zoomIn()
+        {
+            Zoom(0.5f);
+        }
+        public void zoomOut()
+        {
+            Zoom(-0.5f);
+            
+        }
         private void Update()
         {
-            // Zoom with mouse scroll wheel
-            if (Mouse.current != null)
-            {
-                float scrollValue = Mouse.current.scroll.ReadValue().y;
-                if (Mathf.Abs(scrollValue) > 0.01f)
-                {
-                    Zoom(scrollValue * _zoomSpeed);
-                }
-            }
+       
             // Zoom using keyboard arrow keys for testing
             if (Keyboard.current != null)
             {
@@ -102,6 +103,8 @@ namespace GalleryApp
 
                 if (touch0.isInProgress && touch1.isInProgress)
                 {
+                    scrollRect.enabled = false;
+                    swipeEnabled = false;
                     Vector2 pos0 = touch0.position.ReadValue();
                     Vector2 pos1 = touch1.position.ReadValue();
                     float currentDistance = Vector2.Distance(pos0, pos1);
@@ -109,18 +112,21 @@ namespace GalleryApp
                     if (!lastPinchDistance.HasValue)
                     {
                         lastPinchDistance = currentDistance;
+                        
                     }
                     else
                     {
                         float deltaDistance = currentDistance - lastPinchDistance.Value;
                         Zoom(deltaDistance * _zoomSpeed);
                         lastPinchDistance = currentDistance;
+                        scrollRect.enabled = true;
                     }
                 }
             }
             else
             {
                 lastPinchDistance = null;
+                swipeEnabled = true;
             }
         }
 
