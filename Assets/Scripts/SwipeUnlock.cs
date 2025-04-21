@@ -5,33 +5,42 @@ using UnityEngine.UI;
 
 public class SwipeDetector : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    public AudioClip homeSound;
     public ScrollRect scrollRect;
     private Vector2 _startDragPosition;
-    
+
     private float _swipeThreshold = 50f; // Minimum swipe distance to detect
-    
+
     public void OnBeginDrag(PointerEventData eventData)
     {
-            _startDragPosition = eventData.position;
-            
-            scrollRect.OnBeginDrag(eventData); 
+        _startDragPosition = eventData.position;
+
+        scrollRect.OnBeginDrag(eventData);
     }
+
     public void OnDrag(PointerEventData eventData)
     {
-            scrollRect.OnDrag(eventData); 
+        scrollRect.OnDrag(eventData);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-       
         float deltaX = eventData.position.y - _startDragPosition.y;
-        
+
         if (Mathf.Abs(deltaX) > _swipeThreshold)
         {
-             Debug.Log("openPhone");
-             SceneHandler.LoadScene("Home");
+            Debug.Log("openPhone");
+            SoundManager.Instance.PlaySound(homeSound);
+            if (GameManager.Instance.currentScene == "Home")
+            {
+                SceneHandler.LoadScene("LockScreen");
+            }
+            else
+            {
+                SceneHandler.LoadScene("Home");
+            }
         }
-        
-        scrollRect.OnEndDrag(eventData); 
+
+        scrollRect.OnEndDrag(eventData);
     }
 }
