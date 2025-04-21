@@ -1327,7 +1327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 710.7001}
+  m_AnchoredPosition: {x: -392.5, y: 710.6999}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
   scrollRect: {fileID: 911259209}
-  popUp: {fileID: 0}
+  popUp: {fileID: 987165999}
   nextSceneName: ThanksForPlaying
 --- !u!4 &589953924
 Transform:
@@ -1965,11 +1965,11 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 908064028}
   m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99929667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2229,6 +2229,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8094b41ee97b14f08a8d04f0a5293fed, type: 3}
+--- !u!1 &987165999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7419505003147238701, guid: 8094b41ee97b14f08a8d04f0a5293fed, type: 3}
+  m_PrefabInstance: {fileID: 987165998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1018858756
 GameObject:
   m_ObjectHideFlags: 0

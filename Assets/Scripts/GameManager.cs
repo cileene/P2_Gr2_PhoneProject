@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     
     // ------------------ VARIABLES ------------------
-    [Header("Progression")] 
+    [Header("PROGRESSION")] 
+    [Header("Level 0")]
     public bool phoneUnlocked;
     public int currentLevel;
     public string currentScene; // Default scene
@@ -19,22 +20,24 @@ public class GameManager : MonoBehaviour
     public int birdHighScore;
     public bool deathGamePlayed;
     public bool lastSandraMessage;
+    [Header("Level 1")]
     public bool wasShaken;
     public bool seenGyroHint;
     public bool gyroCodeSeen;
     public bool playerIsTrapped;
     
-    [Header("Friction Strategies")]
+    [Header("FRICTION STRATEGIES")]
     public bool shuffleHomeScreen;
     public bool birdFriction; // Lower brightness and raise game speed linked to score
     public bool textFriction;
     public bool rotationFriction;
     public float rotationChance = 0.1f; // 10% chance to apply rotation friction
 
-    [Header("Data Paths")]
+    [Header("SAVE DATA")]
     public bool useSaveData = true;
     public bool obfuscateData = true;
     
+    [Header("APP STATES")]
     [Header("App Badges")] 
     public bool messagesBadge;
     public bool photosBadge; 

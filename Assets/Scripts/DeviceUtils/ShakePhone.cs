@@ -1,6 +1,5 @@
 using FlappyBirdScripts;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace DeviceUtils
 {

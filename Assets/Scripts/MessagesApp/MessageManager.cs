@@ -15,7 +15,6 @@ namespace MessagesApp
     {
         public AudioClip messageSendSound;
         public AudioClip messageReceiveSound;
-
         public GameObject buttonChoice1;
         public GameObject buttonChoice2;
         public List<string> playerButtonMessages;
