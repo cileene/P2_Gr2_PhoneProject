@@ -24,6 +24,7 @@ namespace GalleryApp
         {
             if (passwordInput.text == correctPassword)
             {
+                GameManager.Instance.seenGyroHint = true;
                 secretFolderPanel.SetActive(true);
                 passwordPanel.SetActive(false);
             }

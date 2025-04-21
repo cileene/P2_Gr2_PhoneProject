@@ -8,7 +8,7 @@ public static class SceneHandler
     public static void LoadScene(string sceneToLoad)
     {
         // if the scene to load is not empty, load the scene
-        if (!string.IsNullOrEmpty(sceneToLoad))
+        if (!string.IsNullOrEmpty(sceneToLoad) && !GameManager.Instance.playerIsTrapped)
         {
             Debug.Log($"Loading scene: {sceneToLoad}");
             UGSSceneTransition.HandleSceneCustomEvent(sceneToLoad); // send to Analytics
@@ -18,7 +18,7 @@ public static class SceneHandler
         }
         else
         {
-            Debug.LogWarning("Scene to load is not specified.");
+            Debug.LogWarning("No new scene for you");
         }
     }
 }
