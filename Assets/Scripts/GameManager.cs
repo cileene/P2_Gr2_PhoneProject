@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int birdHighScore;
     public bool deathGamePlayed;
     public bool lastSandraMessage;
+    public bool wasShaken;
     public bool seenGyroHint;
     public bool gyroCodeSeen;
     public bool playerIsTrapped;

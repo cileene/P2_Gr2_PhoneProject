@@ -10,7 +10,6 @@ namespace DeviceUtils
         public float minShakeInterval = 0.5f;
         private float sqrShakeThreshold;
         private float lastShakeTime;
-        private bool _wasShaken = false;
         [SerializeField] private GameObject background;
         private float _animationSpeed;
 
@@ -25,10 +24,10 @@ namespace DeviceUtils
         {
             Vector3 acceleration = Input.acceleration;
             if (acceleration.sqrMagnitude >= sqrShakeThreshold
-                && Time.unscaledTime - lastShakeTime >= minShakeInterval && !_wasShaken)
+                && Time.unscaledTime - lastShakeTime >= minShakeInterval && !GameManager.Instance.wasShaken)
             {
                 Debug.Log("Phone was shaken!");
-                _wasShaken = true;
+                GameManager.Instance.wasShaken = true;
                 lastShakeTime = Time.time;
                 ToggleBirdHardMode();
             }
