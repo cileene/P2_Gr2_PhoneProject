@@ -1,36 +1,21 @@
 using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 // Take UI input and assign it to a variable
 public class UIInputToVar : MonoBehaviour
 {
     public Slider slider;
     public InputField inputField;
+    public TMP_InputField tmpInputField;
     public Dropdown dropdown;
     public Button button;
     public Toggle toggle;
     public TextMeshProUGUI text;
 
     public string inputObject;
-
-    private enum InputType
-    {
-        AgeSlider,
-        SmokeToggle,
-        SmokeSlider,
-        DrinkToggle,
-        DrinkSlider,
-        ExerciseSlider,
-        DietSlider,
-        SleepSlider,
-        RiskSlider,
-        EnvironmentDropdown,
-        HistoryToggle,
-        PlayerName
-    }
 
     public void Start()
     {
@@ -48,8 +33,20 @@ public class UIInputToVar : MonoBehaviour
     {
         switch (inputObject)
         {
-            case "AgeSlider":
-                GameManager.Instance.playerAge = (int)slider.value;
+            case "BirthYear":
+                // Strip all non-digit characters before parsing
+                string cleanedInput = Regex.Replace(text.text, @"\D+", "");
+                int parsedYear;
+                if (int.TryParse(cleanedInput, out parsedYear))
+                {
+                    GameManager.Instance.playerBirthYear = parsedYear;
+                    int age = DateTime.Now.Year - parsedYear;
+                    GameManager.Instance.playerAge = age;
+                }
+                else
+                {
+                    Debug.LogWarning($"Invalid birth year input: '{text.text}'");
+                }
                 break;
             case "SmokeToggle":
                 GameManager.Instance.playerSmokes = toggle.isOn;
@@ -97,6 +94,4 @@ public class UIInputToVar : MonoBehaviour
 
         SaveDataManager.TriggerSave();
     }
-    
-    
 }

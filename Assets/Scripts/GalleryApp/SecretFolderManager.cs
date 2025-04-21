@@ -12,7 +12,7 @@ namespace GalleryApp
 
         private void Start()
         {
-            correctPassword = GameManager.Instance.playerDeathYear.ToString();
+            correctPassword = GameManager.Instance.playerBirthYear.ToString();
         }
 
         public void OpenPasswordPrompt()

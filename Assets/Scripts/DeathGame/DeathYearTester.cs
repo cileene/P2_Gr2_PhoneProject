@@ -72,6 +72,7 @@ namespace DeathGame
             {
                 PlayerName = GameManager.Instance.playerName,
                 PlayerAge = GameManager.Instance.playerAge,
+                PlayerBirthYear = GameManager.Instance.playerBirthYear,
                 PlayerSmokes = GameManager.Instance.playerSmokes,
                 PlayerCigarettesPerDay = GameManager.Instance.playerCigarettesPerDay,
                 PlayerDrinks = GameManager.Instance.playerDrinks,

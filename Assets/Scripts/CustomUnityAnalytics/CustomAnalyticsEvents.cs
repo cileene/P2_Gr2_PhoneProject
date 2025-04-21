@@ -40,6 +40,7 @@ namespace CustomUnityAnalytics
 
         public string PlayerName { set { SetParameter("playerName", value); } }
         public int PlayerAge { set { SetParameter("playerAge", value); } }
+        public int PlayerBirthYear { set { SetParameter("playerBirthYear", value); } }
         public bool PlayerSmokes { set { SetParameter("playerSmokes", value); } }
         public int PlayerCigarettesPerDay { set { SetParameter("playerCigarettesPerDay", value); } }
         public bool PlayerDrinks { set { SetParameter("playerDrinks", value); } }

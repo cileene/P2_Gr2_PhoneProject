@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Info")]
     public string playerName;
     public int playerAge;
+    public int playerBirthYear;
     public bool playerSmokes;
     public int playerCigarettesPerDay;
     public bool playerDrinks;
