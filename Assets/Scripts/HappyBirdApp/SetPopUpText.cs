@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace FlappyBirdScripts
+namespace HappyBirdApp
 {
     public class SetPopUpText : MonoBehaviour
     {

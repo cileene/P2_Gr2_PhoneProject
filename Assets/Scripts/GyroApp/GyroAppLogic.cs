@@ -1,6 +1,7 @@
 using UnityEngine;
 
-
+namespace GyroApp
+{
     public class GyroAppLogic : MonoBehaviour
     {
         private void Start()
@@ -12,3 +13,4 @@ using UnityEngine;
         }
 
     }
+}

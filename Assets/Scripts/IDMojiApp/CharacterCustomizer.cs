@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace IDMoji
+namespace IDMojiApp
 {
     public class CharacterCustomizer : MonoBehaviour
     {

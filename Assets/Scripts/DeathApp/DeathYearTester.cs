@@ -3,7 +3,7 @@ using CustomUnityAnalytics;
 using TMPro;
 using UnityEngine;
 
-namespace DeathGame
+namespace DeathApp
 {
     public class DeathYearTester : MonoBehaviour
     {

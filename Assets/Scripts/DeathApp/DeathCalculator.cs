@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace DeathGame
+namespace DeathApp
 {
     public static class DeathCalculator
     {

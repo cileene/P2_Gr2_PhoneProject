@@ -1,6 +1,6 @@
 using System;
 
-namespace DeathGame
+namespace DeathApp
 {
     [Serializable]
     public class DeathUserInput

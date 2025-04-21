@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FlappyBirdScripts
+namespace HappyBirdApp
 {
     public class Background : MonoBehaviour
     {

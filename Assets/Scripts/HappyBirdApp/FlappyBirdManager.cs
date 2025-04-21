@@ -2,7 +2,7 @@ using CustomUnityAnalytics;
 using TMPro;
 using UnityEngine;
 
-namespace FlappyBirdScripts
+namespace HappyBirdApp
 {
     [DefaultExecutionOrder(-1)]
     public class FlappyBirdManager : MonoBehaviour

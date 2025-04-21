@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DeviceUtils
+namespace GyroApp
 {
     public class CheckRotation : MonoBehaviour
     {

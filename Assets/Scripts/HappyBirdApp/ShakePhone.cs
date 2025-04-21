@@ -1,7 +1,6 @@
-using FlappyBirdScripts;
 using UnityEngine;
 
-namespace DeviceUtils
+namespace HappyBirdApp
 {
     public class ShakePhone : MonoBehaviour
     {
