@@ -85,56 +85,6 @@ namespace GalleryApp
             Zoom(-0.5f);
         }
 
-        private void Update()
-        {
-            // Zoom using keyboard arrow keys for testing
-            if (Keyboard.current != null)
-            {
-                if (Keyboard.current.upArrowKey.isPressed)
-                {
-                    Zoom(0.05f);
-                }
-
-                if (Keyboard.current.downArrowKey.isPressed)
-                {
-                    Zoom(-0.05f);
-                }
-            }
-
-            // Pinch zoom on touch devices
-            if (Touchscreen.current != null && Touchscreen.current.touches.Count >= 2)
-            {
-                var touch0 = Touchscreen.current.touches[0];
-                var touch1 = Touchscreen.current.touches[1];
-
-                if (touch0.isInProgress && touch1.isInProgress)
-                {
-                    scrollRect.enabled = false;
-                    swipeEnabled = false;
-                    Vector2 pos0 = touch0.position.ReadValue();
-                    Vector2 pos1 = touch1.position.ReadValue();
-                    float currentDistance = Vector2.Distance(pos0, pos1);
-
-                    if (!lastPinchDistance.HasValue)
-                    {
-                        lastPinchDistance = currentDistance;
-                    }
-                    else
-                    {
-                        float deltaDistance = currentDistance - lastPinchDistance.Value;
-                        Zoom(deltaDistance * _zoomSpeed);
-                        lastPinchDistance = currentDistance;
-                        scrollRect.enabled = true;
-                    }
-                }
-            }
-            else
-            {
-                lastPinchDistance = null;
-                swipeEnabled = true;
-            }
-        }
-
         private void Zoom(float increment) //TODO: smooth the zoom behaviour
         {
             if (_contentRect == null) return;
