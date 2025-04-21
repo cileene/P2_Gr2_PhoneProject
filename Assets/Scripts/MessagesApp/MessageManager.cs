@@ -15,7 +15,7 @@ namespace MessagesApp
     {
         public AudioClip messageSendSound;
         public AudioClip messageReceiveSound;
-        
+
         public GameObject buttonChoice1;
         public GameObject buttonChoice2;
         public List<string> playerButtonMessages;
@@ -42,7 +42,7 @@ namespace MessagesApp
             _saveFileName = $"conversationState_{GameManager.Instance.currentScene}.json";
             _saveFilePath = Path.Combine(GameManager.Instance.dataPath, _saveFileName);
             GameManager.Instance.messagesDataPath = _saveFilePath;
-            if(GameManager.Instance.useSaveData) LoadConversationState(); // Load the previous state, if any
+            if (GameManager.Instance.useSaveData) LoadConversationState(); // Load the previous state, if any
             ScrollToBottom();
         }
 
@@ -55,17 +55,20 @@ namespace MessagesApp
             }
             else
             {
-                GameManager.Instance.deathLoading = false; //TODO: this is a hack
-                GameManager.Instance.deathBadge = true; //TODO: more hack
-                GameManager.Instance.messagesBadge = false; //TODO: also a hack
-            
+                if (!GameManager.Instance.deathGamePlayed)
+                {
+                    GameManager.Instance.deathLoading = false;
+                    GameManager.Instance.deathBadge = true;
+                }
+
+                GameManager.Instance.messagesBadge = false;
+
                 buttonChoice1.SetActive(false);
                 buttonChoice2.SetActive(false); // Hide buttons if not progressing
             }
-        
         }
-    
-    
+
+
         private void CheckProgression()
         {
             if (GameManager.Instance.progressStory)
@@ -87,16 +90,18 @@ namespace MessagesApp
         {
             if (_currentChoiceIndex < playerButtonMessages.Count)
             {
-                buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex];
+                buttonChoice1.GetComponentInChildren<TextMeshProUGUI>().text =
+                    playerButtonMessages[_currentChoiceIndex];
             }
             else
             {
                 buttonChoice1.SetActive(false);
             }
-        
+
             if (_currentChoiceIndex + 1 < playerButtonMessages.Count)
             {
-                buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text = playerButtonMessages[_currentChoiceIndex + 1];
+                buttonChoice2.GetComponentInChildren<TextMeshProUGUI>().text =
+                    playerButtonMessages[_currentChoiceIndex + 1];
             }
             else
             {
@@ -104,7 +109,7 @@ namespace MessagesApp
             }
         }
 
-        public void OnChoice1Clicked() 
+        public void OnChoice1Clicked()
         {
             OnChoiceClicked(0);
             StartCoroutine(RunChoiceAfterDelay(0));
@@ -121,9 +126,9 @@ namespace MessagesApp
             _playerChoices.Add(_currentChoiceIndex + choiceIndex); // Save the second choice
 
             UGSSnitch(choiceIndex); // Call home to UGS
-            
+
             SoundManager.Instance.PlaySound(messageSendSound);
-        
+
             DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
             StartCoroutine(DisplayLoadingDots());
             buttonChoice1.SetActive(false);
@@ -139,9 +144,8 @@ namespace MessagesApp
                 CurrentChoiceIndex = _currentChoiceIndex,
                 ChoiceIndex = choiceIndex
             };
-        
-            AnalyticsService.Instance.RecordEvent(messageSent);
 
+            AnalyticsService.Instance.RecordEvent(messageSent);
         }
 
         IEnumerator DisplayLoadingDots()
@@ -156,7 +160,7 @@ namespace MessagesApp
             Destroy(loadingDotsInstance.gameObject);
             ScrollToBottom();
         }
-    
+
         IEnumerator RunChoiceAfterDelay(int choiceIndex)
         {
             yield return new WaitForSeconds(2f); // Wait for 2 seconds
@@ -181,21 +185,25 @@ namespace MessagesApp
                 // Wait for 2 seconds
                 ScrollToBottom();
                 yield return new WaitForSeconds(2f);
-                
-                popUp.SetActive(true); // Maybe use animation
-                GameManager.Instance.currentLevel = 1;
 
-                // Load the next scene if there are no more choices
-                //SceneHandler.LoadScene(nextSceneName);
+                // end of sandra convo
+                if (GameManager.Instance.currentScene == "Sandra")
+                {
+                    GameManager.Instance.lastSandraMessage = true;
+                    popUp.SetActive(true); // Maybe use animation
+                    GameManager.Instance.currentLevel = 1;
+                }
             }
+
             ScrollToBottom();
-        
         }
+
         private void ScrollToBottom()
         {
             Canvas.ForceUpdateCanvases();
             scrollRect.verticalNormalizedPosition = 0f;
         }
+
         private void DisplayMessage(string message) //TODO: refactor multiple repeated methods into one
         {
             TextMeshProUGUI playerMessage = Instantiate(playerMessagePrefab, messageContainer);

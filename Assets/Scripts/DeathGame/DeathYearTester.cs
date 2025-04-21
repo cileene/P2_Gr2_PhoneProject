@@ -61,8 +61,10 @@ namespace DeathGame
                                   $"Good luck {GameManager.Instance.playerName}!";
             }
 
+            GameManager.Instance.deathGamePlayed = true;
             GameManager.Instance.progressStory = true;
             GameManager.Instance.deathBadge = false;
+            GameManager.Instance.messagesBadge = true;
             UGSSnitch();
         }
 

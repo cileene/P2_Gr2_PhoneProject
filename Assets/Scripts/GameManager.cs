@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public string currentScene; // Default scene
     public bool progressStory;
     public int birdHighScore;
+    public bool deathGamePlayed;
+    public bool lastSandraMessage;
     public bool seenGyroHint;
     public bool gyroCodeSeen;
     public bool playerIsTrapped;
