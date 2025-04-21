@@ -8,10 +8,13 @@ namespace GalleryApp
     public class SwipeDetector : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
     {
         public ScrollRect scrollRect;
-        public GalleryManager galleryManager; // Reference to GalleryManager (tried to call by making static but it didn't work)
+
+        public GalleryManager
+            galleryManager; // Reference to GalleryManager (tried to call by making static but it didn't work)
+
         public bool swipeEnabled = true;
         private Vector2 _startDragPosition;
-        
+
         private float _swipeThreshold = 50f; // Minimum swipe distance to detect
         private float _zoomSpeed = 0.01f;
         private float _minZoom = 0.5f;
@@ -23,6 +26,7 @@ namespace GalleryApp
         void Start()
         {
             _contentRect = scrollRect.content;
+            
             if (_contentRect != null)
             {
                 _originalZoom = _contentRect.localScale.y;
@@ -34,23 +38,23 @@ namespace GalleryApp
         {
             if (!swipeEnabled) return;
             _startDragPosition = eventData.position;
-          
-            scrollRect.OnBeginDrag(eventData); 
+
+            scrollRect.OnBeginDrag(eventData);
         }
 
         public void OnDrag(PointerEventData eventData)
         {
             if (!swipeEnabled) return;
-            scrollRect.OnDrag(eventData); 
+            scrollRect.OnDrag(eventData);
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
             if (!swipeEnabled) return;
-          
+
             float deltaX = eventData.position.x - _startDragPosition.x;
             float deltaY = eventData.position.y - _startDragPosition.y;
-        
+
             if (Mathf.Abs(deltaX) > _swipeThreshold)
             {
                 if (deltaX > 0)
@@ -62,26 +66,27 @@ namespace GalleryApp
                     galleryManager?.NextImage(); // Swipe left goes to next Image
                 }
             }
+
             if (Mathf.Abs(deltaY) > _swipeThreshold)
             {
                 galleryManager?.CloseImageView();
             }
-        
-            scrollRect.OnEndDrag(eventData); 
+
+            scrollRect.OnEndDrag(eventData);
         }
-        
+
         public void zoomIn()
         {
             Zoom(0.5f);
         }
+
         public void zoomOut()
         {
             Zoom(-0.5f);
-            
         }
+
         private void Update()
         {
-       
             // Zoom using keyboard arrow keys for testing
             if (Keyboard.current != null)
             {
@@ -89,12 +94,13 @@ namespace GalleryApp
                 {
                     Zoom(0.05f);
                 }
+
                 if (Keyboard.current.downArrowKey.isPressed)
                 {
                     Zoom(-0.05f);
                 }
             }
- 
+
             // Pinch zoom on touch devices
             if (Touchscreen.current != null && Touchscreen.current.touches.Count >= 2)
             {
@@ -112,7 +118,6 @@ namespace GalleryApp
                     if (!lastPinchDistance.HasValue)
                     {
                         lastPinchDistance = currentDistance;
-                        
                     }
                     else
                     {
@@ -130,9 +135,11 @@ namespace GalleryApp
             }
         }
 
-        private void Zoom(float increment)
+        private void Zoom(float increment) //TODO: smooth the zoom behaviour
         {
             if (_contentRect == null) return;
+            // Center pivot so zoom occurs around the center
+            _contentRect.pivot = new Vector2(0.5f, 0.5f);
 
             float currentZoom = _contentRect.localScale.y;
             float newZoom = Mathf.Clamp(currentZoom + increment, _originalZoom, _maxZoom);
