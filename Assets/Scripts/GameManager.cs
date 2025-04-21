@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     
     // ------------------ VARIABLES ------------------
+    [Header("SAVE DATA")]
+    public bool useSaveData = true;
+    public bool obfuscateData = true;
+    
     [Header("PROGRESSION")] 
     [Header("Level 0")]
     public bool phoneUnlocked;
@@ -33,10 +37,6 @@ public class GameManager : MonoBehaviour
     public bool rotationFriction;
     public float rotationChance = 0.1f; // 10% chance to apply rotation friction
 
-    [Header("SAVE DATA")]
-    public bool useSaveData = true;
-    public bool obfuscateData = true;
-    
     [Header("APP STATES")]
     [Header("App Badges")] 
     public bool messagesBadge;
