@@ -33,7 +33,8 @@ namespace MessagesApp
         private int _currentChoiceIndex;
         private string _saveFileName;
         private string _saveFilePath;
-    
+
+        [SerializeField] private GameObject popUp;
         [SerializeField] private string nextSceneName;
 
         private void Start()
@@ -180,8 +181,12 @@ namespace MessagesApp
                 // Wait for 2 seconds
                 ScrollToBottom();
                 yield return new WaitForSeconds(2f);
+                
+                popUp.SetActive(true); // Maybe use animation
+                GameManager.Instance.currentLevel = 1;
+
                 // Load the next scene if there are no more choices
-                SceneHandler.LoadScene(nextSceneName);
+                //SceneHandler.LoadScene(nextSceneName);
             }
             ScrollToBottom();
         

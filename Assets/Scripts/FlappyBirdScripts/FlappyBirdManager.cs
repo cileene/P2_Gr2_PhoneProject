@@ -15,6 +15,7 @@ namespace FlappyBirdScripts
         [SerializeField] private TextMeshProUGUI highScoreText;
         [SerializeField] private GameObject playButton;
         [SerializeField] private GameObject gameOver;
+        [SerializeField] private GameObject popUp;
 
         public int Score { get; private set; } = 0;
 
@@ -93,6 +94,8 @@ namespace FlappyBirdScripts
             {
                 Screen.brightness -= 0.1f;
                 Time.timeScale += 0.1f;
+                
+                if (Score >= 5) popUp.SetActive(true);
             }
         }
 
