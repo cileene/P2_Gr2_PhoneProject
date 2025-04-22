@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [Header("Level 0")]
     public bool phoneUnlocked;
     public int currentLevel;
-    public string currentScene; // Default scene
+    public string currentScene;
     public bool progressStory;
     public int birdHighScore;
     public bool deathGamePlayed;
@@ -62,11 +62,11 @@ public class GameManager : MonoBehaviour
     public bool calendarLoading;
     public bool idMojiLoading;
     
-    [Header("Message State")]
+    [Header("MESSAGE STATE")]
     public int currentChoiceIndex;
     public List<int> playerChoices;
     
-    [Header("Player Info")]
+    [Header("PLAYER INFO")]
     public string playerName;
     public int playerAge;
     public int playerBirthYear;
@@ -82,27 +82,25 @@ public class GameManager : MonoBehaviour
     public bool playerFamilyHistory;
     public int playerDeathYear;
 
-    [Header("App Tracking")]
-    public List<string> appNames = new List<string>
+    [Header("TRACKING")]
+    [Header("Apps")]
+    public List<string> appNames = new()
     {
         "Messages", "Photos", "Settings", "Death", "HappyBird",
         "Gyro", "oldPhotos", "Notes", "Calendar", "IDMoji"
     };
-    [SerializeField]
-    public List<int> appCounts = new List<int>();
+    public List<int> appCounts = new();
 
-    [Header("Conversation Tracking")]
-    public List<string> conversationNames = new List<string>
+    [Header("Conversations")]
+    public List<string> conversationNames = new()
     {
         "Sandra", "Paris"
     };
-    [SerializeField]
-    public List<int> conversationCounts = new List<int>();
+    public List<int> conversationCounts = new();
 
-    [Header("Photo Tracking")]
-    public List<string> photoNames = new List<string>();
-    [SerializeField]
-    public List<int> photoCounts = new List<int>();
+    [Header("Photos")]
+    public List<string> photoNames = new();
+    public List<int> photoCounts = new();
     
     [HideInInspector] public string dataPath;
     [HideInInspector] public string messagesDataPath;
