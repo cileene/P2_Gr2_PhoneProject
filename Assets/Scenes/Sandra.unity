@@ -1327,7 +1327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 710.6999}
+  m_AnchoredPosition: {x: -392.5, y: 710.69977}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1412,8 +1412,8 @@ MonoBehaviour:
   - Honest
   - ...
   - ...
-  - Alright...
-  - Done...
+  - Of course
+  - If you say so
   - 'Depressing... '
   - Great!
   - What's going on here?
@@ -1437,8 +1437,8 @@ MonoBehaviour:
   - "I didn\u2019t get to play it.. sorry"
   - ...
   - ...
-  - Alright, I played your game
-  - Done, I just finished it
+  - Shure thing
+  - If i have too
   - Wow. Super uplifting. Just what I needed to spiral today.
   - A+ existential dread. Loved it. 10/10 would emotionally unravel again.
   - "but what\u2019s going on, who\u2019s phone is this??"
@@ -1488,7 +1488,7 @@ MonoBehaviour:
   - ...
   - .
   - ..
-  progressMessages: 06000000
+  progressMessages: 08000000
   playerMessagePrefab: {fileID: 9124171079006057124, guid: 5cc62392fac434cf8bdf16dd3f01a891, type: 3}
   botMessagePrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
@@ -1969,7 +1969,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99929667
+  m_Size: 0.9999991
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3080,6 +3080,10 @@ PrefabInstance:
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: progressStory
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: rotationFriction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8566268782444468105, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: m_Name
