@@ -1264,7 +1264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 709.64966}
+  m_AnchoredPosition: {x: -392.5, y: 709.64984}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1349,6 +1349,10 @@ MonoBehaviour:
   - "What\u2019s the point?"
   - I'll try
   - Sounds fun
+  - That was easy!
+  - That was hard!
+  - what do you mean?
+  - why?
   playerMessages:
   - Why the gallery?
   - "You think i\u2019m stuck?"
@@ -1358,19 +1362,31 @@ MonoBehaviour:
   - "What\u2019s the point?"
   - I'll give it try!
   - Yeaah sounds like a fun game.
+  - That was too easy!!
+  - Im glad thats over
+  - what do you mean?
+  - why, what sould i do now?
   botMessages:
   - "Let\u2019s just say... it remembers what you don\u2019tme"
   - "No. I think you\u2019re scared to look."
-  - "Dropdown message Paris\L\LYou remember that moment, right?\L\LYou raged playing
-    that, Sandra couldn\u2019t stop laughing  I\u2019m betting that game is still
-    hidden somewhere. Want to try again?"
-  - "Dropdown message Paris\L\LYou remember that moment, right?\L\LYou raged playing
-    that, Sandra couldn\u2019t stop laughing  I\u2019m betting that game is still
-    hidden somewhere. Want to try again?"
+  - "You remember that moment, right?\L\LYou raged playing that, Sandra couldn\u2019t
+    stop laughing!  I\u2019m betting that game is still hidden somewhere. Want to
+    try again?"
+  - "You remember that moment, right?\L\LYou raged playing that, Sandra couldn\u2019t
+    stop laughing!  I\u2019m betting that game is still hidden somewhere. Want to
+    try again?"
   - okay confident! Try *shaking* it up a bit this time then..
   - Sometimes you find answers in repetition.  Try *shaking* it up a bit this time
   - 'Wow you made it! '
   - Wow you made it!
+  - Shuuureee... but what should you then do with what youve learned?
+  - i bet, but now comes the really hard part
+  - well if i was you, i would try to look at your photos again... Maybe a certain
+    *year* could *unlock* more than you know... You get it? what im trying to say
+    is that you are horible at remembering passwords
+  - well if i was you, i would try to look at your photos again... Maybe a certain
+    *year* could *unlock* more than you know... You get it? what im trying to say
+    is that you are horible at remembering passwords
   loadingDots:
   - .
   - ..
@@ -1727,7 +1743,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99984026
+  m_Size: 0.9999548
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
