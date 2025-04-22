@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ namespace IDMoji
     {
         public Canvas startCanvas;
         public Canvas customizerCanvas;
-        public Canvas endCanvas;
+        public GameObject customizerElements;
 
         //system Buttons
         public Button createButton;
@@ -30,19 +31,7 @@ namespace IDMoji
         public ScrollRect mouthScroll;
         public ScrollRect hairScroll;
         public ScrollRect bodyScroll;
-
-        /*
-        //elements within each scrollbar
-        public GridLayoutGroup colorGridFace;
-        public GridLayoutGroup optionsGridFace;
-        public GridLayoutGroup colorGridEyes;
-        public GridLayoutGroup optionsGridEyes;
-        public GridLayoutGroup colorGridMouth;
-        public GridLayoutGroup optionsGridMouth;
-        public GridLayoutGroup colorGridHair;
-        public GridLayoutGroup optionsGridHair;
-        */
-
+        
         public CharacterCustomizer characterCustomizer;
 
         private void Start()
@@ -50,7 +39,7 @@ namespace IDMoji
             // Ensure only the start canvas is visible
             startCanvas.gameObject.SetActive(true);
             customizerCanvas.gameObject.SetActive(false);
-            endCanvas.gameObject.SetActive(false);
+            //Canvas.gameObject.SetActive(false);
 
             // Hide all scrollrects at the start
             HideAllScrollRects();
@@ -69,26 +58,20 @@ namespace IDMoji
             bodyButton.onClick.AddListener(() => ShowScrollRect(bodyScroll));
         }
 
-        public void StartCustomization()
-        {
-            startCanvas.gameObject.SetActive(false); // Hide Start Canvas
-            customizerCanvas.gameObject.SetActive(true); // Show Customizer Canvas
-        }
-
         // Function to start customization
         private void OpenCustomizer()
         {
             startCanvas.gameObject.SetActive(false);
             customizerCanvas.gameObject.SetActive(true);
-            endCanvas.gameObject.SetActive(false);
+            characterCustomizer.InitializeCustomization();
         }
 
         // Function to finish customization
         private void FinishCustomization()
         {
             startCanvas.gameObject.SetActive(false);
-            customizerCanvas.gameObject.SetActive(false);
-            endCanvas.gameObject.SetActive(true);
+            confirmButton.gameObject.SetActive(true);
+            customizerElements.SetActive(false);
         }
 
         // Function to exit app (you can replace this with a proper quit function)
@@ -109,7 +92,6 @@ namespace IDMoji
             if (selectedScroll != null)
             {
                 selectedScroll.gameObject.SetActive(true);
-                Debug.Log(selectedScroll.name + " is now active");
             }
         }
 
@@ -123,11 +105,39 @@ namespace IDMoji
             bodyScroll.gameObject.SetActive(false);
         }
 
-        // Function to toggle scroll rects
-        private void ToggleScroll(ScrollRect scrollToShow)
+        public void OnEyesButtonClicked()
         {
-            HideAllScrollRects();
-            scrollToShow.gameObject.SetActive(true);
+            characterCustomizer.eyesImage.enabled = true;
+            characterCustomizer.UpdateEyeColor("Turqouise");
+            characterCustomizer.SelectEyes(0);
+        }
+
+        public void OnMouthButtonClicked()
+        {
+            characterCustomizer.mouthImage.enabled = true;
+            characterCustomizer.UpdateMouthColor("Red");
+            characterCustomizer.SelectMouth(0);
+        }
+
+        public void OnHairButtonClicked()
+        {
+            characterCustomizer.hairImage.enabled = true;
+            characterCustomizer.UpdateHairColor("Blonde");
+            characterCustomizer.SelectHair(0);
+        }
+
+        public void ExpandCharacterPreview()
+        {
+            // Ensure the RectTransform of characterPreview is accessed
+            RectTransform previewRect = characterCustomizer.characterPreview.GetComponent<RectTransform>();
+            // Update the anchored position
+            previewRect.anchoredPosition = new Vector2(-20, -1080);
+
+            // Scale the individual images
+            characterCustomizer.faceImage.transform.localScale = new Vector2(1.8f, 1.8f);
+            characterCustomizer.eyesImage.transform.localScale = new Vector2(1.8f, 1.8f);
+            characterCustomizer.mouthImage.transform.localScale = new Vector2(1.8f, 1.8f);
+            characterCustomizer.hairImage.transform.localScale = new Vector2(1.8f, 1.8f);
         }
     }
 }
