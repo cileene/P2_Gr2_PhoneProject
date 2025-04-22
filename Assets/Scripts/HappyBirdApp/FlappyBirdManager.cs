@@ -94,8 +94,13 @@ namespace HappyBirdApp
             {
                 Screen.brightness -= 0.1f;
                 Time.timeScale += 0.1f;
+
+                if (Score >= 5) // after winning hardmode go to new messages in paris scene
+                {
+                    popUp.SetActive(true);
+                    GameManager.Instance.progressStory = true;
+                }
                 
-                if (Score >= 5) popUp.SetActive(true);
             }
         }
 

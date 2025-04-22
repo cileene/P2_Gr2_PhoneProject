@@ -1259,11 +1259,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 805752745}
+  - {fileID: 1186084482}
   m_Father: {fileID: 1937762450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 709.65015}
+  m_AnchoredPosition: {x: -392.5, y: 709.64966}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1340,15 +1341,36 @@ MonoBehaviour:
   buttonChoice1: {fileID: 435356628}
   buttonChoice2: {fileID: 1594148591}
   playerButtonMessages:
-  - Hi Paris
-  - Paris like the city
+  - Gallery?
+  - Why?
+  - Okaay..
+  - I'll take a look.
+  - Sure, why not
+  - "What\u2019s the point?"
+  - I'll try
+  - Sounds fun
   playerMessages:
-  - Hi Paris who are you?
-  - Hi Paris how was the olympics, no but who are you?
+  - Why the gallery?
+  - "You think i\u2019m stuck?"
+  - yeaah shure thing... ill take a look
+  - Okay i will look into it!
+  - Sure, why not
+  - "What\u2019s the point?"
+  - I'll give it try!
+  - Yeaah sounds like a fun game.
   botMessages:
-  - you know me
-  - "haha very funny? Stop joking around. It\u2019s me Sandra. Did you delete my
-    contact, or?"
+  - "Let\u2019s just say... it remembers what you don\u2019tme"
+  - "No. I think you\u2019re scared to look."
+  - "Dropdown message Paris\L\LYou remember that moment, right?\L\LYou raged playing
+    that, Sandra couldn\u2019t stop laughing  I\u2019m betting that game is still
+    hidden somewhere. Want to try again?"
+  - "Dropdown message Paris\L\LYou remember that moment, right?\L\LYou raged playing
+    that, Sandra couldn\u2019t stop laughing  I\u2019m betting that game is still
+    hidden somewhere. Want to try again?"
+  - okay confident! Try *shaking* it up a bit this time then..
+  - Sometimes you find answers in repetition.  Try *shaking* it up a bit this time
+  - 'Wow you made it! '
+  - Wow you made it!
   loadingDots:
   - .
   - ..
@@ -1358,12 +1380,13 @@ MonoBehaviour:
   - ...
   - .
   - ..
-  progressMessages: 
+  progressMessages: 0200000006000000
   playerMessagePrefab: {fileID: 9124171079006057124, guid: 5cc62392fac434cf8bdf16dd3f01a891, type: 3}
   botMessagePrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
   scrollRect: {fileID: 911259209}
+  popUp: {fileID: 0}
   nextSceneName: Paris
 --- !u!4 &589953924
 Transform:
@@ -1577,9 +1600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
       propertyPath: m_text
-      value: 'Hi im Paris
-
-'
+      value: Still creeping in old chats? you never change
       objectReference: {fileID: 0}
     - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
       propertyPath: m_fontAsset
@@ -1702,11 +1723,11 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 908064028}
   m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99984026
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2335,6 +2356,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153656495}
   m_CullTransparentMesh: 1
+--- !u!1001 &1186084481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 523185812}
+    m_Modifications:
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_text
+      value: Come on. Let go of that. There are pieces elsewhere. Start with your
+        gallery?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d4f877039970b4a4889d9ba21f701909, type: 2}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 78687052368759348, guid: d4f877039970b4a4889d9ba21f701909, type: 2}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294835709
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057472683051034836, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+      propertyPath: m_Name
+      value: 1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+--- !u!224 &1186084482 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1310747948039473699, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
+  m_PrefabInstance: {fileID: 1186084481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1457321386
 GameObject:
   m_ObjectHideFlags: 0
