@@ -1264,7 +1264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.5, y: 709.64984}
+  m_AnchoredPosition: {x: -392.5, y: 709.65}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1377,8 +1377,10 @@ MonoBehaviour:
     try again?"
   - okay confident! Try *shaking* it up a bit this time then..
   - Sometimes you find answers in repetition.  Try *shaking* it up a bit this time
-  - 'Wow you made it! '
-  - Wow you made it!
+  - Wow you made it! If your screen is too dark you can go into settings to change
+    it
+  - Wow you made it! If your screen is too dark you can go into settings to change
+    it
   - Shuuureee... but what should you then do with what youve learned?
   - i bet, but now comes the really hard part
   - well if i was you, i would try to look at your photos again... Maybe a certain
@@ -1742,8 +1744,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 908064028}
   m_HandleRect: {fileID: 0}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9999548
+  m_Value: 0
+  m_Size: 0.99998426
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
