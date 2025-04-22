@@ -164,8 +164,12 @@ namespace MessagesApp
         {
             yield return new WaitForSeconds(2f); // Wait for 2 seconds
             SoundManager.Instance.PlaySound(messageReceiveSound);
-            DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
+            
             if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
+            if (GameManager.Instance.progressStory)
+            {
+                DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
+            }
             _currentChoiceIndex += 2; // Move to the next choices
             DisplayChoices();
             SaveConversationState();
