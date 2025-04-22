@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace HappyBirdApp
 {
-    public class Background : MonoBehaviour
+    public class Parallax : MonoBehaviour
     {
         private MeshRenderer meshRenderer;
 

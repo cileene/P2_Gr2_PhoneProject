@@ -13,7 +13,7 @@ namespace HappyBirdApp
 
         private void Start()
         {
-            _animationSpeed = background.GetComponent<Background>().animationSpeed;
+            _animationSpeed = background.GetComponent<Parallax>().animationSpeed;
             sqrShakeThreshold = shakeDetectionThreshold * shakeDetectionThreshold;
             lastShakeTime = Time.unscaledTime;
         }
@@ -33,6 +33,7 @@ namespace HappyBirdApp
 
         private void ToggleBirdHardMode()
         {
+            background.GetComponent<MaterialSwap>().SwapMaterial();
             _animationSpeed = 10f;
             background.transform.rotation = Quaternion.Euler(0, 0, 180);
             GameManager.Instance.birdFriction = true;
