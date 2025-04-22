@@ -80,10 +80,6 @@ namespace HappyBirdApp
             UGSSnitch();
 
             Pause();
-            if (Score > 0)
-            {
-                SceneHandler.LoadScene("HappyBird");
-            }
         }
 
         public void IncreaseScore()

@@ -10,13 +10,12 @@ namespace HappyBirdApp
 
         private void Awake()
         {
-            meshRenderer = GetComponent <MeshRenderer>();
+            meshRenderer = GetComponent<MeshRenderer>();
         }
 
         private void Update()
         {
-            meshRenderer.material.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0);
-
-        } 
+            meshRenderer.sharedMaterial.mainTextureOffset += new Vector2(animationSpeed * Time.deltaTime, 0);
+        }
     }
 }

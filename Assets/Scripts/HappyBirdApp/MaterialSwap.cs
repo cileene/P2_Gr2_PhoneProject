@@ -7,21 +7,23 @@ namespace HappyBirdApp
         [SerializeField] private Material normalMaterial;
         [SerializeField] private Material alternativeMaterial;
 
+        private MeshRenderer meshRenderer;
+
+        private void Awake()
+        {
+            meshRenderer = GetComponent<MeshRenderer>();
+            meshRenderer.sharedMaterial = normalMaterial;
+        }
+
         public void SwapMaterial()
         {
-            // Get the MeshRenderer component of the GameObject
-            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-
-            // Check if the current material is the normal material
-            if (meshRenderer.material == normalMaterial)
+            if (meshRenderer.sharedMaterial == normalMaterial)
             {
-                // Swap to the alternative material
-                meshRenderer.material = alternativeMaterial;
+                meshRenderer.sharedMaterial = alternativeMaterial;
             }
             else
             {
-                // Swap back to the normal material
-                meshRenderer.material = normalMaterial;
+                meshRenderer.sharedMaterial = normalMaterial;
             }
         }
     }
