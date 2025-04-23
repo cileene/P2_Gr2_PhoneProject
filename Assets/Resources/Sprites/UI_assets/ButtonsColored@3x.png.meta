@@ -263,6 +263,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1335,7 +1348,55 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ButtonsColored@3x_0: 4606921948273087348
+      ButtonsColored@3x_1: 4333057548253452943
+      ButtonsColored@3x_10: 1151586287872659419
+      ButtonsColored@3x_11: 5037482135916496403
+      ButtonsColored@3x_12: -4185644524403527894
+      ButtonsColored@3x_13: -4841398833051639501
+      ButtonsColored@3x_14: 1005176804554593282
+      ButtonsColored@3x_15: 2266405868624413938
+      ButtonsColored@3x_16: 1585068579499553065
+      ButtonsColored@3x_17: 1247269820778286253
+      ButtonsColored@3x_18: 4226054908838813455
+      ButtonsColored@3x_19: 4424090391586581693
+      ButtonsColored@3x_2: 3845268080220074099
+      ButtonsColored@3x_20: 5082178667000472731
+      ButtonsColored@3x_21: -2741448686863047059
+      ButtonsColored@3x_22: -4834517486426128488
+      ButtonsColored@3x_23: 8758151893725546974
+      ButtonsColored@3x_24: 204135830591473675
+      ButtonsColored@3x_25: 907061090397979926
+      ButtonsColored@3x_26: 6944745404797858619
+      ButtonsColored@3x_27: -8253467873474058163
+      ButtonsColored@3x_28: 663794149463823067
+      ButtonsColored@3x_29: 8819672748930971910
+      ButtonsColored@3x_3: -1283696162718947142
+      ButtonsColored@3x_30: 4398661846368192683
+      ButtonsColored@3x_31: 2543802163394028124
+      ButtonsColored@3x_32: -225351688162900216
+      ButtonsColored@3x_33: -1520751235862507053
+      ButtonsColored@3x_34: 8316029952835892642
+      ButtonsColored@3x_35: 1258814293885974647
+      ButtonsColored@3x_36: -7900730214889787913
+      ButtonsColored@3x_37: 2375964871479594166
+      ButtonsColored@3x_38: -4894794867880220882
+      ButtonsColored@3x_39: 7377348131610253202
+      ButtonsColored@3x_4: 5922880470915088969
+      ButtonsColored@3x_40: 7893831270495688861
+      ButtonsColored@3x_41: -9217827962678950819
+      ButtonsColored@3x_42: -3719672197251308665
+      ButtonsColored@3x_43: -6935220156107737775
+      ButtonsColored@3x_44: -8480788188419417309
+      ButtonsColored@3x_45: -3603451263265587654
+      ButtonsColored@3x_46: 3461927562738083951
+      ButtonsColored@3x_47: -8655811351834645767
+      ButtonsColored@3x_5: -265093383328427113
+      ButtonsColored@3x_6: 5534826163951956401
+      ButtonsColored@3x_7: 6086503687518334195
+      ButtonsColored@3x_8: -8943958648699893000
+      ButtonsColored@3x_9: -4125446441749189409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

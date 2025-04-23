@@ -1634,8 +1634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageSendSound: {fileID: 8300000, guid: 39a44d36da058419cb8ee0ea4cb92bdc, type: 3}
   messageReceiveSound: {fileID: 8300000, guid: 3b53082fef54048019728ccbff6083e0, type: 3}
-  buttonChoice1: {fileID: 0}
-  buttonChoice2: {fileID: 0}
+  buttonChoice1: {fileID: 626210206}
+  buttonChoice2: {fileID: 149136806}
   playerButtonMessages:
   - Lie
   - Honest
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   botMessagePrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   loadingDotsPrefab: {fileID: 3763768227152078324, guid: c891835376d744724a34c5e1d23a79a7, type: 3}
   messageContainer: {fileID: 523185812}
-  scrollRect: {fileID: 0}
+  scrollRect: {fileID: 523156578}
   popUp: {fileID: 987165999}
   nextSceneName: ThanksForPlaying
 --- !u!4 &589953924

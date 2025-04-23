@@ -17,16 +17,16 @@ namespace MessagesApp
         public AudioClip messageReceiveSound;
         public GameObject buttonChoice1;
         public GameObject buttonChoice2;
-        public List<string> playerButtonMessages;
-        public List<string> playerMessages;
-        public List<string> botMessages;
-        public List<string> loadingDots;
-        public List<int> progressMessages;
         public TextMeshProUGUI playerMessagePrefab;
         public TextMeshProUGUI botMessagePrefab;
         public TextMeshProUGUI loadingDotsPrefab;
         public Transform messageContainer;
         public ScrollRect scrollRect;
+        public List<string> playerButtonMessages;
+        public List<string> playerMessages;
+        public List<string> botMessages;
+        public List<string> loadingDots;
+        public List<int> progressMessages;
 
         private List<int> _playerChoices = new List<int>(); // Keep track of choices made
         private int _currentChoiceIndex;
