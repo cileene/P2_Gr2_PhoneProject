@@ -16,14 +16,16 @@ public class GameManager : MonoBehaviour
     public bool obfuscateData = true;
     
     [Header("PROGRESSION")] 
+    public int birdHighScore;
+    
     [Header("Level 0")]
     public bool phoneUnlocked;
     public int currentLevel;
     public string currentScene;
     public bool progressStory;
-    public int birdHighScore;
     public bool deathGamePlayed;
     public bool lastSandraMessage;
+    
     [Header("Level 1")]
     public bool wasShaken;
     public bool seenGyroHint;
