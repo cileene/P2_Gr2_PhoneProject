@@ -185,9 +185,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 429
+        y: 444
         width: 332
-        height: 97
+        height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,8 +252,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 108
-        width: 336
-        height: 71
+        width: 341
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: Asset 30@2x_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1
-        width: 300
-        height: 65
+        x: 3
+        y: 2
+        width: 333
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
