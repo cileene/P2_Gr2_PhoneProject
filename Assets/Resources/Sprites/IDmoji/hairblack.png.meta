@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 85c7d5dae746b4a2ca95bce6447e675c
+guid: 24f9a68fe5f7f4c19a9de4d2adca0b39
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7259167506840717807
-    second: Asset 19@2x_0
+      213: 1476590985552194541
+    second: blackHair_0
   - first:
-      213: -1899768364646925380
-    second: Asset 19@2x_1
+      213: 8462451278947234402
+    second: blackHair_1
   - first:
-      213: 8597344882678505624
-    second: Asset 19@2x_2
+      213: -9210036888202778518
+    second: blackHair_2
   - first:
-      213: 1806432889553964598
-    second: Asset 19@2x_3
+      213: -3112726621121993814
+    second: blackHair_3
   - first:
-      213: 6768082885636857419
-    second: Asset 19@2x_4
+      213: -6752975589769771274
+    second: blackHair_4
   - first:
-      213: 4054970163364527064
-    second: Asset 19@2x_5
+      213: 3485782974501267803
+    second: blackHair_5
   - first:
-      213: 7951705749280747447
-    second: Asset 19@2x_6
+      213: -2856742011433166250
+    second: blackHair_6
   - first:
-      213: -614943830066766827
-    second: Asset 19@2x_7
+      213: -338426997747774044
+    second: blackHair_7
   - first:
-      213: -8059368919982228642
-    second: Asset 19@2x_8
+      213: 6968872814669045596
+    second: blackHair_8
+  - first:
+      213: 6134303874035683445
+    second: blackHair_9
+  - first:
+      213: 6045422313719255298
+    second: blackHair_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +78,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -150,145 +156,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 19@2x_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 1567
-        width: 512
-        height: 723
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11673bdfc91424b90800000000000000
-      internalID: -7259167506840717807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_1
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 1573
-        width: 505
-        height: 711
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbbf1bddcbaa2a5e0800000000000000
-      internalID: -1899768364646925380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_2
-      rect:
-        serializedVersion: 2
-        x: 1270
-        y: 1563
-        width: 509
-        height: 724
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 890239fbe97ef4770800000000000000
-      internalID: 8597344882678505624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_3
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 807
-        width: 507
-        height: 688
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63e4274642db11910800000000000000
-      internalID: 1806432889553964598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_4
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 791
-        width: 505
-        height: 717
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4e19c0968f0ded50800000000000000
-      internalID: 6768082885636857419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_5
-      rect:
-        serializedVersion: 2
-        x: 1298
-        y: 790
-        width: 489
-        height: 687
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8db762221e5264830800000000000000
-      internalID: 4054970163364527064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_6
+      name: blackHair_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 544
-        height: 696
+        y: 0
+        width: 163
+        height: 379
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bf6f40cf322a5e60800000000000000
-      internalID: 7951705749280747447
+      spriteID: debe1649da7ed7410800000000000000
+      internalID: 1476590985552194541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 19@2x_7
+      name: blackHair_1
       rect:
         serializedVersion: 2
-        x: 668
-        y: 6
-        width: 479
-        height: 720
+        x: 214
+        y: 0
+        width: 177
+        height: 385
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,20 +193,174 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51c5d0c38d74777f0800000000000000
-      internalID: -614943830066766827
+      spriteID: 26233ba2a9aa07570800000000000000
+      internalID: 8462451278947234402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 19@2x_8
+      name: blackHair_2
       rect:
         serializedVersion: 2
-        x: 1296
+        x: 418
+        y: 0
+        width: 211
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68ed6e3f306f2080800000000000000
+      internalID: -9210036888202778518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 181
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa32f1941af5dc4d0800000000000000
+      internalID: -3112726621121993814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_4
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 0
+        width: 189
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f683eada7c9842a0800000000000000
+      internalID: -6752975589769771274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_5
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 0
+        width: 178
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59a047952dff5030800000000000000
+      internalID: 3485782974501267803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_6
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 177
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a5799b640da58d0800000000000000
+      internalID: -2856742011433166250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_7
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 0
+        width: 198
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad87d8407aad4bf0800000000000000
+      internalID: -338426997747774044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_8
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 0
+        width: 193
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f993bf6e866b060800000000000000
+      internalID: 6968872814669045596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_9
+      rect:
+        serializedVersion: 2
+        x: 1970
         y: 7
-        width: 510
-        height: 734
+        width: 210
+        height: 378
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +369,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5bb2aaeaae572090800000000000000
-      internalID: -8059368919982228642
+      spriteID: 570133c5fdc612550800000000000000
+      internalID: 6134303874035683445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackHair_10
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 0
+        width: 201
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201d4767097a5e350800000000000000
+      internalID: 6045422313719255298
       vertices: []
       indices: 
       edges: []
@@ -351,7 +401,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5c6dfb08e814f445f87a32e6aec96441
+    spriteID: 3b39fdcd347a1435099b2b0a9cf4b947
     internalID: 0
     vertices: []
     indices: 
@@ -361,15 +411,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Asset 19@2x_0: -7259167506840717807
-      Asset 19@2x_1: -1899768364646925380
-      Asset 19@2x_2: 8597344882678505624
-      Asset 19@2x_3: 1806432889553964598
-      Asset 19@2x_4: 6768082885636857419
-      Asset 19@2x_5: 4054970163364527064
-      Asset 19@2x_6: 7951705749280747447
-      Asset 19@2x_7: -614943830066766827
-      Asset 19@2x_8: -8059368919982228642
+      blackHair_0: 1476590985552194541
+      blackHair_1: 8462451278947234402
+      blackHair_10: 6045422313719255298
+      blackHair_2: -9210036888202778518
+      blackHair_3: -3112726621121993814
+      blackHair_4: -6752975589769771274
+      blackHair_5: 3485782974501267803
+      blackHair_6: -2856742011433166250
+      blackHair_7: -338426997747774044
+      blackHair_8: 6968872814669045596
+      blackHair_9: 6134303874035683445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

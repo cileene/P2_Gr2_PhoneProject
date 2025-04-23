@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 85c7d5dae746b4a2ca95bce6447e675c
+guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7259167506840717807
-    second: Asset 19@2x_0
+      213: 2405659496213580667
+    second: brownHair_0
   - first:
-      213: -1899768364646925380
-    second: Asset 19@2x_1
+      213: 2307766163561379752
+    second: brownHair_1
   - first:
-      213: 8597344882678505624
-    second: Asset 19@2x_2
+      213: -8305755551085348953
+    second: brownHair_2
   - first:
-      213: 1806432889553964598
-    second: Asset 19@2x_3
+      213: 2981141623318772993
+    second: brownHair_3
   - first:
-      213: 6768082885636857419
-    second: Asset 19@2x_4
+      213: -5180319873387154490
+    second: brownHair_4
   - first:
-      213: 4054970163364527064
-    second: Asset 19@2x_5
+      213: -7480714609512480986
+    second: brownHair_5
   - first:
-      213: 7951705749280747447
-    second: Asset 19@2x_6
+      213: 5619902896679768449
+    second: brownHair_6
   - first:
-      213: -614943830066766827
-    second: Asset 19@2x_7
+      213: 1895606748683805836
+    second: brownHair_7
   - first:
-      213: -8059368919982228642
-    second: Asset 19@2x_8
+      213: -4840885309786015001
+    second: brownHair_8
+  - first:
+      213: 2317557040814284135
+    second: brownHair_9
+  - first:
+      213: -489602672987333535
+    second: brownHair_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +78,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -150,145 +156,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 19@2x_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 1567
-        width: 512
-        height: 723
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11673bdfc91424b90800000000000000
-      internalID: -7259167506840717807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_1
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 1573
-        width: 505
-        height: 711
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbbf1bddcbaa2a5e0800000000000000
-      internalID: -1899768364646925380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_2
-      rect:
-        serializedVersion: 2
-        x: 1270
-        y: 1563
-        width: 509
-        height: 724
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 890239fbe97ef4770800000000000000
-      internalID: 8597344882678505624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_3
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 807
-        width: 507
-        height: 688
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63e4274642db11910800000000000000
-      internalID: 1806432889553964598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_4
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 791
-        width: 505
-        height: 717
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4e19c0968f0ded50800000000000000
-      internalID: 6768082885636857419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_5
-      rect:
-        serializedVersion: 2
-        x: 1298
-        y: 790
-        width: 489
-        height: 687
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8db762221e5264830800000000000000
-      internalID: 4054970163364527064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_6
+      name: brownHair_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 544
-        height: 696
+        y: 0
+        width: 469
+        height: 1097
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bf6f40cf322a5e60800000000000000
-      internalID: 7951705749280747447
+      spriteID: b7b0b5ae09e926120800000000000000
+      internalID: 2405659496213580667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 19@2x_7
+      name: brownHair_1
       rect:
         serializedVersion: 2
-        x: 668
-        y: 6
-        width: 479
-        height: 720
+        x: 622
+        y: 0
+        width: 507
+        height: 1114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51c5d0c38d74777f0800000000000000
-      internalID: -614943830066766827
+      spriteID: 8a7fdb34915d60020800000000000000
+      internalID: 2307766163561379752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 19@2x_8
+      name: brownHair_2
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 7
-        width: 510
-        height: 734
+        x: 1215
+        y: 0
+        width: 606
+        height: 1072
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +215,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5bb2aaeaae572090800000000000000
-      internalID: -8059368919982228642
+      spriteID: 7a7345205570cbc80800000000000000
+      internalID: -8305755551085348953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_3
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 0
+        width: 520
+        height: 1105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dfb0bf2842f5920800000000000000
+      internalID: 2981141623318772993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_4
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 0
+        width: 542
+        height: 1104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c3bcdb858ecb18b0800000000000000
+      internalID: -5180319873387154490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_5
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 0
+        width: 512
+        height: 1108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ffee972b92f2890800000000000000
+      internalID: -7480714609512480986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_6
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 0
+        width: 508
+        height: 1116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18159c4b8e7edfd40800000000000000
+      internalID: 5619902896679768449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_7
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 0
+        width: 569
+        height: 1132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84a1296b4c8e4a10800000000000000
+      internalID: 1895606748683805836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_8
+      rect:
+        serializedVersion: 2
+        x: 5091
+        y: 0
+        width: 552
+        height: 1131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea3cc77578b1dcb0800000000000000
+      internalID: -4840885309786015001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_9
+      rect:
+        serializedVersion: 2
+        x: 5698
+        y: 36
+        width: 635
+        height: 1109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76dd07489dd992020800000000000000
+      internalID: 2317557040814284135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownHair_10
+      rect:
+        serializedVersion: 2
+        x: 6402
+        y: 0
+        width: 568
+        height: 1153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c128386f49439f0800000000000000
+      internalID: -489602672987333535
       vertices: []
       indices: 
       edges: []
@@ -351,7 +401,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5c6dfb08e814f445f87a32e6aec96441
+    spriteID: 112207cc7f7ac4ee29501a217ecf145f
     internalID: 0
     vertices: []
     indices: 
@@ -361,15 +411,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Asset 19@2x_0: -7259167506840717807
-      Asset 19@2x_1: -1899768364646925380
-      Asset 19@2x_2: 8597344882678505624
-      Asset 19@2x_3: 1806432889553964598
-      Asset 19@2x_4: 6768082885636857419
-      Asset 19@2x_5: 4054970163364527064
-      Asset 19@2x_6: 7951705749280747447
-      Asset 19@2x_7: -614943830066766827
-      Asset 19@2x_8: -8059368919982228642
+      brownHair_0: 2405659496213580667
+      brownHair_1: 2307766163561379752
+      brownHair_10: -489602672987333535
+      brownHair_2: -8305755551085348953
+      brownHair_3: 2981141623318772993
+      brownHair_4: -5180319873387154490
+      brownHair_5: -7480714609512480986
+      brownHair_6: 5619902896679768449
+      brownHair_7: 1895606748683805836
+      brownHair_8: -4840885309786015001
+      brownHair_9: 2317557040814284135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

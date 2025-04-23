@@ -1,82 +1,40 @@
 fileFormatVersion: 2
-guid: a42dcf8dec4d942889aa7d8401697013
+guid: f1c882d63ed4e4d15bbd211da5b40ab0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6069368658061769793
-    second: Asset 49@2x_0
+      213: -1943763868715539874
+    second: darkBlonde_0
   - first:
-      213: -7965113281977129089
-    second: Asset 49@2x_1
+      213: -8851309528302862118
+    second: darkBlonde_1
   - first:
-      213: -1768170647734933131
-    second: Asset 49@2x_2
+      213: -8513505173399808008
+    second: darkBlonde_2
   - first:
-      213: -5246878786588228033
-    second: Asset 49@2x_3
+      213: 7056949969006197504
+    second: darkBlonde_3
   - first:
-      213: 2427612511008696653
-    second: Asset 49@2x_4
+      213: 622854956687308262
+    second: darkBlonde_4
   - first:
-      213: -8423571603358764816
-    second: Asset 49@2x_5
+      213: 3758539818422974757
+    second: darkBlonde_5
   - first:
-      213: -5174402688782153930
-    second: Asset 49@2x_6
+      213: -3646133781577403065
+    second: darkBlonde_6
   - first:
-      213: -7247978851752546453
-    second: Asset 49@2x_7
+      213: 3728429618126939978
+    second: darkBlonde_7
   - first:
-      213: 2678947590215708328
-    second: Asset 49@2x_8
+      213: -3443904129264340400
+    second: darkBlonde_8
   - first:
-      213: -8539536566532626684
-    second: Asset 49@2x_9
+      213: 7934902777789452581
+    second: darkBlonde_9
   - first:
-      213: 6447348130501291809
-    second: Asset 49@2x_10
-  - first:
-      213: 3825079291002306535
-    second: Asset 49@2x_11
-  - first:
-      213: 5526626319921917356
-    second: Asset 49@2x_12
-  - first:
-      213: 2468919404345305301
-    second: Asset 49@2x_13
-  - first:
-      213: 2276230928920187252
-    second: Asset 49@2x_14
-  - first:
-      213: 8569852288628501979
-    second: Asset 49@2x_15
-  - first:
-      213: -3686354461936320553
-    second: Asset 49@2x_16
-  - first:
-      213: 6551825193716632077
-    second: Asset 49@2x_17
-  - first:
-      213: -5289214042600385859
-    second: Asset 49@2x_18
-  - first:
-      213: -763155830817832485
-    second: Asset 49@2x_19
-  - first:
-      213: -3208327127619159805
-    second: Asset 49@2x_20
-  - first:
-      213: 180776420163888166
-    second: Asset 49@2x_21
-  - first:
-      213: -3988200846147052497
-    second: Asset 49@2x_22
-  - first:
-      213: 895151458531293088
-    second: Asset 49@2x_23
-  - first:
-      213: -2373006500974164106
-    second: Asset 49@2x_24
+      213: -6254634662516881280
+    second: darkBlonde_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -123,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -198,243 +156,243 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 49@2x_0
+      name: darkBlonde_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1552
-        width: 590
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14c39aa33aaba3450800000000000000
-      internalID: 6069368658061769793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_1
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 1552
-        width: 590
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f77e108cbab367190800000000000000
-      internalID: -7965113281977129089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_2
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 1557
-        width: 572
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 579ac7ff9223677e0800000000000000
-      internalID: -1768170647734933131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_3
-      rect:
-        serializedVersion: 2
-        x: 1782
-        y: 1587
-        width: 613
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3640e1fa875f27b0800000000000000
-      internalID: -5246878786588228033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_4
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 373
-        width: 546
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d49a7fa77bc90b120800000000000000
-      internalID: 2427612511008696653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_5
-      rect:
-        serializedVersion: 2
-        x: 659
-        y: 379
-        width: 525
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f0bbb9b146791b80800000000000000
-      internalID: -8423571603358764816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_6
-      rect:
-        serializedVersion: 2
-        x: 1220
-        y: 379
-        width: 549
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63740527b24d038b0800000000000000
-      internalID: -5174402688782153930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_7
-      rect:
-        serializedVersion: 2
-        x: 1787
-        y: 403
-        width: 603
-        height: 1150
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6feeb1c2a10a6b90800000000000000
-      internalID: -7247978851752546453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 49@2x_8
-      rect:
-        serializedVersion: 2
-        x: 584
         y: 0
-        width: 538
-        height: 309
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 469
+        height: 1097
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3fa3df9e2db534d7987c0e5f1b4927a9
-      internalID: -460635623
+      spriteID: e52a8f55f0d5605e0800000000000000
+      internalID: -1943763868715539874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 49@2x_9
+      name: darkBlonde_1
       rect:
         serializedVersion: 2
-        x: 1185
+        x: 622
         y: 0
-        width: 532
-        height: 362
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 507
+        height: 1114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aa9896b1de3e842eba830e247a0bf190
-      internalID: -1288642641
+      spriteID: ad04a7851e4d92580800000000000000
+      internalID: -8851309528302862118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 49@2x_10
+      name: darkBlonde_2
       rect:
         serializedVersion: 2
-        x: 1770
+        x: 1215
         y: 0
-        width: 638
-        height: 338
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 606
+        height: 1072
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0fe0b69ee6df14dbc98684374e93dcff
-      internalID: -1756678538
+      spriteID: 8f7dd0ab624f9d980800000000000000
+      internalID: -8513505173399808008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_3
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 0
+        width: 520
+        height: 1105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b71548b925fe160800000000000000
+      internalID: 7056949969006197504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_4
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 0
+        width: 542
+        height: 1104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e530f77843d4a800800000000000000
+      internalID: 622854956687308262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_5
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 0
+        width: 512
+        height: 1108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529334f1d04092430800000000000000
+      internalID: 3758539818422974757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_6
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 0
+        width: 508
+        height: 1116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745f689c4a4566dc0800000000000000
+      internalID: -3646133781577403065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_7
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 0
+        width: 569
+        height: 1132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47608ecbfa0eb330800000000000000
+      internalID: 3728429618126939978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_8
+      rect:
+        serializedVersion: 2
+        x: 5091
+        y: 0
+        width: 552
+        height: 1131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052b2b6e07bc430d0800000000000000
+      internalID: -3443904129264340400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_9
+      rect:
+        serializedVersion: 2
+        x: 5698
+        y: 34
+        width: 621
+        height: 1087
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521966519007e1e60800000000000000
+      internalID: 7934902777789452581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBlonde_10
+      rect:
+        serializedVersion: 2
+        x: 6373
+        y: 0
+        width: 582
+        height: 1153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08806d4b9e21339a0800000000000000
+      internalID: -6254634662516881280
       vertices: []
       indices: 
       edges: []
@@ -443,7 +401,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e33346d50d6d948829ffc144be44e9ee
+    spriteID: 052b622da828b459dbd1ba68b63b0cac
     internalID: 0
     vertices: []
     indices: 
@@ -453,17 +411,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Asset 49@2x_0: 6069368658061769793
-      Asset 49@2x_1: -7965113281977129089
-      Asset 49@2x_10: -1756678538
-      Asset 49@2x_2: -1768170647734933131
-      Asset 49@2x_3: -5246878786588228033
-      Asset 49@2x_4: 2427612511008696653
-      Asset 49@2x_5: -8423571603358764816
-      Asset 49@2x_6: -5174402688782153930
-      Asset 49@2x_7: -7247978851752546453
-      Asset 49@2x_8: -460635623
-      Asset 49@2x_9: -1288642641
+      darkBlonde_0: -1943763868715539874
+      darkBlonde_1: -8851309528302862118
+      darkBlonde_10: -6254634662516881280
+      darkBlonde_2: -8513505173399808008
+      darkBlonde_3: 7056949969006197504
+      darkBlonde_4: 622854956687308262
+      darkBlonde_5: 3758539818422974757
+      darkBlonde_6: -3646133781577403065
+      darkBlonde_7: 3728429618126939978
+      darkBlonde_8: -3443904129264340400
+      darkBlonde_9: 7934902777789452581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

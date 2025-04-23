@@ -129,9 +129,17 @@ namespace IDMoji
         public void ExpandCharacterPreview()
         {
             // Ensure the RectTransform of characterPreview is accessed
-            RectTransform previewRect = characterCustomizer.characterPreview.GetComponent<RectTransform>();
-            // Update the anchored position
-            previewRect.anchoredPosition = new Vector2(-20, -1080);
+            RectTransform previewFaceRect = characterCustomizer.faceImage.GetComponent<RectTransform>();
+            previewFaceRect.anchoredPosition = new Vector2(-8, -373);
+
+            RectTransform previewEyesRect = characterCustomizer.eyesImage.GetComponent<RectTransform>();
+            previewEyesRect.anchoredPosition = new Vector2(-8, -279);
+
+            RectTransform previewMouthRect = characterCustomizer.mouthImage.GetComponent<RectTransform>();
+            previewMouthRect.anchoredPosition = new Vector2(-8, -507);
+            
+            RectTransform previewHairRect = characterCustomizer.hairImage.GetComponent<RectTransform>();
+            previewHairRect.anchoredPosition = new Vector2(-8, -225);
 
             // Scale the individual images
             characterCustomizer.faceImage.transform.localScale = new Vector2(1.8f, 1.8f);

@@ -3216,7 +3216,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2065082972}
-  - {fileID: 709262873}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5455,7 +5454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &709262873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5463,17 +5462,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709262872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1845808480}
-  m_Father: {fileID: 381330841}
+  m_Father: {fileID: 2065082972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -596}
+  m_AnchoredPosition: {x: 0, y: -595.4761}
   m_SizeDelta: {x: 500.9, y: 136.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709262874
@@ -7863,7 +7862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -784.99994}
+  m_AnchoredPosition: {x: -20, y: -784.99994}
   m_SizeDelta: {x: 600, y: 857.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &975010660
@@ -7891,10 +7890,6 @@ MonoBehaviour:
   eyesImage: {fileID: 1388165300}
   mouthImage: {fileID: 2076334765}
   hairImage: {fileID: 2088437641}
-  finalFaceImage: {fileID: 0}
-  finalEyesImage: {fileID: 0}
-  finalMouthImage: {fileID: 0}
-  finalHairImage: {fileID: 0}
   faceShapesPale:
   - {fileID: -7259167506840717807, guid: 85c7d5dae746b4a2ca95bce6447e675c, type: 3}
   - {fileID: -1899768364646925380, guid: 85c7d5dae746b4a2ca95bce6447e675c, type: 3}
@@ -8058,29 +8053,29 @@ MonoBehaviour:
   - {fileID: 607705536}
   - {fileID: 680207028}
   hairStylesBlonde:
-  - {fileID: 6069368658061769793, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -7965113281977129089, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -1768170647734933131, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -5246878786588228033, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: 2427612511008696653, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -8423571603358764816, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -5174402688782153930, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -7247978851752546453, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -460635623, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -1288642641, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
-  - {fileID: -1756678538, guid: a42dcf8dec4d942889aa7d8401697013, type: 3}
+  - {fileID: 1777236551935713357, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: -777368718451398932, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: 8192130790926775708, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: -4244802700634372076, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: -1360792760954038418, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: 5153266480062315145, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: -1364441174792467594, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: -7691320413360023812, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: 8681794807027184022, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: 5336791927242288735, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
+  - {fileID: -2183501406689983668, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
   hairStylesDarkBlonde:
-  - {fileID: 2802685610529827892, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: -1348577540420828453, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: 4101518662332739448, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: -1801141032767129108, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: 8228231258910224724, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: 3938109939391773156, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: -3175496846791357468, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: -9138483693155309390, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: 8604002473947186253, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: -1225140623822905237, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
-  - {fileID: 5308344420067607430, guid: 36e8aa7dd1de249b9b0057001a5f1424, type: 3}
+  - {fileID: 9159934845445333686, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: 1263639195555719296, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: 3378593869705268071, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -7170719443481777499, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -6240793810417018939, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -9199277576996529123, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: 4705842816568741856, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -4228448452643531668, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -3208860754909240065, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: 5241995235069159994, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -1040168380321679710, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
   hairStylesOrange:
   - {fileID: -2914737575166619746, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
   - {fileID: 6180875713860818602, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
@@ -10612,11 +10607,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5047448197349187750, guid: 10659f6d550524a31a54f68370c5ba4e, type: 3}
       propertyPath: m_text
-      value: CREATE NEW IDMOJI
+      value: IDmoji Creation
       objectReference: {fileID: 0}
     - target: {fileID: 5047448197349187750, guid: 10659f6d550524a31a54f68370c5ba4e, type: 3}
       propertyPath: m_fontSize
-      value: 36.8
+      value: 51.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047448197349187750, guid: 10659f6d550524a31a54f68370c5ba4e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 6907031495140639372, guid: 10659f6d550524a31a54f68370c5ba4e, type: 3}
       propertyPath: m_Pivot.x
@@ -17975,6 +17974,7 @@ RectTransform:
   - {fileID: 975010658}
   - {fileID: 1108236465}
   - {fileID: 86629950}
+  - {fileID: 709262873}
   m_Father: {fileID: 381330841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18379,11 +18379,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 975010658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.7, y: -30.95}
-  m_SizeDelta: {x: 473.9, y: 919}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 20, y: -43}
+  m_SizeDelta: {x: 451.2, y: 862.3}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2088437641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18957,10 +18957,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1383942765}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 6
+      - m_Target: {fileID: 1383942766}
+        m_TargetAssemblyTypeName: IDMoji.IdMojiCustomizer, Assembly-CSharp
+        m_MethodName: ExpandCharacterPreview
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

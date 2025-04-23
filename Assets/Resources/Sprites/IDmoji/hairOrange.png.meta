@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 85c7d5dae746b4a2ca95bce6447e675c
+guid: 0ba89e80bdc3848cb9c58d55bcb4d4af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7259167506840717807
-    second: Asset 19@2x_0
+      213: -4842788000925033123
+    second: orangeHair_0
   - first:
-      213: -1899768364646925380
-    second: Asset 19@2x_1
+      213: 8716743648406640858
+    second: orangeHair_1
   - first:
-      213: 8597344882678505624
-    second: Asset 19@2x_2
+      213: -4304636796039736074
+    second: orangeHair_2
   - first:
-      213: 1806432889553964598
-    second: Asset 19@2x_3
+      213: -1337771574486784342
+    second: orangeHair_3
   - first:
-      213: 6768082885636857419
-    second: Asset 19@2x_4
+      213: 1242200354919357700
+    second: orangeHair_4
   - first:
-      213: 4054970163364527064
-    second: Asset 19@2x_5
+      213: 6575834136815023295
+    second: orangeHair_5
   - first:
-      213: 7951705749280747447
-    second: Asset 19@2x_6
+      213: 283833185504334883
+    second: orangeHair_6
   - first:
-      213: -614943830066766827
-    second: Asset 19@2x_7
+      213: -5586762486766763288
+    second: orangeHair_7
   - first:
-      213: -8059368919982228642
-    second: Asset 19@2x_8
+      213: -1660285292943919066
+    second: orangeHair_8
+  - first:
+      213: -5148733839668874665
+    second: orangeHair_9
+  - first:
+      213: -6387138352002395540
+    second: orangeHair_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +78,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -150,145 +156,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 19@2x_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 1567
-        width: 512
-        height: 723
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11673bdfc91424b90800000000000000
-      internalID: -7259167506840717807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_1
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 1573
-        width: 505
-        height: 711
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbbf1bddcbaa2a5e0800000000000000
-      internalID: -1899768364646925380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_2
-      rect:
-        serializedVersion: 2
-        x: 1270
-        y: 1563
-        width: 509
-        height: 724
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 890239fbe97ef4770800000000000000
-      internalID: 8597344882678505624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_3
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 807
-        width: 507
-        height: 688
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63e4274642db11910800000000000000
-      internalID: 1806432889553964598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_4
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 791
-        width: 505
-        height: 717
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4e19c0968f0ded50800000000000000
-      internalID: 6768082885636857419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_5
-      rect:
-        serializedVersion: 2
-        x: 1298
-        y: 790
-        width: 489
-        height: 687
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8db762221e5264830800000000000000
-      internalID: 4054970163364527064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 19@2x_6
+      name: orangeHair_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 544
-        height: 696
+        y: 0
+        width: 469
+        height: 1097
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bf6f40cf322a5e60800000000000000
-      internalID: 7951705749280747447
+      spriteID: d5dd65aa8f5faccb0800000000000000
+      internalID: -4842788000925033123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 19@2x_7
+      name: orangeHair_1
       rect:
         serializedVersion: 2
-        x: 668
-        y: 6
-        width: 479
-        height: 720
+        x: 622
+        y: 0
+        width: 507
+        height: 1114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51c5d0c38d74777f0800000000000000
-      internalID: -614943830066766827
+      spriteID: ad89b693a2818f870800000000000000
+      internalID: 8716743648406640858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 19@2x_8
+      name: orangeHair_2
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 7
-        width: 510
-        height: 734
+        x: 1215
+        y: 0
+        width: 606
+        height: 1072
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +215,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5bb2aaeaae572090800000000000000
-      internalID: -8059368919982228642
+      spriteID: 6f4d9f414abd244c0800000000000000
+      internalID: -4304636796039736074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_3
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 0
+        width: 520
+        height: 1105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6a91047d74f6de0800000000000000
+      internalID: -1337771574486784342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_4
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 0
+        width: 542
+        height: 1104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d15de24ae2d3110800000000000000
+      internalID: 1242200354919357700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_5
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 0
+        width: 512
+        height: 1108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb43fb2ae4e024b50800000000000000
+      internalID: 6575834136815023295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_6
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 0
+        width: 508
+        height: 1127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324147547c060f300800000000000000
+      internalID: 283833185504334883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_7
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 0
+        width: 569
+        height: 1132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e20ac34e15d772b0800000000000000
+      internalID: -5586762486766763288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_8
+      rect:
+        serializedVersion: 2
+        x: 5091
+        y: 0
+        width: 552
+        height: 1131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628b548925b75f8e0800000000000000
+      internalID: -1660285292943919066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_9
+      rect:
+        serializedVersion: 2
+        x: 5692
+        y: 40
+        width: 637
+        height: 1076
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752f08b1ad50c88b0800000000000000
+      internalID: -5148733839668874665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangeHair_10
+      rect:
+        serializedVersion: 2
+        x: 6389
+        y: 0
+        width: 581
+        height: 1153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c629f9562835c57a0800000000000000
+      internalID: -6387138352002395540
       vertices: []
       indices: 
       edges: []
@@ -351,7 +401,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5c6dfb08e814f445f87a32e6aec96441
+    spriteID: 53a4d63d3a141400aaa150cff5b0663d
     internalID: 0
     vertices: []
     indices: 
@@ -361,15 +411,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Asset 19@2x_0: -7259167506840717807
-      Asset 19@2x_1: -1899768364646925380
-      Asset 19@2x_2: 8597344882678505624
-      Asset 19@2x_3: 1806432889553964598
-      Asset 19@2x_4: 6768082885636857419
-      Asset 19@2x_5: 4054970163364527064
-      Asset 19@2x_6: 7951705749280747447
-      Asset 19@2x_7: -614943830066766827
-      Asset 19@2x_8: -8059368919982228642
+      orangeHair_0: -4842788000925033123
+      orangeHair_1: 8716743648406640858
+      orangeHair_10: -6387138352002395540
+      orangeHair_2: -4304636796039736074
+      orangeHair_3: -1337771574486784342
+      orangeHair_4: 1242200354919357700
+      orangeHair_5: 6575834136815023295
+      orangeHair_6: 283833185504334883
+      orangeHair_7: -5586762486766763288
+      orangeHair_8: -1660285292943919066
+      orangeHair_9: -5148733839668874665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
