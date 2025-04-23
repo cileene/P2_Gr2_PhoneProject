@@ -435,7 +435,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NotificiColor@3x_0: 7712882351911193606
+      NotificiColor@3x_1: 7217414949926343468
+      NotificiColor@3x_10: 6997683283562763243
+      NotificiColor@3x_11: 5760616103657749721
+      NotificiColor@3x_2: -18842153925224870
+      NotificiColor@3x_3: -3385136581427187366
+      NotificiColor@3x_4: -8324378716521509079
+      NotificiColor@3x_5: 8028726431984650315
+      NotificiColor@3x_6: 4796280573990046771
+      NotificiColor@3x_7: 8611542475412138484
+      NotificiColor@3x_8: -1120652033806506940
+      NotificiColor@3x_9: -2247527136486360013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

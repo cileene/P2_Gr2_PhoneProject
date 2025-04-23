@@ -1035,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KeyColor@3x_0: 306682191416634401
+      KeyColor@3x_1: 8248399970916555175
+      KeyColor@3x_10: -5426496652876204254
+      KeyColor@3x_11: -6979569505163545010
+      KeyColor@3x_12: 7139582469927760000
+      KeyColor@3x_13: -9196893369226222409
+      KeyColor@3x_14: 4819876269318686898
+      KeyColor@3x_15: -1537267034311483667
+      KeyColor@3x_16: -3834316583744992269
+      KeyColor@3x_17: -7219188561625247469
+      KeyColor@3x_18: 2202757570307130637
+      KeyColor@3x_19: 6607996878409646427
+      KeyColor@3x_2: -8895463862848205292
+      KeyColor@3x_20: 2982862368432214660
+      KeyColor@3x_21: -6072398994192420975
+      KeyColor@3x_22: 7129879773369503224
+      KeyColor@3x_23: -6740702639614643900
+      KeyColor@3x_24: 7623777496076189125
+      KeyColor@3x_25: 7107249799810732602
+      KeyColor@3x_26: 8095639796341554649
+      KeyColor@3x_27: 5383856290788091337
+      KeyColor@3x_28: 3889895073227656395
+      KeyColor@3x_29: -4780321120319307313
+      KeyColor@3x_3: 1179130661146890566
+      KeyColor@3x_30: 9007412334325658078
+      KeyColor@3x_31: -5859543131374335944
+      KeyColor@3x_32: 1012564769596854321
+      KeyColor@3x_33: 4952660093451401347
+      KeyColor@3x_34: -3836539796603464902
+      KeyColor@3x_35: 7801209500885085759
+      KeyColor@3x_4: 5110908504855677122
+      KeyColor@3x_5: -5868892859816333173
+      KeyColor@3x_6: -6600272752664608099
+      KeyColor@3x_7: 7079655232402158594
+      KeyColor@3x_8: -6851523376519778820
+      KeyColor@3x_9: -9220388474553762632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
