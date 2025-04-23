@@ -1838,7 +1838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.992493, y: 385.70404}
+  m_AnchoredPosition: {x: 114.1, y: 385.70404}
   m_SizeDelta: {x: 130.5, y: 49.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242552535
@@ -3953,7 +3953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -198.9925, y: 385.70404}
+  m_AnchoredPosition: {x: -137.4, y: 385.70404}
   m_SizeDelta: {x: 130.5, y: 49.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506619132
@@ -12698,7 +12698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: useSaveData
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: currentScene
@@ -17180,7 +17180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1955527898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18295,7 +18295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220.0075, y: 385.70404}
+  m_AnchoredPosition: {x: 397.6, y: 385.70404}
   m_SizeDelta: {x: 130.5, y: 49.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077014402

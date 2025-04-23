@@ -127,6 +127,7 @@ namespace IDMojiApp
 
         public void ExpandCharacterPreview()
         {
+            
             // Ensure the RectTransform of characterPreview is accessed
             RectTransform previewFaceRect = characterCustomizer.faceImage.GetComponent<RectTransform>();
             previewFaceRect.anchoredPosition = new Vector2(-8, -373);

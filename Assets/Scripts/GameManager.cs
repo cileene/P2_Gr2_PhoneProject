@@ -110,6 +110,17 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public FindAndEditTMPElements findAndEditTMPElements;
     public string SaveData { get; private set; }
     private const string FileName = "SaveData.json";
+
+    [Header("Character Customization")]
+    public int selectedFaceColorIndex;
+    public int selectedFaceVariantIndex;
+    public int selectedEyeColorIndex;
+    public int selectedEyeVariantIndex;
+    public int selectedMouthColorIndex;
+    public int selectedMouthVariantIndex;
+    public int selectedHairColorIndex;
+    public int selectedHairVariantIndex;
+    //public int selectedBodyIndex;
     
     
     // ------------------ METHODS ------------------

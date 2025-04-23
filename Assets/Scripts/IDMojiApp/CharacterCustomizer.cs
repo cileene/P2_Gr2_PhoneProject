@@ -75,7 +75,7 @@ namespace IDMojiApp
         public Sprite selectedEyes;
         public Sprite selectedMouth;
         public Sprite selectedHair;
-        private Sprite selectedBody;
+        //private Sprite selectedBody;
 
         // Selected color variants
         private Sprite[] selectedFaceColor;
@@ -107,38 +107,43 @@ namespace IDMojiApp
                 int index = i; // Capture index for closure
                 hairColorVariants[i].onClick.AddListener(() => UpdateHairColor(hairColors[index]));
             }
-            UpdateCharacterPreview();
+            LoadFromGameManager();
         }
 
         public void SelectFace(int index)
         {
             selectedFace = selectedFaceColor[index];
+            GameManager.Instance.selectedFaceVariantIndex = index;
             UpdateCharacterPreview();
         }
 
         public void SelectEyes(int index)
         {
             selectedEyes = selectedEyeColor[index];
+            GameManager.Instance.selectedEyeVariantIndex = index;
             UpdateCharacterPreview();
         }
 
         public void SelectMouth(int index)
         {
             selectedMouth = selectedMouthColor[index];
+            GameManager.Instance.selectedMouthVariantIndex = index;
             UpdateCharacterPreview();
         }
 
         public void SelectHair(int index)
         {
             selectedHair = selectedHairColor[index];
+            GameManager.Instance.selectedHairVariantIndex = index;
             UpdateCharacterPreview();
         }
 
-        public void SelectBody(int index)
-        {
-            selectedBody = bodyTypes[index];
-            UpdateCharacterPreview();
-        }
+        // public void SelectBody(int index)
+        // {
+        //     selectedBody = bodyTypes[index];
+        //     GameManager.Instance.selectedBodyIndex = index;
+        //     UpdateCharacterPreview();
+        // }
 
         private void UpdateCharacterPreview()
         {
@@ -202,7 +207,7 @@ namespace IDMojiApp
                     selectedFaceColor = faceShapesDark;
                     break;
             }
-            
+            GameManager.Instance.selectedFaceColorIndex = System.Array.IndexOf(faceColors, color);
         for (int i = 0; i < faceVariants.Length; i++)
             {
                 if (i < selectedFaceColor.Length)
@@ -231,6 +236,7 @@ namespace IDMojiApp
                     selectedEyeColor = eyeStylesBlack;
                     break;
             }  
+            GameManager.Instance.selectedEyeColorIndex = System.Array.IndexOf(eyeColors, color);
             for (int i = 0; i < eyeVariants.Length; i++)
             {
                 if (i < selectedEyeColor.Length)
@@ -259,6 +265,7 @@ namespace IDMojiApp
                     selectedMouthColor = mouthStylesRed;
                     break;
             } 
+            GameManager.Instance.selectedMouthColorIndex = System.Array.IndexOf(mouthColors, color);
             for (int i = 0; i < mouthVariants.Length; i++)
             {
                 if (i < selectedMouthColor.Length)
@@ -287,6 +294,7 @@ namespace IDMojiApp
                     selectedHairColor = hairStylesBlack;
                     break;
             }  
+            GameManager.Instance.selectedHairColorIndex = System.Array.IndexOf(hairColors, color);
             for (int i = 0; i < hairVariants.Length; i++)
             {
                 if (i < selectedHairColor.Length)
@@ -305,5 +313,19 @@ namespace IDMojiApp
             UpdateFaceColor("Pale");
             SelectFace(0);
         }
+    private void LoadFromGameManager() { //TODO: NICK FIX THIS
+        var gm = GameManager.Instance;
+        // Apply stored selections
+        UpdateFaceColor(faceColors[gm.selectedFaceColorIndex]);
+        SelectFace(gm.selectedFaceVariantIndex);
+        UpdateEyeColor(eyeColors[gm.selectedEyeColorIndex]);
+        SelectEyes(gm.selectedEyeVariantIndex);
+        UpdateMouthColor(mouthColors[gm.selectedMouthColorIndex]);
+        SelectMouth(gm.selectedMouthVariantIndex);
+        UpdateHairColor(hairColors[gm.selectedHairColorIndex]);
+        SelectHair(gm.selectedHairVariantIndex);
+        //SelectBody(gm.selectedBodyIndex);
+        UpdateCharacterPreview();
+    }
     } 
 }
