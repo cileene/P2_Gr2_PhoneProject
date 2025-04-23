@@ -10,10 +10,12 @@ namespace DeviceUtils
         private Texture2D _selfieTexture;
         private string _dataPath;
 
+        private string _fileName = "/Selfie.png";
+
         private void Start()
         {
             // check if there's already a selfie saved
-            if (File.Exists(GameManager.Instance.dataPath + "/Selfie.png"))
+            if (File.Exists(GameManager.Instance.dataPath + _fileName))
             {
                 return;
             }
@@ -23,7 +25,7 @@ namespace DeviceUtils
 
         public void CaptureSelfieNow()
         {
-            _dataPath = GameManager.Instance.dataPath + "/Selfie.png";
+            _dataPath = GameManager.Instance.dataPath + _fileName;
             StartCoroutine(InitializeCameraAndCapture());
         }
 
@@ -31,24 +33,12 @@ namespace DeviceUtils
         {
             if (_webCamTexture != null)
             {
-                // Determine target width and compute target height based on aspect ratio
-                int targetWidth = 128; // Desired width for low-res capture
-                float aspectRatio = (float)_webCamTexture.height / _webCamTexture.width;
-                int targetHeight = Mathf.RoundToInt(targetWidth * aspectRatio);
-
-                // Create a low-res texture
-                _selfieTexture = new Texture2D(targetWidth, targetHeight, TextureFormat.RGBA32, false, false);
-
-                // Downsample from webcam texture
-                Color[] originalPixels = _webCamTexture.GetPixels();
-                Color[] resizedPixels = Resample(originalPixels, _webCamTexture.width, _webCamTexture.height, targetWidth, targetHeight);
-                for (int i = 0; i < resizedPixels.Length; i++) //TODO: wow
-                {
-                    resizedPixels[i].r = Mathf.LinearToGammaSpace(resizedPixels[i].r);
-                    resizedPixels[i].g = Mathf.LinearToGammaSpace(resizedPixels[i].g);
-                    resizedPixels[i].b = Mathf.LinearToGammaSpace(resizedPixels[i].b);
-                }
-                _selfieTexture.SetPixels(resizedPixels);
+                // Capture full-resolution selfie
+                int width = _webCamTexture.width;
+                int height = _webCamTexture.height;
+                _selfieTexture = new Texture2D(width, height, TextureFormat.RGBA32, false);
+                Color[] pixels = _webCamTexture.GetPixels();
+                _selfieTexture.SetPixels(pixels);
                 _selfieTexture.Apply();
 
                 // Save to file
@@ -58,25 +48,6 @@ namespace DeviceUtils
                 GameManager.Instance.selfiePicture = _dataPath;
                 GameManager.Instance.phoneUnlocked = true;
             }
-        }
-
-        // Helper method to resample pixels
-        private Color[] Resample(Color[] original, int originalWidth, int originalHeight, int newWidth, int newHeight)
-        {
-            Color[] newPixels = new Color[newWidth * newHeight];
-            float ratioX = (float)originalWidth / newWidth;
-            float ratioY = (float)originalHeight / newHeight;
-
-            for (int y = 0; y < newHeight; y++)
-            {
-                for (int x = 0; x < newWidth; x++)
-                {
-                    int originalX = Mathf.FloorToInt(x * ratioX);
-                    int originalY = Mathf.FloorToInt(y * ratioY);
-                    newPixels[y * newWidth + x] = original[originalY * originalWidth + originalX];
-                }
-            }
-            return newPixels;
         }
 
         private IEnumerator InitializeCameraAndCapture()

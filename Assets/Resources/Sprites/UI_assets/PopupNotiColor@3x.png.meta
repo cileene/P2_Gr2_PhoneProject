@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 96ed8948c53fb4d868e4b9b8ad08804a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5582412067537402522
+    second: PopupNotiColor@3x_0
+  - first:
+      213: -5089389002467759720
+    second: PopupNotiColor@3x_1
+  - first:
+      213: 6113239151978184455
+    second: PopupNotiColor@3x_2
+  - first:
+      213: -3395104100635850057
+    second: PopupNotiColor@3x_3
+  - first:
+      213: 5350980843424496305
+    second: PopupNotiColor@3x_4
+  - first:
+      213: 1716331234839483462
+    second: PopupNotiColor@3x_5
+  - first:
+      213: -6837744997743361907
+    second: PopupNotiColor@3x_6
+  - first:
+      213: -4980531556971705573
+    second: PopupNotiColor@3x_7
+  - first:
+      213: 4666574970120340025
+    second: PopupNotiColor@3x_8
+  - first:
+      213: 2248151238094559543
+    second: PopupNotiColor@3x_9
+  - first:
+      213: 4780943915452921145
+    second: PopupNotiColor@3x_10
+  - first:
+      213: -2908138772510483584
+    second: PopupNotiColor@3x_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1209
+        width: 1133
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9abb63d236b87d40800000000000000
+      internalID: 5582412067537402522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_1
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 1211
+        width: 1134
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8992120caabde59b0800000000000000
+      internalID: -5089389002467759720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 976
+        width: 1133
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f7ba09e9696d450800000000000000
+      internalID: 6113239151978184455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_3
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 977
+        width: 1134
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bac02afeca22e0d0800000000000000
+      internalID: -3395104100635850057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 743
+        width: 1133
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1babc34f9b0824a40800000000000000
+      internalID: 5350980843424496305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_5
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 739
+        width: 1134
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644d3812a22a1d710800000000000000
+      internalID: 1716331234839483462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 511
+        width: 1133
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d808dc807237b11a0800000000000000
+      internalID: -6837744997743361907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_7
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 510
+        width: 1134
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b041adfe891eab0800000000000000
+      internalID: -4980531556971705573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 278
+        width: 1133
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93280c3f53103c040800000000000000
+      internalID: 4666574970120340025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_9
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 276
+        width: 1134
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7391bfbc3a9033f10800000000000000
+      internalID: 2248151238094559543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 46
+        width: 1133
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935f2ab1923595240800000000000000
+      internalID: 4780943915452921145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopupNotiColor@3x_11
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 48
+        width: 1134
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bd8f2c13734a7d0800000000000000
+      internalID: -2908138772510483584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PopupNotiColor@3x_0: 5582412067537402522
+      PopupNotiColor@3x_1: -5089389002467759720
+      PopupNotiColor@3x_10: 4780943915452921145
+      PopupNotiColor@3x_11: -2908138772510483584
+      PopupNotiColor@3x_2: 6113239151978184455
+      PopupNotiColor@3x_3: -3395104100635850057
+      PopupNotiColor@3x_4: 5350980843424496305
+      PopupNotiColor@3x_5: 1716331234839483462
+      PopupNotiColor@3x_6: -6837744997743361907
+      PopupNotiColor@3x_7: -4980531556971705573
+      PopupNotiColor@3x_8: 4666574970120340025
+      PopupNotiColor@3x_9: 2248151238094559543
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -82,6 +82,7 @@ namespace GalleryApp
             if (_currentIndex == 2 && GameManager.Instance.currentLevel == 1)
             {
                 popUp.SetActive(true);
+                GameManager.Instance.progressStory = true;
             }
         }
     }

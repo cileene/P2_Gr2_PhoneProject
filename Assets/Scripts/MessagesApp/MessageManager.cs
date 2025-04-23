@@ -15,19 +15,18 @@ namespace MessagesApp
     {
         public AudioClip messageSendSound;
         public AudioClip messageReceiveSound;
-
         public GameObject buttonChoice1;
         public GameObject buttonChoice2;
-        public List<string> playerButtonMessages;
-        public List<string> playerMessages;
-        public List<string> botMessages;
-        public List<string> loadingDots;
-        public List<int> progressMessages;
         public TextMeshProUGUI playerMessagePrefab;
         public TextMeshProUGUI botMessagePrefab;
         public TextMeshProUGUI loadingDotsPrefab;
         public Transform messageContainer;
         public ScrollRect scrollRect;
+        public List<string> playerButtonMessages;
+        public List<string> playerMessages;
+        public List<string> botMessages;
+        public List<string> loadingDots;
+        public List<int> progressMessages;
 
         private List<int> _playerChoices = new List<int>(); // Keep track of choices made
         private int _currentChoiceIndex;
@@ -165,8 +164,12 @@ namespace MessagesApp
         {
             yield return new WaitForSeconds(2f); // Wait for 2 seconds
             SoundManager.Instance.PlaySound(messageReceiveSound);
-            DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
+            
             if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
+            if (GameManager.Instance.progressStory)
+            {
+                DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
+            }
             _currentChoiceIndex += 2; // Move to the next choices
             DisplayChoices();
             SaveConversationState();
