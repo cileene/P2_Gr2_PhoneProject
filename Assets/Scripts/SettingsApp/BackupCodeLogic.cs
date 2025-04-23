@@ -7,6 +7,7 @@ namespace SettingsApp
     {
         [SerializeField] private TMP_InputField codeInputField;
         [SerializeField] private GameObject popUp;
+        [SerializeField] private GameObject selfieGameObject;
         private int inputCode;
         private string fileName;
         private string textToSave;
@@ -27,6 +28,7 @@ namespace SettingsApp
             // Compare parsed code against stored birth year
             if (inputCode == GameManager.Instance.playerBirthYear)
             {
+                selfieGameObject.SetActive(true);
                 popUp.SetActive(true);
                 SetFileNameAndText();
                 SaveTextFileToDevice.SaveTextFile(fileName, textToSave);
