@@ -1,0 +1,1343 @@
+fileFormatVersion: 2
+guid: e32956399c23044dd8384373bcd1a8de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4606921948273087348
+    second: ButtonsColored@3x_0
+  - first:
+      213: 4333057548253452943
+    second: ButtonsColored@3x_1
+  - first:
+      213: 3845268080220074099
+    second: ButtonsColored@3x_2
+  - first:
+      213: -1283696162718947142
+    second: ButtonsColored@3x_3
+  - first:
+      213: 5922880470915088969
+    second: ButtonsColored@3x_4
+  - first:
+      213: -265093383328427113
+    second: ButtonsColored@3x_5
+  - first:
+      213: 5534826163951956401
+    second: ButtonsColored@3x_6
+  - first:
+      213: 6086503687518334195
+    second: ButtonsColored@3x_7
+  - first:
+      213: -8943958648699893000
+    second: ButtonsColored@3x_8
+  - first:
+      213: -4125446441749189409
+    second: ButtonsColored@3x_9
+  - first:
+      213: 1151586287872659419
+    second: ButtonsColored@3x_10
+  - first:
+      213: 5037482135916496403
+    second: ButtonsColored@3x_11
+  - first:
+      213: -4185644524403527894
+    second: ButtonsColored@3x_12
+  - first:
+      213: -4841398833051639501
+    second: ButtonsColored@3x_13
+  - first:
+      213: 1005176804554593282
+    second: ButtonsColored@3x_14
+  - first:
+      213: 2266405868624413938
+    second: ButtonsColored@3x_15
+  - first:
+      213: 1585068579499553065
+    second: ButtonsColored@3x_16
+  - first:
+      213: 1247269820778286253
+    second: ButtonsColored@3x_17
+  - first:
+      213: 4226054908838813455
+    second: ButtonsColored@3x_18
+  - first:
+      213: 4424090391586581693
+    second: ButtonsColored@3x_19
+  - first:
+      213: 5082178667000472731
+    second: ButtonsColored@3x_20
+  - first:
+      213: -2741448686863047059
+    second: ButtonsColored@3x_21
+  - first:
+      213: -4834517486426128488
+    second: ButtonsColored@3x_22
+  - first:
+      213: 8758151893725546974
+    second: ButtonsColored@3x_23
+  - first:
+      213: 204135830591473675
+    second: ButtonsColored@3x_24
+  - first:
+      213: 907061090397979926
+    second: ButtonsColored@3x_25
+  - first:
+      213: 6944745404797858619
+    second: ButtonsColored@3x_26
+  - first:
+      213: -8253467873474058163
+    second: ButtonsColored@3x_27
+  - first:
+      213: 663794149463823067
+    second: ButtonsColored@3x_28
+  - first:
+      213: 8819672748930971910
+    second: ButtonsColored@3x_29
+  - first:
+      213: 4398661846368192683
+    second: ButtonsColored@3x_30
+  - first:
+      213: 2543802163394028124
+    second: ButtonsColored@3x_31
+  - first:
+      213: -225351688162900216
+    second: ButtonsColored@3x_32
+  - first:
+      213: -1520751235862507053
+    second: ButtonsColored@3x_33
+  - first:
+      213: 8316029952835892642
+    second: ButtonsColored@3x_34
+  - first:
+      213: 1258814293885974647
+    second: ButtonsColored@3x_35
+  - first:
+      213: -7900730214889787913
+    second: ButtonsColored@3x_36
+  - first:
+      213: 2375964871479594166
+    second: ButtonsColored@3x_37
+  - first:
+      213: -4894794867880220882
+    second: ButtonsColored@3x_38
+  - first:
+      213: 7377348131610253202
+    second: ButtonsColored@3x_39
+  - first:
+      213: 7893831270495688861
+    second: ButtonsColored@3x_40
+  - first:
+      213: -9217827962678950819
+    second: ButtonsColored@3x_41
+  - first:
+      213: -3719672197251308665
+    second: ButtonsColored@3x_42
+  - first:
+      213: -6935220156107737775
+    second: ButtonsColored@3x_43
+  - first:
+      213: -8480788188419417309
+    second: ButtonsColored@3x_44
+  - first:
+      213: -3603451263265587654
+    second: ButtonsColored@3x_45
+  - first:
+      213: 3461927562738083951
+    second: ButtonsColored@3x_46
+  - first:
+      213: -8655811351834645767
+    second: ButtonsColored@3x_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ButtonsColored@3x_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1309
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47394ca7a131fef30800000000000000
+      internalID: 4606921948273087348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1310
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ad8f2f1ec122c30800000000000000
+      internalID: 4333057548253452943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_2
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1310
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3707aa322f22d5530800000000000000
+      internalID: 3845268080220074099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_3
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1311
+        width: 496
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8ea9d24256f2ee0800000000000000
+      internalID: -1283696162718947142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1194
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9420ef3586c423250800000000000000
+      internalID: 5922880470915088969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_5
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1195
+        width: 234
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793176ee8f2325cf0800000000000000
+      internalID: -265093383328427113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_6
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1195
+        width: 346
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1f4e34217afcc40800000000000000
+      internalID: 5534826163951956401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_7
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1195
+        width: 496
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fca2aa2bda977450800000000000000
+      internalID: 6086503687518334195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1079
+        width: 178
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fac5720ffca0e380800000000000000
+      internalID: -8943958648699893000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_9
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1079
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdce3ab91587fb6c0800000000000000
+      internalID: -4125446441749189409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_10
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1079
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf4cd0a0a14bff00800000000000000
+      internalID: 1151586287872659419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_11
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1080
+        width: 496
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316cda9105bb8e540800000000000000
+      internalID: 5037482135916496403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 963
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f6ed64b7a99e5c0800000000000000
+      internalID: -4185644524403527894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 964
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33167f38965efccb0800000000000000
+      internalID: -4841398833051639501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_14
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 964
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20450f36afa13fd00800000000000000
+      internalID: 1005176804554593282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_15
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 965
+        width: 496
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4083c2124e37f10800000000000000
+      internalID: 2266405868624413938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_16
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 846
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92134b9997b4ff510800000000000000
+      internalID: 1585068579499553065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_17
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 847
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac0e8e2b413f4110800000000000000
+      internalID: 1247269820778286253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_18
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 847
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f12aa8c86f5aa30800000000000000
+      internalID: 4226054908838813455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_19
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 848
+        width: 496
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcacb475c6856d30800000000000000
+      internalID: 4424090391586581693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_20
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 731
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94a1a33296878640800000000000000
+      internalID: 5082178667000472731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_21
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 732
+        width: 234
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d662191b1fa64f9d0800000000000000
+      internalID: -2741448686863047059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_22
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 732
+        width: 346
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ff721e5f758ecb0800000000000000
+      internalID: -4834517486426128488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_23
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 733
+        width: 496
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed90d62aeb43b8970800000000000000
+      internalID: 8758151893725546974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_24
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 616
+        width: 178
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b088554d47c35d200800000000000000
+      internalID: 204135830591473675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_25
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 616
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61500c28147869c00800000000000000
+      internalID: 907061090397979926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_26
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 616
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33b08c9621b06060800000000000000
+      internalID: 6944745404797858619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_27
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 617
+        width: 496
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48ea74a2bac57d80800000000000000
+      internalID: -8253467873474058163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_28
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 500
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd216c21345463900800000000000000
+      internalID: 663794149463823067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_29
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 501
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6093933f2a5c56a70800000000000000
+      internalID: 8819672748930971910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_30
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 501
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba807d7e4af2b0d30800000000000000
+      internalID: 4398661846368192683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_31
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 502
+        width: 496
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52a8f707966d4320800000000000000
+      internalID: 2543802163394028124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_32
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 389
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807048565d36fdcf0800000000000000
+      internalID: -225351688162900216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_33
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 390
+        width: 234
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1ddaaeec435eae0800000000000000
+      internalID: -1520751235862507053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_34
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 390
+        width: 346
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5ba409e29786370800000000000000
+      internalID: 8316029952835892642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_35
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 391
+        width: 496
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778f1494ee4387110800000000000000
+      internalID: 1258814293885974647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_36
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 274
+        width: 178
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd6c4bbab7fa5290800000000000000
+      internalID: -7900730214889787913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_37
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 274
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc0953567f19f020800000000000000
+      internalID: 2375964871479594166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_38
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 274
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27289b5002321cb0800000000000000
+      internalID: -4894794867880220882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_39
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 275
+        width: 496
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2975501f90b916660800000000000000
+      internalID: 7377348131610253202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_40
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 158
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9814ca97b58c8d60800000000000000
+      internalID: 7893831270495688861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_41
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 159
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54cbdb5e42b31080800000000000000
+      internalID: -9217827962678950819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_42
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 159
+        width: 346
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78360f128d1116cc0800000000000000
+      internalID: -3719672197251308665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_43
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 160
+        width: 496
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155b11c230621cf90800000000000000
+      internalID: -6935220156107737775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_44
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 43
+        width: 178
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b9ee563103e4a80800000000000000
+      internalID: -8480788188419417309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_45
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 44
+        width: 234
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e3f9ffa28fdfdc0800000000000000
+      internalID: -3603451263265587654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_46
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 44
+        width: 346
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f682327b6cc3b0030800000000000000
+      internalID: 3461927562738083951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonsColored@3x_47
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 45
+        width: 496
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa2a1b9f6160e780800000000000000
+      internalID: -8655811351834645767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

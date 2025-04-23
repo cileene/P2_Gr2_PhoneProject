@@ -50,6 +50,9 @@ TagManager:
   - name: hair
     uniqueID: 2014765885
     locked: 0
+  - name: chatFace
+    uniqueID: 3192075497
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
