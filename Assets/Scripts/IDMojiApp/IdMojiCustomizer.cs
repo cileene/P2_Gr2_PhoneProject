@@ -15,6 +15,7 @@ namespace IDMojiApp
         public Button doneButton;
         public Button exitButton;
         public Button confirmButton;
+        public Button cancelButton;
 
         //CategoryButtons
         public Button faceButton;
@@ -32,6 +33,16 @@ namespace IDMojiApp
         public ScrollRect bodyScroll;
         
         public CharacterCustomizer characterCustomizer;
+        
+        // Original preview positions and scale for collapsing later
+        private Vector2 faceOriginalPos;
+        private Vector2 eyesOriginalPos;
+        private Vector2 mouthOriginalPos;
+        private Vector2 hairOriginalPos;
+        private Vector3 faceOriginalScale;
+        private Vector3 eyesOriginalScale;
+        private Vector3 mouthOriginalScale;
+        private Vector3 hairOriginalScale;
 
         private void Start()
         {
@@ -53,7 +64,8 @@ namespace IDMojiApp
             createButton.onClick.AddListener(OpenCustomizer);
             doneButton.onClick.AddListener(FinishCustomization);
             exitButton.onClick.AddListener(ExitApp);
-            confirmButton.onClick.AddListener(ExitApp);
+            //confirmButton.onClick.AddListener(ExitApp);
+            cancelButton.onClick.AddListener(CancelAndGoBack);
 
             // Assign category button listeners
             faceButton.onClick.AddListener(() => ShowScrollRect(faceScroll));
@@ -66,16 +78,24 @@ namespace IDMojiApp
         // Function to start customization
         private void OpenCustomizer()
         {
-            GameManager.Instance.iDMojiCreated = true;
             startCanvas.gameObject.SetActive(false);
             customizerCanvas.gameObject.SetActive(true);
             characterCustomizer.InitializeCustomization();
+        }
+        
+        public void CancelAndGoBack()
+        {
+            confirmButton.gameObject.SetActive(false);
+            customizerElements.SetActive(true);
+            cancelButton.gameObject.SetActive(false);
+            CollapseCharacterPreview();
         }
 
         // Function to finish customization
         private void FinishCustomization()
         {
             startCanvas.gameObject.SetActive(false);
+            cancelButton.gameObject.SetActive(true);
             confirmButton.gameObject.SetActive(true);
             customizerElements.SetActive(false);
         }
@@ -134,25 +154,55 @@ namespace IDMojiApp
 
         public void ExpandCharacterPreview()
         {
-            
             // Ensure the RectTransform of characterPreview is accessed
             RectTransform previewFaceRect = characterCustomizer.faceImage.GetComponent<RectTransform>();
+            faceOriginalPos = previewFaceRect.anchoredPosition;
             previewFaceRect.anchoredPosition = new Vector2(-8, -373);
 
             RectTransform previewEyesRect = characterCustomizer.eyesImage.GetComponent<RectTransform>();
+            eyesOriginalPos = previewEyesRect.anchoredPosition;
             previewEyesRect.anchoredPosition = new Vector2(-8, -279);
 
             RectTransform previewMouthRect = characterCustomizer.mouthImage.GetComponent<RectTransform>();
+            mouthOriginalPos = previewMouthRect.anchoredPosition;
             previewMouthRect.anchoredPosition = new Vector2(-8, -507);
             
             RectTransform previewHairRect = characterCustomizer.hairImage.GetComponent<RectTransform>();
+            hairOriginalPos = previewHairRect.anchoredPosition;
             previewHairRect.anchoredPosition = new Vector2(-8, -225);
 
             // Scale the individual images
+            faceOriginalScale = characterCustomizer.faceImage.transform.localScale;
             characterCustomizer.faceImage.transform.localScale = new Vector2(1.8f, 1.8f);
+            
+            eyesOriginalScale = characterCustomizer.eyesImage.transform.localScale;
             characterCustomizer.eyesImage.transform.localScale = new Vector2(1.8f, 1.8f);
+            
+            mouthOriginalScale = characterCustomizer.mouthImage.transform.localScale;
             characterCustomizer.mouthImage.transform.localScale = new Vector2(1.8f, 1.8f);
+            
+            hairOriginalScale = characterCustomizer.hairImage.transform.localScale;
             characterCustomizer.hairImage.transform.localScale = new Vector2(1.8f, 1.8f);
+        }
+        
+        private void CollapseCharacterPreview()
+        {
+            // Collapse the character preview
+            RectTransform previewFaceRect = characterCustomizer.faceImage.GetComponent<RectTransform>();
+            previewFaceRect.anchoredPosition = faceOriginalPos;
+            characterCustomizer.faceImage.transform.localScale = faceOriginalScale;
+
+            RectTransform previewEyesRect = characterCustomizer.eyesImage.GetComponent<RectTransform>();
+            previewEyesRect.anchoredPosition = eyesOriginalPos;
+            characterCustomizer.eyesImage.transform.localScale = eyesOriginalScale;
+
+            RectTransform previewMouthRect = characterCustomizer.mouthImage.GetComponent<RectTransform>();
+            previewMouthRect.anchoredPosition = mouthOriginalPos;
+            characterCustomizer.mouthImage.transform.localScale = mouthOriginalScale;
+            
+            RectTransform previewHairRect = characterCustomizer.hairImage.GetComponent<RectTransform>();
+            previewHairRect.anchoredPosition = hairOriginalPos;
+            characterCustomizer.hairImage.transform.localScale = hairOriginalScale;
         }
     }
 }
