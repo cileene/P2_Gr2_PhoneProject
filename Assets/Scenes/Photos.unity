@@ -351,14 +351,14 @@ RectTransform:
   m_Children:
   - {fileID: 1225027768}
   - {fileID: 1450226870}
+  - {fileID: 592175702}
+  - {fileID: 582644390}
   - {fileID: 1160305245}
   - {fileID: 1020587656}
   - {fileID: 1015311850}
   - {fileID: 845428210}
-  - {fileID: 1299615352}
-  - {fileID: 582644390}
-  - {fileID: 592175702}
   - {fileID: 1202530149}
+  - {fileID: 1299615352}
   - {fileID: 1630563956}
   m_Father: {fileID: 1201418007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
