@@ -79,7 +79,7 @@ namespace GalleryApp
         {
             // Check if the current photo is a Sandra photo
             // maybe change to only show the photo when the player has talked to paris
-            if (_currentIndex == 2 && GameManager.Instance.currentLevel == 1)
+            if (_currentIndex == 6 && GameManager.Instance.currentLevel == 1)
             {
                 popUp.SetActive(true);
                 GameManager.Instance.progressStory = true;
