@@ -105,13 +105,12 @@ namespace MessagesApp
         public void OnChoice1Clicked()
         {
             OnChoiceClicked(0);
-            StartCoroutine(RunChoiceAfterDelay(0));
         }
 
         public void OnChoice2Clicked()
         {
+            
             OnChoiceClicked(1);
-            StartCoroutine(RunChoiceAfterDelay(1));
         }
 
         public void OnChoiceClicked(int choiceIndex)
@@ -123,7 +122,7 @@ namespace MessagesApp
             SoundManager.Instance.PlaySound(messageSendSound);
 
             DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
-            StartCoroutine(DisplayLoadingDots());
+            StartCoroutine(RunChoiceAfterDelay(choiceIndex));
             buttonChoice1.SetActive(false);
             buttonChoice2.SetActive(false);
             ScrollToBottom();
@@ -156,13 +155,19 @@ namespace MessagesApp
 
         IEnumerator RunChoiceAfterDelay(int choiceIndex)
         {
-            yield return new WaitForSeconds(2f); // Wait for 2 seconds
-            SoundManager.Instance.PlaySound(messageReceiveSound);
-
             if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
+            
+            if (GameManager.Instance.progressStory)
+            {
+                StartCoroutine(DisplayLoadingDots());
+            }
+            
+            yield return new WaitForSeconds(2f); // Wait for 2 seconds
+            
             if (GameManager.Instance.progressStory)
             {
                 DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
+                SoundManager.Instance.PlaySound(messageReceiveSound);
             }
 
             _currentChoiceIndex += 2; // Move to the next choices
