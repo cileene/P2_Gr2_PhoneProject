@@ -5472,8 +5472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -595.4761}
-  m_SizeDelta: {x: 500.9, y: 136.6}
+  m_AnchoredPosition: {x: 0, y: -693.38007}
+  m_SizeDelta: {x: 550, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709262874
 MonoBehaviour:
@@ -7171,7 +7171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 539.99, y: -988}
+  m_AnchoredPosition: {x: 540.01, y: -984}
   m_SizeDelta: {x: 600, y: 857.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907956495
@@ -8200,53 +8200,53 @@ MonoBehaviour:
   - {fileID: 5336791927242288735, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
   - {fileID: -2183501406689983668, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
   hairStylesDarkBlonde:
-  - {fileID: 9159934845445333686, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: 1263639195555719296, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: 3378593869705268071, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: -7170719443481777499, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: -6240793810417018939, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: -9199277576996529123, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: 4705842816568741856, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: -4228448452643531668, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: -3208860754909240065, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: 5241995235069159994, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
-  - {fileID: -1040168380321679710, guid: fc61403d3e3294ae39d2497fd5320b6c, type: 3}
+  - {fileID: -1943763868715539874, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: -8851309528302862118, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: -8513505173399808008, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: 7056949969006197504, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: 622854956687308262, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: 3758539818422974757, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: -3646133781577403065, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: 3728429618126939978, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: -3443904129264340400, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: 7934902777789452581, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
+  - {fileID: -6254634662516881280, guid: f1c882d63ed4e4d15bbd211da5b40ab0, type: 3}
   hairStylesOrange:
-  - {fileID: -2914737575166619746, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: 6180875713860818602, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: 5902177780171158503, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: -5192192683706805969, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: -1893192616159909540, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: 7084699394588426172, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: -2606464399273594182, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: -1039799180702619112, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: 6769412408111289055, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: 711601379715636664, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
-  - {fileID: 4059244116895719195, guid: 0cbf6812022f241efaa55ca297c2783f, type: 3}
+  - {fileID: -4842788000925033123, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: 8716743648406640858, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: -4304636796039736074, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: -1337771574486784342, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: 1242200354919357700, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: 6575834136815023295, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: 283833185504334883, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: -5586762486766763288, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: -1660285292943919066, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: -5148733839668874665, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
+  - {fileID: -6387138352002395540, guid: 0ba89e80bdc3848cb9c58d55bcb4d4af, type: 3}
   hairStylesBrown:
-  - {fileID: -7908679712344509548, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: 5682414343321707283, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: 4267093706064524104, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: 544032140440055806, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: 7509792606261117193, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: -8296098978276566115, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: -272979524968883053, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: 4964649519332023775, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: -5841601587747290474, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: -7934279035308796891, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
-  - {fileID: 1964580754442783702, guid: dfc8a78f4c1454c6abf3199c7fd5c6e0, type: 3}
+  - {fileID: 2405659496213580667, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: 2307766163561379752, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: -8305755551085348953, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: 2981141623318772993, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: -5180319873387154490, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: -7480714609512480986, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: 5619902896679768449, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: 1895606748683805836, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: -4840885309786015001, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: 2317557040814284135, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
+  - {fileID: -489602672987333535, guid: 7ea8ae02b00ec47a4aa91eb0b7e9012e, type: 3}
   hairStylesBlack:
-  - {fileID: 8674973880338285178, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -1042017125526924176, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -15752071486598493, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -9094101366912979029, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -4790978626818534082, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -1901995302750728166, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: 8234152538001098584, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -2654629370232729533, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -7545565366854241885, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: 540212164208573706, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
-  - {fileID: -7909883598791030672, guid: 11c7c26e3e18e4208938c90605c7fc1b, type: 3}
+  - {fileID: 1476590985552194541, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: 8462451278947234402, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: -9210036888202778518, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: -3112726621121993814, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: -6752975589769771274, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: 3485782974501267803, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: -2856742011433166250, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: -338426997747774044, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: 6968872814669045596, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: 6134303874035683445, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
+  - {fileID: 6045422313719255298, guid: 24f9a68fe5f7f4c19a9de4d2adca0b39, type: 3}
   hairColorVariants:
   - {fileID: 2105724512}
   - {fileID: 1134262217}
@@ -13072,7 +13072,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0062561035, y: -529.0062}
-  m_SizeDelta: {x: 419.7, y: 124.8}
+  m_SizeDelta: {x: 550, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515109834
 MonoBehaviour:
@@ -13150,8 +13150,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 3183175780230028303, guid: 726e00a1e27ae4a5c94fec5cb9c96e20, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -18619,8 +18619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: -43}
-  m_SizeDelta: {x: 451.2, y: 862.3}
+  m_AnchoredPosition: {x: 20, y: -69}
+  m_SizeDelta: {x: 451.2, y: 854.7}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2088437641
 MonoBehaviour:
@@ -18642,7 +18642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2359611407999258724, guid: 1522b22b8594d40a9bcedd390dd8c743, type: 3}
+  m_Sprite: {fileID: 1777236551935713357, guid: 6c81c86a8ca7249d18e381c1ae4c613b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
