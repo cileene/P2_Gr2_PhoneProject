@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
     private const string FileName = "SaveData.json";
 
     [Header("Character Customization")]
+    public bool iDMojiCreated;
     public int selectedFaceColorIndex;
     public int selectedFaceVariantIndex;
     public int selectedEyeColorIndex;

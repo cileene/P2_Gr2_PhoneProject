@@ -35,13 +35,19 @@ namespace IDMojiApp
 
         private void Start()
         {
-            // Ensure only the start canvas is visible
-            startCanvas.gameObject.SetActive(true);
-            customizerCanvas.gameObject.SetActive(false);
-            //Canvas.gameObject.SetActive(false);
-
-            // Hide all scrollrects at the start
-            HideAllScrollRects();
+            if (GameManager.Instance.iDMojiCreated)
+            {
+                startCanvas.gameObject.SetActive(false);
+                customizerCanvas.gameObject.SetActive(true);
+            }
+            else
+            {
+                startCanvas.gameObject.SetActive(true);
+                customizerCanvas.gameObject.SetActive(false);
+                
+                // Hide all scrollrects at the start
+                HideAllScrollRects();
+            }
 
             // Assign button click events
             createButton.onClick.AddListener(OpenCustomizer);
@@ -60,6 +66,7 @@ namespace IDMojiApp
         // Function to start customization
         private void OpenCustomizer()
         {
+            GameManager.Instance.iDMojiCreated = true;
             startCanvas.gameObject.SetActive(false);
             customizerCanvas.gameObject.SetActive(true);
             characterCustomizer.InitializeCustomization();
