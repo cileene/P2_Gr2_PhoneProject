@@ -4,6 +4,8 @@ namespace GyroApp
 {
     public class CheckRotation : MonoBehaviour
     {
+        [SerializeField] private GameObject endPopupPanel;
+        
         private void Update()
         {
             //if (GameManager.Instance.phoneUnlocked) return;
@@ -16,7 +18,7 @@ namespace GyroApp
             if (transform.rotation.eulerAngles.x is > 30 and < 150)
             {
                 // wait one second, then unlock the phone
-                Invoke(nameof(CodeUnlocked), 1f);
+                Invoke(nameof(CodeUnlocked), 3f);
             }
         }
 
@@ -25,6 +27,7 @@ namespace GyroApp
             Debug.Log($"YES!!");
             GameManager.Instance.gyroCodeSeen = true;
             GameManager.Instance.playerIsTrapped = false;
+            endPopupPanel.SetActive(true);
         }
     }
 }
