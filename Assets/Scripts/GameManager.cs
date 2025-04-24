@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public bool lastSandraMessage;
     
     [Header("Level 1")]
+    public bool parisPopUpSeen;
     public bool wasShaken;
     public bool seenGyroHint;
     public bool gyroCodeSeen;

@@ -205,7 +205,7 @@ namespace MessagesApp
                 if (GameManager.Instance.currentScene == "Sandra")
                 {
                     GameManager.Instance.lastSandraMessage = true;
-                    popUp.SetActive(true); // Maybe use animation
+                    //popUp.SetActive(true); 
                     GameManager.Instance.currentLevel = 1;
                 }
             }
