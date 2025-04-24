@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public bool seenGyroHint;
     public bool gyroCodeSeen;
     public bool playerIsTrapped;
+    public bool zoomReady;
     
     [Header("FRICTION STRATEGIES")]
     public bool shuffleHomeScreen;

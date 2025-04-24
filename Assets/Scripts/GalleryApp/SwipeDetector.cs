@@ -19,6 +19,7 @@ namespace GalleryApp
         private float _maxZoom = 4f;
         private RectTransform _contentRect;
         private float _originalZoom;
+        [SerializeField] private GameObject popUp;
 
         void Start()
         {
@@ -95,6 +96,16 @@ namespace GalleryApp
 
             // Disable swipe when zoomed in
             swipeEnabled = Mathf.Approximately(newZoom, _originalZoom);
+
+            if (Mathf.Approximately(newZoom, 4f) && GameManager.Instance.zoomReady)
+            {
+                Invoke(nameof(PopUpIfZoom), 4f);
+            }
+        }
+
+        public void PopUpIfZoom()
+        {
+            popUp.SetActive(true);
         }
     }
 }

@@ -2,6 +2,7 @@ using CustomUnityAnalytics;
 using UnityEngine;
 using UnityEngine.UI;
 using GeneralUtils;
+using UnityEngine.Serialization;
 
 namespace GalleryApp
 {
@@ -74,6 +75,10 @@ namespace GalleryApp
                     SaveDataManager.WriteSaveData();
             }
         }
+        private void ShowPopup()
+        {
+            popUp.SetActive(true);
+        }
 
         private void CheckForSandraPhoto() //TODO: NOT FINISHED
         {
@@ -81,7 +86,8 @@ namespace GalleryApp
             // maybe change to only show the photo when the player has talked to paris
             if (_currentIndex == 6 && GameManager.Instance.currentLevel == 1)
             {
-                popUp.SetActive(true);
+                Invoke(nameof(ShowPopup), 1f);
+                GameManager.Instance.zoomReady = true;
                 GameManager.Instance.progressStory = true;
             }
         }
