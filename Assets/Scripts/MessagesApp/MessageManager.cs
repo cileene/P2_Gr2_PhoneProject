@@ -36,7 +36,7 @@ namespace MessagesApp
         [SerializeField] private GameObject popUp;
         [SerializeField] private string nextSceneName;
 
-        private void Start()
+         private void Start()
         {
             _saveFileName = $"conversationState_{GameManager.Instance.currentScene}.json";
             _saveFilePath = Path.Combine(GameManager.Instance.dataPath, _saveFileName);
@@ -109,7 +109,6 @@ namespace MessagesApp
 
         public void OnChoice2Clicked()
         {
-            
             OnChoiceClicked(1);
         }
 
@@ -118,11 +117,12 @@ namespace MessagesApp
             _playerChoices.Add(_currentChoiceIndex + choiceIndex); // Save the second choice
 
             UGSSnitch(choiceIndex); // Call home to UGS
+            DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
 
             SoundManager.Instance.PlaySound(messageSendSound);
-
-            DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
+            StartCoroutine(DisplayLoadingDots());
             StartCoroutine(RunChoiceAfterDelay(choiceIndex));
+            
             buttonChoice1.SetActive(false);
             buttonChoice2.SetActive(false);
             ScrollToBottom();
@@ -155,14 +155,10 @@ namespace MessagesApp
 
         IEnumerator RunChoiceAfterDelay(int choiceIndex)
         {
-            if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
-            
-            if (GameManager.Instance.progressStory)
-            {
-                StartCoroutine(DisplayLoadingDots());
-            }
             
             yield return new WaitForSeconds(2f); // Wait for 2 seconds
+
+            if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
             
             if (GameManager.Instance.progressStory)
             {
@@ -205,7 +201,7 @@ namespace MessagesApp
                 if (GameManager.Instance.currentScene == "Sandra")
                 {
                     GameManager.Instance.lastSandraMessage = true;
-                    //popUp.SetActive(true); 
+                    //popUp.SetActive(true); // Maybe use animation
                     GameManager.Instance.currentLevel = 1;
                 }
             }
