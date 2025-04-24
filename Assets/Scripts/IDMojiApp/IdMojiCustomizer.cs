@@ -64,7 +64,7 @@ namespace IDMojiApp
             createButton.onClick.AddListener(OpenCustomizer);
             doneButton.onClick.AddListener(FinishCustomization);
             exitButton.onClick.AddListener(ExitApp);
-            confirmButton.onClick.AddListener(ExitApp);
+            //confirmButton.onClick.AddListener(ExitApp);
             cancelButton.onClick.AddListener(CancelAndGoBack);
 
             // Assign category button listeners
@@ -83,7 +83,7 @@ namespace IDMojiApp
             characterCustomizer.InitializeCustomization();
         }
         
-        private void CancelAndGoBack()
+        public void CancelAndGoBack()
         {
             confirmButton.gameObject.SetActive(false);
             customizerElements.SetActive(true);
@@ -95,8 +95,8 @@ namespace IDMojiApp
         private void FinishCustomization()
         {
             startCanvas.gameObject.SetActive(false);
-            confirmButton.gameObject.SetActive(true);
             cancelButton.gameObject.SetActive(true);
+            confirmButton.gameObject.SetActive(true);
             customizerElements.SetActive(false);
         }
 
