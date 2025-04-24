@@ -54,12 +54,6 @@ namespace MessagesApp
             }
             else
             {
-                if (!GameManager.Instance.deathGamePlayed)
-                {
-                    GameManager.Instance.deathLoading = false;
-                    GameManager.Instance.deathBadge = true;
-                }
-
                 GameManager.Instance.messagesBadge = false;
 
                 buttonChoice1.SetActive(false);
@@ -164,17 +158,30 @@ namespace MessagesApp
         {
             yield return new WaitForSeconds(2f); // Wait for 2 seconds
             SoundManager.Instance.PlaySound(messageReceiveSound);
-            
+
             if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
             if (GameManager.Instance.progressStory)
             {
                 DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
             }
+
             _currentChoiceIndex += 2; // Move to the next choices
+
             DisplayChoices();
             SaveConversationState();
             if (!GameManager.Instance.progressStory)
             {
+                if (!GameManager.Instance.iDMojiCreated)
+                {
+                    GameManager.Instance.idMojiLoading = false;
+                    GameManager.Instance.idMojiBadge = true;
+                }
+                else if (!GameManager.Instance.deathGamePlayed && GameManager.Instance.iDMojiCreated)
+                {
+                    GameManager.Instance.deathLoading = false;
+                    GameManager.Instance.deathBadge = true;
+                }
+
                 buttonChoice1.SetActive(false);
                 buttonChoice2.SetActive(false);
             }
