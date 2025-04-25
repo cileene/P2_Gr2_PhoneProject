@@ -9,7 +9,7 @@ namespace HappyBirdApp
         {
             // Set the text of the pop-up to the current score
             TextMeshProUGUI popUpText = GetComponent<TextMeshProUGUI>(); //TODO: Fix this
-            popUpText.text = $"Insert text about {GameManager.Instance.playerName} and then go to Paris!";
+            popUpText.text = $"Well done {GameManager.Instance.playerName}! you should probably go back to Paris..";
         }
     }
 }

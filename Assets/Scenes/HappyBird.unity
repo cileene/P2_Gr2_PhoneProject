@@ -766,7 +766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143152712427579980, guid: 8094b41ee97b14f08a8d04f0a5293fed, type: 3}
       propertyPath: m_text
-      value: Read
+      value: Uhm, Ok?
       objectReference: {fileID: 0}
     - target: {fileID: 5040757539193641081, guid: 8094b41ee97b14f08a8d04f0a5293fed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
