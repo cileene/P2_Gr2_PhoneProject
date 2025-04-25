@@ -55,19 +55,21 @@ namespace HappyBirdApp
         public void Play()
         {
             Score = 0;
-            scoreText.text = Score.ToString();
+            if (GameManager.Instance.birdFriction)
+            {
+                scoreText.text = $"{Score.ToString()}/5";
+            }
+            else
+            {
+                scoreText.text = Score.ToString();
+            }
+
 
             playButton.SetActive(false);
             gameOver.SetActive(false);
 
             Time.timeScale = 1f;
             player.enabled = true;
-
-            // Pipes[] pipes = Object.FindObjectsbyType<Pipes>();
-//foreach (Pipes pipe in pipes)
-//{
-            //   Destroy(pipe.gameObject);
-//}
         }
 
         public void GameOver()
