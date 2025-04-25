@@ -193,19 +193,20 @@ namespace MessagesApp
             }
             else
             {
-                // Wait for 2 seconds
-                ScrollToBottom();
-                yield return new WaitForSeconds(2f);
-
                 // end of sandra convo
                 if (GameManager.Instance.currentScene == "Sandra")
                 {
                     GameManager.Instance.lastSandraMessage = true;
-                    //popUp.SetActive(true); // Maybe use animation
                     GameManager.Instance.messagesBadge = false;
                     GameManager.Instance.settingsBadge = true;
+                    GameManager.Instance.settingsLoading = false;
+                    GameManager.Instance.photosLoading = false;
                     GameManager.Instance.currentLevel = 1;
                 }
+                // Wait for 2 seconds
+                ScrollToBottom();
+                yield return new WaitForSeconds(2f);
+
             }
 
             ScrollToBottom();

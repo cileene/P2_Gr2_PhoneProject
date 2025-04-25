@@ -16,13 +16,14 @@ public class GameManager : MonoBehaviour
     public bool obfuscateData = true;
     
     [Header("PROGRESSION")] 
+    public int currentLevel;
+    public string currentScene;
     public int birdHighScore;
     
     [Header("Level 0")]
     public bool phoneUnlocked;
-    public int currentLevel;
-    public string currentScene;
     public bool progressStory;
+    public bool iDMojiCreated;
     public bool deathGamePlayed;
     public bool lastSandraMessage;
     
@@ -114,7 +115,6 @@ public class GameManager : MonoBehaviour
     private const string FileName = "SaveData.json";
 
     [Header("Character Customization")]
-    public bool iDMojiCreated;
     public int selectedFaceColorIndex;
     public int selectedFaceVariantIndex;
     public int selectedEyeColorIndex;

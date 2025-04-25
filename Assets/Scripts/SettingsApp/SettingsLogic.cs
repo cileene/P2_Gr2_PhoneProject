@@ -21,7 +21,7 @@ namespace SettingsApp
             yield return new WaitForSeconds(2f);
             parisPopUp.SetActive(true);
             GameManager.Instance.parisPopUpSeen = true;
-            GameManager.Instance.photosBadge = false;
+            GameManager.Instance.settingsBadge = false;
         }
         
     }

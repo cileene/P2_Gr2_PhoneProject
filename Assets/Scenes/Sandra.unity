@@ -1560,7 +1560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392, y: 598.44946}
+  m_AnchoredPosition: {x: -392, y: 598.44977}
   m_SizeDelta: {x: 784, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &523185813
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   - Yeah, You kinda dropped off the grid again.  I figured something was up after
     what happened. And why does you Idmoji look all messed up? Go fix that!
   - "What? Stop joking around. It\u2019s me Sandra. Did you delete my contact, or?
-    And Idmoji look all messed up, go fix that!"
+    And IDMoji look all messed up, go fix that!"
   - Much better now! and hey.. what did you think about my new game??
   - Much better now! and hey.. what did you think about my new game??
   - "my dude, you\u2019ve used that lie before. try a bit harder"
@@ -1704,8 +1704,9 @@ MonoBehaviour:
   - It's called "Death", go play it NOW and then get back to me
   - so, what did you think???
   - so, what did you think???
-  - Whatever. If you're just gonna mock it, then forget it.
-  - Seriously? I thought maybe I overdid it.
+  - Whatever. If you're just gonna mock it, then forget it. At least you liked Happy
+    Bird...
+  - Seriously? I thought maybe I overdid it compared to Happy Bird.
   - come on..
   - come on..
   - why are you doing this again
@@ -4028,7 +4029,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1346771943}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9888246
+  m_Size: 0.9999985
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
