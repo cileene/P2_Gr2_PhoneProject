@@ -202,6 +202,8 @@ namespace MessagesApp
                 {
                     GameManager.Instance.lastSandraMessage = true;
                     //popUp.SetActive(true); // Maybe use animation
+                    GameManager.Instance.messagesBadge = false;
+                    GameManager.Instance.settingsBadge = true;
                     GameManager.Instance.currentLevel = 1;
                 }
             }
