@@ -8,6 +8,7 @@ namespace GyroApp
         
         private void Update()
         {
+            if (!GameManager.Instance.seenGyroHint) return;
             //if (GameManager.Instance.phoneUnlocked) return;
             Invoke(nameof(DelayedCheckRotation), 2f);
         }
