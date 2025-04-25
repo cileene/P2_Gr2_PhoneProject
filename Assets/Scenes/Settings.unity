@@ -2486,6 +2486,7 @@ MonoBehaviour:
   codeInputField: {fileID: 1642512835}
   popUp: {fileID: 2098780790}
   selfieGameObject: {fileID: 1362443767}
+  backupCode: 1184
 --- !u!4 &881042744
 Transform:
   m_ObjectHideFlags: 0
@@ -3395,7 +3396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 918.99963}
+  m_AnchoredPosition: {x: 0, y: 919}
   m_SizeDelta: {x: 0, y: 3402}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1098167769
@@ -5507,7 +5508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: playerBirthYear
-      value: 1991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: allAppNames.Array.size
@@ -6663,8 +6664,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2034505703}
   m_HandleRect: {fileID: 2034505702}
   m_Direction: 2
-  m_Value: 1.0000004
-  m_Size: 0.5402666
+  m_Value: 1
+  m_Size: 0.54027045
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
