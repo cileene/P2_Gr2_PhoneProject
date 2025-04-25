@@ -157,8 +157,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4519063107728045677, guid: 892984e1edb744922968dbe009854eef, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4115495862878824049, guid: d854b1c5a7725e747b9113230c98dc16, type: 3}
+  m_Sprite: {fileID: -1623231584560858364, guid: fc6b139c4856fde4b8e088bf6beef128, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4523,15 +4523,15 @@ RectTransform:
   m_GameObject: {fileID: 1491894607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 28465387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038147, y: 310}
-  m_SizeDelta: {x: 996.43, y: 951.17}
+  m_AnchoredPosition: {x: -0.0000038147, y: -42.7}
+  m_SizeDelta: {x: 768, y: 997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491894609
 MonoBehaviour:
@@ -4553,7 +4553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -404790446224145930, guid: a8b0726f9deab6b42a88629ce3556b73, type: 3}
+  m_Sprite: {fileID: -1517767761225050297, guid: 892984e1edb744922968dbe009854eef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6324,7 +6324,7 @@ MonoBehaviour:
   - {fileID: -6229344629135590220, guid: 6f9035d59c3d24bcd8cbed1303a81307, type: 3}
   - {fileID: -1097597678920783314, guid: f1c7bd1aced29e043b2bd96d9390656a, type: 3}
   - {fileID: 9085546173938197295, guid: 20a4e71373bab754bab72ffe9039d5e7, type: 3}
-  - {fileID: -4115495862878824049, guid: d854b1c5a7725e747b9113230c98dc16, type: 3}
+  - {fileID: -1623231584560858364, guid: fc6b139c4856fde4b8e088bf6beef128, type: 3}
   - {fileID: 5879467184502092013, guid: ef7bf2da88d8ee04baa9b3b85ca73cb4, type: 3}
   - {fileID: 2378097287076334375, guid: f1ccb9ef9b72d49caa25bc88f2dac20a, type: 3}
   - {fileID: 307031410802871263, guid: 0d7d5431c00ceb7498a736785209fde0, type: 3}

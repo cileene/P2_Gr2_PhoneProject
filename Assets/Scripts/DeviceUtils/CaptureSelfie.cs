@@ -36,7 +36,7 @@ namespace DeviceUtils
                 // Capture full-resolution selfie
                 int width = _webCamTexture.width;
                 int height = _webCamTexture.height;
-                _selfieTexture = new Texture2D(width, height, TextureFormat.RGBA32, false);
+                _selfieTexture = new Texture2D(width, height);
                 Color[] pixels = _webCamTexture.GetPixels();
                 _selfieTexture.SetPixels(pixels);
                 _selfieTexture.Apply();
