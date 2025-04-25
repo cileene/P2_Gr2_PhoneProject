@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 892984e1edb744922968dbe009854eef
+guid: e072f530c0dfb3c4badf01d1c312496f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4519063107728045677
-    second: GyroBalloon@2x_0
-  - first:
-      213: -1517767761225050297
-    second: GyroBalloon@2x_1
-  - first:
-      213: 3002711909056590648
-    second: GyroBalloon@2x_2
-  - first:
-      213: 8277355418808845487
-    second: GyroBalloon@2x_3
+      213: 7434420973239066541
+    second: DrunkCostume_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,57 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GyroBalloon@2x_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1028
-        width: 768
-        height: 997
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3990c4aeb001941c0800000000000000
-      internalID: -4519063107728045677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GyroBalloon@2x_1
-      rect:
-        serializedVersion: 2
-        x: 803
-        y: 1028
-        width: 768
-        height: 997
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74714ac334ecfeae0800000000000000
-      internalID: -1517767761225050297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GyroBalloon@2x_2
+      name: DrunkCostume_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 768
-        height: 997
+        width: 2000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 833372e7296cba920800000000000000
-      internalID: 3002711909056590648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GyroBalloon@2x_3
-      rect:
-        serializedVersion: 2
-        x: 803
-        y: 0
-        width: 768
-        height: 997
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa481c9e5e21fd270800000000000000
-      internalID: 8277355418808845487
+      spriteID: dafd0a46c7e5c2760800000000000000
+      internalID: 7434420973239066541
       vertices: []
       indices: 
       edges: []
@@ -235,11 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GyroBalloon@2x_0: -4519063107728045677
-      GyroBalloon@2x_1: -1517767761225050297
-      GyroBalloon@2x_2: 3002711909056590648
-      GyroBalloon@2x_3: 8277355418808845487
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
