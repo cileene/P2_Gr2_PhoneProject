@@ -87,9 +87,9 @@ namespace HappyBirdApp
         public void IncreaseScore()
         {
             Score++;
-            scoreText.text = Score.ToString();
             if (GameManager.Instance.birdFriction)
             {
+                scoreText.text = $"{Score.ToString()}/5";
                 Screen.brightness -= 0.1f;
                 Time.timeScale += 0.1f;
 
@@ -99,6 +99,10 @@ namespace HappyBirdApp
                     GameManager.Instance.progressStory = true;
                 }
                 
+            }
+            else
+            {
+                scoreText.text = Score.ToString();
             }
         }
 
