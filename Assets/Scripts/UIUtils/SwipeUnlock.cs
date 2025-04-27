@@ -25,23 +25,23 @@ namespace UIUtils
             }
         }
 
-        public void OnBeginDrag(PointerEventData eventData)
+        public void OnBeginDrag(PointerEventData eventData) // called when drag starts
         {
-            _startDragPosition = eventData.position;
+            _startDragPosition = eventData.position; // Store the initial position of the drag
 
-            scrollRect.OnBeginDrag(eventData);
+            scrollRect.OnBeginDrag(eventData); // Call the ScrollRect's OnBeginDrag method to handle the drag event
         }
 
-        public void OnDrag(PointerEventData eventData)
+        public void OnDrag(PointerEventData eventData) // called when dragging
         {
-            scrollRect.OnDrag(eventData);
+            scrollRect.OnDrag(eventData); // Call the ScrollRect's OnDrag method to handle the drag event
         }
 
-        public void OnEndDrag(PointerEventData eventData)
+        public void OnEndDrag(PointerEventData eventData) // called when drag ends
         {
-            float deltaX = eventData.position.y - _startDragPosition.y;
+            float deltaY = eventData.position.y - _startDragPosition.y; // Calculate the difference in the y-axis
 
-            if (Mathf.Abs(deltaX) > _swipeThreshold)
+            if (Mathf.Abs(deltaY) > _swipeThreshold) // check swipe is above swipethreshold
             {
                 Debug.Log("openPhone");
                 SoundManager.Instance.PlaySound(homeSound);
@@ -49,7 +49,7 @@ namespace UIUtils
                 {
                     SceneHandler.LoadScene("LockScreen");
                 }
-                else if (GameManager.Instance.currentScene == "Gyro" && GameManager.Instance.playerIsTrapped)
+                else if (GameManager.Instance.currentScene == "Gyro" && GameManager.Instance. playerIsTrapped)
                 {
                     if (popUp != null)
                     {
