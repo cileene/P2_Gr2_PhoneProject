@@ -120,7 +120,7 @@ namespace MessagesApp
             DisplayMessage(playerMessages[_currentChoiceIndex + choiceIndex]);
 
             SoundManager.Instance.PlaySound(messageSendSound);
-            StartCoroutine(DisplayLoadingDots());
+            //StartCoroutine(DisplayLoadingDots());
             StartCoroutine(RunChoiceAfterDelay(choiceIndex));
             
             buttonChoice1.SetActive(false);
@@ -140,7 +140,7 @@ namespace MessagesApp
             AnalyticsService.Instance.RecordEvent(messageSent);
         }
 
-        IEnumerator DisplayLoadingDots()
+        /*IEnumerator DisplayLoadingDots()
         {
             TextMeshProUGUI loadingDotsInstance = Instantiate(loadingDotsPrefab, messageContainer);
             foreach (string dot in loadingDots)
@@ -151,17 +151,23 @@ namespace MessagesApp
 
             Destroy(loadingDotsInstance.gameObject);
             ScrollToBottom();
-        }
+        }*/
 
         IEnumerator RunChoiceAfterDelay(int choiceIndex)
         {
-            
-            yield return new WaitForSeconds(2f); // Wait for 2 seconds
-
             if (progressMessages.Contains(_currentChoiceIndex)) GameManager.Instance.progressStory = false;
             
             if (GameManager.Instance.progressStory)
             {
+                TextMeshProUGUI loadingDotsInstance = Instantiate(loadingDotsPrefab, messageContainer);
+                foreach (string dot in loadingDots)
+                {
+                    loadingDotsInstance.text = dot;
+                    yield return new WaitForSeconds(0.2f);
+                }
+
+                Destroy(loadingDotsInstance.gameObject);
+                
                 DisplayBotMessage(botMessages[_currentChoiceIndex + choiceIndex]);
                 SoundManager.Instance.PlaySound(messageReceiveSound);
             }
