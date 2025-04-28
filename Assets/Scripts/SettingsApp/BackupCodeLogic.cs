@@ -16,8 +16,19 @@ namespace SettingsApp
         private int    inputCode;
         private string fileName;
         private string textToSave;
+        private GameManager gm;
 
         // --------------------------------------------------------------------
+        
+        private void Awake()
+        {
+            gm = GameManager.Instance;
+            if (gm == null)
+            {
+                Debug.LogError("BackupCodeLogic: GameManager instance not found.");
+                return;
+            }
+        }
 
         public void CheckCode()
         {
@@ -31,13 +42,16 @@ namespace SettingsApp
 
             if (inputCode == backupCode)
             {
-                selfieGameObject.SetActive(true);
+                //selfieGameObject.SetActive(true); //TODO: Selfies are broken
                 popUp.SetActive(true);
                 SetFileNameAndText();
                 SaveTextFileToDevice.SaveTextFile(fileName, textToSave);
 
-                // lift the rotation-friction once the truth is revealed
-                GameManager.Instance.rotationFriction = false;
+                // lift the friction once the truth is revealed
+                gm.rotationFriction = false;
+                gm.birdFriction = false;
+                gm.wasShaken = false;
+
             }
             else
             {
@@ -73,7 +87,6 @@ namespace SettingsApp
         // --------------------------------------------------------------------
         private string BuildBackupText()
         {
-            var gm    = GameManager.Instance;
             var sb    = new StringBuilder();
             var today = DateTime.Today;
 

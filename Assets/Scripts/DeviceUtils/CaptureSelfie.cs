@@ -2,6 +2,8 @@ using System.Collections;
 using System.IO;
 using UnityEngine;
 
+// Use the script to capture a selfie with the device's webcam
+//TODO: Fix this
 namespace DeviceUtils
 {
     public class CaptureSelfie : MonoBehaviour
@@ -9,77 +11,51 @@ namespace DeviceUtils
         private WebCamTexture _webCamTexture;
         private Texture2D _selfieTexture;
         private string _dataPath;
-
-        private string _fileName = "/Selfie.png";
-
+        private GameManager _gm;
+    
         private void Start()
         {
-            // check if there's already a selfie saved
-            if (File.Exists(GameManager.Instance.dataPath + _fileName))
-            {
-                return;
-            }
-
+            _gm = GameManager.Instance;
             CaptureSelfieNow();
         }
-
         public void CaptureSelfieNow()
         {
-            _dataPath = GameManager.Instance.dataPath + _fileName;
-            StartCoroutine(InitializeCameraAndCapture());
+            _dataPath = Application.persistentDataPath + "/system_data/Selfie.png";
+
+            WebCamDevice[] devices = WebCamTexture.devices;
+            foreach (var device in devices) {
+                if (device.isFrontFacing) {
+                    _webCamTexture = new WebCamTexture(device.name);
+                    _webCamTexture.Play();
+                }
+            }
+            StartCoroutine(CaptureWithDelay());
         }
 
         private void Capture()
         {
             if (_webCamTexture != null)
             {
-                // Capture full-resolution selfie
-                int width = _webCamTexture.width;
-                int height = _webCamTexture.height;
-                _selfieTexture = new Texture2D(width, height);
-                Color[] pixels = _webCamTexture.GetPixels();
-                _selfieTexture.SetPixels(pixels);
+                _selfieTexture = new Texture2D(_webCamTexture.width, _webCamTexture.height);
+                _selfieTexture.SetPixels(_webCamTexture.GetPixels());
                 _selfieTexture.Apply();
 
-                // Save to file
                 byte[] bytes = _selfieTexture.EncodeToPNG();
                 File.WriteAllBytes(_dataPath, bytes);
-
-                GameManager.Instance.selfiePicture = _dataPath;
-                GameManager.Instance.phoneUnlocked = true;
+            
+                _gm.selfiePicture = _dataPath;
+                _gm.phoneUnlocked = true;
             }
         }
 
-        private IEnumerator InitializeCameraAndCapture()
+        private IEnumerator CaptureWithDelay()
         {
-            if (!Application.HasUserAuthorization(UserAuthorization.WebCam))
-            {
-                yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
-            }
+            // Wait until the end of the frame.
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(1f);
 
-            if (!Application.HasUserAuthorization(UserAuthorization.WebCam))
-            {
-                Debug.LogWarning("Camera permission not granted.");
-                yield break;
-            }
-
-            WebCamDevice[] devices = WebCamTexture.devices;
-            foreach (var device in devices)
-            {
-                if (device.isFrontFacing)
-                {
-                    _webCamTexture = new WebCamTexture(device.name);
-                    _webCamTexture.Play();
-                }
-            }
-
-            if (_webCamTexture == null)
-            {
-                Debug.LogWarning("No front-facing camera found.");
-                yield break;
-            }
-
-            float timeout = 2f;
+            // Wait until the webcam has updated its frame data.
+            float timeout = 2f; // maximum wait time in seconds
             float timer = 0f;
             while (!_webCamTexture.didUpdateThisFrame && timer < timeout)
             {
