@@ -24,6 +24,26 @@ namespace Editor
             root.SetBoolean("UIFileSharingEnabled", true);
             root.SetBoolean("LSSupportsOpeningDocumentsInPlace", true);
 
+            // 1a) Allow the app to query the 'shareddocuments://' scheme (Files app deep link)
+            const string scheme = "shareddocuments";
+            PlistElementArray schemesArray;
+            if (root.values.ContainsKey("LSApplicationQueriesSchemes"))
+            {
+                schemesArray = root["LSApplicationQueriesSchemes"].AsArray();
+            }
+            else
+            {
+                schemesArray = root.CreateArray("LSApplicationQueriesSchemes");
+            }
+
+            bool hasScheme = false;
+            foreach (var val in schemesArray.values)
+            {
+                if (val.AsString() == scheme) { hasScheme = true; break; }
+            }
+            if (!hasScheme)
+                schemesArray.AddString(scheme);
+
             // 2) Remove any "remote-notification" background mode
             if (root.values.ContainsKey("UIBackgroundModes"))
             {
