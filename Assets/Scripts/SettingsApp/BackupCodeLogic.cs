@@ -53,11 +53,15 @@ namespace SettingsApp
                 popUp.SetActive(true);
                 SetFileNameAndText();
                 SaveTextFileToDevice.SaveTextFile(fileName, textToSave);
+                
 
                 // lift the friction once the truth is revealed
                 gm.rotationFriction = false;
                 gm.birdFriction = false;
                 gm.wasShaken = false;
+                
+                // Record analytics event
+                Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("backupUnlocked");
             }
             else
             {

@@ -29,6 +29,7 @@ namespace GyroApp
             GameManager.Instance.gyroCodeSeen = true;
             GameManager.Instance.playerIsTrapped = false;
             endPopupPanel.SetActive(true);
+            Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("gyroCodeSeen");
         }
     }
 }

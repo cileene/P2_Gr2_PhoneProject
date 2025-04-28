@@ -20,6 +20,7 @@ namespace IDMojiApp
             GameManager.Instance.progressStory = true;
             GameManager.Instance.idMojiBadge = false;
             popUpPanel.SetActive(true);
+            Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("iDMojiCreated"); //TODO: record choices?
         }
     }
 }
