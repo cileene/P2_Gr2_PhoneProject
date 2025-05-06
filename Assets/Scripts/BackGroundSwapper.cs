@@ -24,15 +24,15 @@ public class BackGroundSwapper : MonoBehaviour
         {
             bgImage.sprite = bg5;
         }
-        else if (_gm.currentLevel == 1)
+        else if (_gm.parisPopUpSeen)
         {
             bgImage.sprite = bg4;
         }
-        else if (_gm.deathGamePlayed)
+        else if (_gm.currentLevel == 1)
         {
             bgImage.sprite = bg3;
         }
-        else if (_gm.iDMojiCreated)
+        else if (_gm.deathGamePlayed)
         {
             bgImage.sprite = bg2;
         }
