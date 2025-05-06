@@ -30,7 +30,7 @@ namespace GyroApp
             GameManager.Instance.playerIsTrapped = false;
             GameManager.Instance.gyroBadge = false; // for linear test build
             endPopupPanel.SetActive(true);
-            Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("gyroCodeSeen");
+            //Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("gyroCodeSeen");
             
             enabled = false; // This should fix duplicate analytics events
         }
