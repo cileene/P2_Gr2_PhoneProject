@@ -953,8 +953,9 @@ GameObject:
   - component: {fileID: 1545822133}
   - component: {fileID: 1545822132}
   - component: {fileID: 1545822131}
+  - component: {fileID: 1545822134}
   m_Layer: 0
-  m_Name: AI_flower_0
+  m_Name: FlowerBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,7 +1019,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1513565341455149955, guid: 000139e77b3724db9a30a89d726d2ff8, type: 3}
+  m_Sprite: {fileID: -4429830784394253956, guid: b26d7499c87bc4e2da699823f0ed9918, type: 3}
   m_Color: {r: 0.99215686, g: 0.99215686, b: 0.99215686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1039,11 +1040,28 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.03, y: 1.0152, z: 0}
-  m_LocalScale: {x: 2.0816896, y: 2.0705328, z: 2.1}
+  m_LocalScale: {x: 2.42, y: 2.42, z: 2.42}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545822134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545822130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3a7c08bfb14317a68e8b59fd731caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bg1: {fileID: -4429830784394253956, guid: b26d7499c87bc4e2da699823f0ed9918, type: 3}
+  bg2: {fileID: -7707790384715816955, guid: 97eed15e1f10c401097503a0ea6fe16e, type: 3}
+  bg3: {fileID: -2716267252724556037, guid: 96fde63c4207547b4b07a6ac70301d3d, type: 3}
+  bg4: {fileID: 6257885465978749713, guid: c26099546763640dc88bca959735a6b5, type: 3}
+  bg5: {fileID: 7559856822741370739, guid: cfc8286f8d775401a8b2482e5e9c6aec, type: 3}
 --- !u!1 &1640701662
 GameObject:
   m_ObjectHideFlags: 0

@@ -89,6 +89,7 @@ namespace GalleryApp
                     SaveDataManager.WriteSaveData();
             }
         }
+        
         private void ShowPopup()
         {
             popUp.SetActive(true);
