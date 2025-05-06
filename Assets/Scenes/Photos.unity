@@ -6316,8 +6316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUp: {fileID: 6348219480176445700}
-  smokeImage: {fileID: 0}
-  drinkImage: {fileID: 0}
+  smokeImage: {fileID: 2972371813745310484, guid: 615957fdb38542f4694e4fc0f783680d, type: 3}
+  drinkImage: {fileID: 7434420973239066541, guid: e072f530c0dfb3c4badf01d1c312496f, type: 3}
   fullScreenImage: {fileID: 1420101821}
   imageViewPanel: {fileID: 2037782397}
   images:
