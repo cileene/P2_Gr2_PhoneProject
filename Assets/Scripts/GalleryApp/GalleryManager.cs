@@ -19,6 +19,7 @@ namespace GalleryApp
         private void Start()
         {
             _gm = GameManager.Instance;
+            _gm.photosBadge = false; // for linear test build
         }
 
         public void OpenImage(int index)

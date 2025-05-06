@@ -14,11 +14,8 @@ namespace SettingsApp
             
             if (_gm.currentLevel == 1 && !_gm.parisPopUpSeen)
             {
-                _gm.photosLoading = false; // for linear test build
-                
                 StartCoroutine(ShowParisPopUp());
             }
-
         }
         
         IEnumerator ShowParisPopUp()
@@ -27,6 +24,8 @@ namespace SettingsApp
             parisPopUp.SetActive(true);
             _gm.parisPopUpSeen = true;
             _gm.settingsBadge = false;
+            _gm.photosLoading = false; // for linear test build
+            _gm.photosBadge = true; // for linear test build
         }
         
     }
