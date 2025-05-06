@@ -8,11 +8,13 @@ namespace GalleryApp
         public GameObject passwordPanel;
         public TMP_InputField passwordInput;
         public GameObject secretFolderPanel;
-        private string correctPassword;
+        private string _correctPassword;
+        private GameManager _gm;
 
         private void Start()
         {
-            correctPassword = GameManager.Instance.playerBirthYear.ToString();
+            _gm = GameManager.Instance;
+            _correctPassword = _gm.playerBirthYear.ToString();
         }
 
         public void OpenPasswordPrompt()
@@ -22,17 +24,21 @@ namespace GalleryApp
 
         public void CheckPassword()
         {
-            if (passwordInput.text == correctPassword)
+            if (passwordInput.text == _correctPassword)
             {
-                GameManager.Instance.seenGyroHint = true;
+                _gm.seenGyroHint = true;
+                
+                _gm.gyroLoading = false; // for linear test build
+                _gm.gyroBadge = true; // for linear test build
+                
                 secretFolderPanel.SetActive(true);
-                passwordPanel.SetActive(false);
             }
             else
             {
                 passwordInput.text = "";
-                passwordPanel.SetActive(false);
             }
+
+            passwordPanel.SetActive(false);
         }
 
         public void CloseSecretFolder()
