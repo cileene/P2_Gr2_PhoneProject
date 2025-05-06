@@ -8,10 +8,10 @@ namespace GalleryApp
     {
         [SerializeField] private GameObject bikeImageObject;
         [SerializeField] private GameObject costumeImageObject;
-        [SerializeField] private Texture2D bikeTexture;
-        [SerializeField] private Texture2D smokeTexture;
-        [SerializeField] private Texture2D costumeTexture; 
-        [SerializeField] private Texture2D drinkTexture; 
+        [SerializeField] private Sprite bikeTexture;
+        [SerializeField] private Sprite smokeTexture;
+        [SerializeField] private Sprite costumeTexture; 
+        [SerializeField] private Sprite drinkTexture; 
         private GameManager _gm;
 
         private void Start()
@@ -26,14 +26,14 @@ namespace GalleryApp
         {
             if (bikeImageObject == null || bikeTexture == null || smokeTexture == null) return;
             
-            var bikeImage = bikeImageObject.GetComponent<RawImage>();
+            var bikeImage = bikeImageObject.GetComponent<Image>();
             if (_gm.playerSmokes)
             {
-                bikeImage.texture = smokeTexture;
+                bikeImage.overrideSprite = smokeTexture;
             }
             else
             {
-                bikeImage.texture = bikeTexture;
+                bikeImage.overrideSprite = bikeTexture;
             }
         }
 
@@ -41,14 +41,14 @@ namespace GalleryApp
         {
             if (costumeImageObject == null || costumeTexture == null || drinkTexture == null) return;
             
-            var costumeImage = costumeImageObject.GetComponent<RawImage>();
+            var costumeImage = costumeImageObject.GetComponent<Image>();
             if (_gm.playerDrinks)
             {
-                costumeImage.texture = drinkTexture;
+                costumeImage.overrideSprite = drinkTexture;
             }
             else
             {
-                costumeImage.texture = costumeTexture;
+                costumeImage.overrideSprite = costumeTexture;
             }
             
         }

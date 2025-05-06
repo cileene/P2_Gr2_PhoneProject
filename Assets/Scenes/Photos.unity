@@ -2152,6 +2152,14 @@ PrefabInstance:
       value: Photos
       objectReference: {fileID: 0}
     - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: playerDrinks
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
+      propertyPath: playerSmokes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254911076850724050, guid: 03414071cb3f24c26be248c5ea801b6c, type: 3}
       propertyPath: rotationFriction
       value: 0
       objectReference: {fileID: 0}
@@ -6375,10 +6383,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bikeImageObject: {fileID: 1225027767}
   costumeImageObject: {fileID: 1450226869}
-  bikeTexture: {fileID: 2800000, guid: 1200c2aed5303b947a842fef5c28f971, type: 3}
-  smokeTexture: {fileID: 2800000, guid: 615957fdb38542f4694e4fc0f783680d, type: 3}
-  costumeTexture: {fileID: 2800000, guid: 301bbf7216e110548be04be9549cdfd1, type: 3}
-  drinkTexture: {fileID: 2800000, guid: e072f530c0dfb3c4badf01d1c312496f, type: 3}
+  bikeTexture: {fileID: -935974880193732684, guid: 1200c2aed5303b947a842fef5c28f971, type: 3}
+  smokeTexture: {fileID: 2972371813745310484, guid: 615957fdb38542f4694e4fc0f783680d, type: 3}
+  costumeTexture: {fileID: -7514953813069267802, guid: 301bbf7216e110548be04be9549cdfd1, type: 3}
+  drinkTexture: {fileID: 7434420973239066541, guid: e072f530c0dfb3c4badf01d1c312496f, type: 3}
 --- !u!1 &1873399911
 GameObject:
   m_ObjectHideFlags: 0
