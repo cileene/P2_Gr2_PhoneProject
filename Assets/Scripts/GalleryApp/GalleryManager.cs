@@ -8,6 +8,8 @@ namespace GalleryApp
     public class GalleryManager : MonoBehaviour
     {
         [SerializeField] private GameObject popUp;
+        [SerializeField] private Sprite smokeImage;
+        [SerializeField] private Sprite drinkImage;
         public Image fullScreenImage;
         public GameObject imageViewPanel;
         public Sprite[] images;
@@ -22,11 +24,8 @@ namespace GalleryApp
         public void OpenImage(int index)
         {
             _currentIndex = index;
-            fullScreenImage.sprite = images[_currentIndex];
+            ImageSelector();
             imageViewPanel.SetActive(true);
-            UGSSnitch(); // remote tracking
-            TrackPhotoOpen(); // local tracking
-            CheckForSandraPhoto();
         }
 
         public void NextImage()
@@ -34,12 +33,8 @@ namespace GalleryApp
             if (_currentIndex < images.Length - 1) // Stop at last image
             {
                 _currentIndex++;
-                fullScreenImage.sprite = images[_currentIndex];
+                ImageSelector();
             }
-
-            UGSSnitch();
-            TrackPhotoOpen();
-            CheckForSandraPhoto();
         }
 
         public void PreviousImage()
@@ -47,9 +42,24 @@ namespace GalleryApp
             if (_currentIndex > 0) // Stop at first image
             {
                 _currentIndex--;
+                ImageSelector();
+            }
+        }
+
+        private void ImageSelector()
+        {
+            if (_currentIndex == 0 && _gm.playerSmokes)
+            {
+                fullScreenImage.sprite = smokeImage;    
+            }
+            else if (_currentIndex == 1 && _gm.playerDrinks)
+            {
+                fullScreenImage.sprite = drinkImage;    
+            }
+            else
+            {
                 fullScreenImage.sprite = images[_currentIndex];
             }
-
             UGSSnitch();
             TrackPhotoOpen();
             CheckForSandraPhoto();
