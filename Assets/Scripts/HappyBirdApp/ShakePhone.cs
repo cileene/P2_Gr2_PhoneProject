@@ -10,22 +10,26 @@ namespace HappyBirdApp
         private float lastShakeTime;
         [SerializeField] private GameObject background;
         private float _animationSpeed;
+        private GameManager _gm;
 
         private void Start()
         {
+            _gm = GameManager.Instance;
+            
             _animationSpeed = background.GetComponent<Parallax>().animationSpeed;
             sqrShakeThreshold = shakeDetectionThreshold * shakeDetectionThreshold;
             lastShakeTime = Time.unscaledTime;
+            if (_gm.birdFriction) ToggleBirdHardMode(); // hardmode is now a one-way street
         }
 
         private void Update()
         {
             Vector3 acceleration = Input.acceleration;
             if (acceleration.sqrMagnitude >= sqrShakeThreshold
-                && Time.unscaledTime - lastShakeTime >= minShakeInterval && !GameManager.Instance.wasShaken)
+                && Time.unscaledTime - lastShakeTime >= minShakeInterval && !_gm.wasShaken)
             {
                 Debug.Log("Phone was shaken!");
-                GameManager.Instance.wasShaken = true;
+                _gm.wasShaken = true;
                 lastShakeTime = Time.time;
                 ToggleBirdHardMode();
             }
@@ -36,7 +40,7 @@ namespace HappyBirdApp
             background.GetComponent<MaterialSwap>().SwapMaterial();
             _animationSpeed = 10f;
             background.transform.rotation = Quaternion.Euler(0, 0, 180);
-            GameManager.Instance.birdFriction = true;
+            _gm.birdFriction = true;
         }
     }
 }

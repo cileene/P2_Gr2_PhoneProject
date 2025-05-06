@@ -7,23 +7,27 @@ namespace HappyBirdApp
         [SerializeField] private Material normalMaterial;
         [SerializeField] private Material alternativeMaterial;
 
-        private MeshRenderer meshRenderer;
+        private MeshRenderer _meshRenderer;
 
         private void Awake()
         {
-            meshRenderer = GetComponent<MeshRenderer>();
-            meshRenderer.sharedMaterial = normalMaterial;
+            _meshRenderer = GetComponent<MeshRenderer>();
+            _meshRenderer.sharedMaterial = normalMaterial;
+        }
+        
+        private void Start()
+        {
+            if (GameManager.Instance.birdFriction)
+            {
+                _meshRenderer.sharedMaterial = alternativeMaterial;
+            }
         }
 
         public void SwapMaterial()
         {
-            if (meshRenderer.sharedMaterial == normalMaterial)
+            if (_meshRenderer.sharedMaterial == normalMaterial)
             {
-                meshRenderer.sharedMaterial = alternativeMaterial;
-            }
-            else
-            {
-                meshRenderer.sharedMaterial = normalMaterial;
+                _meshRenderer.sharedMaterial = alternativeMaterial;
             }
         }
     }

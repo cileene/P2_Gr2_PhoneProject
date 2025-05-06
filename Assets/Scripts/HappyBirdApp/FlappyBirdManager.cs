@@ -16,6 +16,7 @@ namespace HappyBirdApp
         [SerializeField] private GameObject playButton;
         [SerializeField] private GameObject gameOver;
         [SerializeField] private GameObject popUp;
+        private GameManager _gm;
 
         public int Score { get; private set; } = 0;
 
@@ -30,6 +31,14 @@ namespace HappyBirdApp
                 Instance = this;
             }
         }
+        
+        private void Start()
+        {
+            _gm = GameManager.Instance;
+            
+            Pause();
+            highScoreText.text = _gm.birdHighScore.ToString();
+        }
 
         private void OnDestroy()
         {
@@ -39,13 +48,7 @@ namespace HappyBirdApp
                 Instance = null;
             }
         }
-
-        private void Start()
-        {
-            Pause();
-            highScoreText.text = GameManager.Instance.birdHighScore.ToString();
-        }
-
+        
         public void Pause()
         {
             Time.timeScale = 0f;
@@ -55,7 +58,7 @@ namespace HappyBirdApp
         public void Play()
         {
             Score = 0;
-            if (GameManager.Instance.birdFriction)
+            if (_gm.birdFriction)
             {
                 scoreText.text = $"{Score.ToString()}/5";
             }
@@ -75,7 +78,7 @@ namespace HappyBirdApp
         public void GameOver()
         {
             UpdateHighScore();
-            highScoreText.text = GameManager.Instance.birdHighScore.ToString();
+            highScoreText.text = _gm.birdHighScore.ToString();
             playButton.SetActive(true);
             gameOver.SetActive(true);
 
@@ -87,7 +90,7 @@ namespace HappyBirdApp
         public void IncreaseScore()
         {
             Score++;
-            if (GameManager.Instance.birdFriction)
+            if (_gm.birdFriction)
             {
                 scoreText.text = $"{Score.ToString()}/5";
                 Screen.brightness -= 0.1f;
@@ -96,7 +99,7 @@ namespace HappyBirdApp
                 if (Score >= 5) // after winning hardmode go to new messages in paris scene
                 {
                     popUp.SetActive(true);
-                    GameManager.Instance.progressStory = true;
+                    _gm.progressStory = true;
                 }
                 
             }
@@ -108,10 +111,10 @@ namespace HappyBirdApp
 
         private void UpdateHighScore() // record the highscore in the GameManager
         {
-            int highScore = GameManager.Instance.birdHighScore;
+            int highScore = _gm.birdHighScore;
             if (Score > highScore)
             {
-                GameManager.Instance.birdHighScore = Score;
+                _gm.birdHighScore = Score;
             }
         }
 
@@ -119,8 +122,9 @@ namespace HappyBirdApp
         {
             PlayedBirdGame playedBirdGame = new PlayedBirdGame
             {
-                HighScore = GameManager.Instance.birdHighScore,
+                HighScore = _gm.birdHighScore,
             };
+            
             Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(playedBirdGame);
         }
     }
