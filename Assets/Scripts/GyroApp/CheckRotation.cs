@@ -18,7 +18,7 @@ namespace GyroApp
             // Check if the phone is in a specific rotation
             if (transform.rotation.eulerAngles.x is > 30 and < 150)
             {
-                // wait one second, then unlock the phone
+                // wait three seconds, then call the method
                 Invoke(nameof(CodeUnlocked), 3f);
             }
         }
