@@ -2,7 +2,6 @@ using CustomUnityAnalytics;
 using UnityEngine;
 using UnityEngine.UI;
 using GeneralUtils;
-using UnityEngine.Serialization;
 
 namespace GalleryApp
 {
@@ -13,6 +12,12 @@ namespace GalleryApp
         public GameObject imageViewPanel;
         public Sprite[] images;
         private int _currentIndex = 0;
+        private GameManager _gm;
+
+        private void Start()
+        {
+            _gm = GameManager.Instance;
+        }
 
         public void OpenImage(int index)
         {
@@ -63,15 +68,14 @@ namespace GalleryApp
             };
             Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(photoViewed);
         }
-
-        /// <summary>Track the currently displayed photo as opened.</summary>
+        
         private void TrackPhotoOpen()
         {
             string photoName = images[_currentIndex].name;
-            if (GameManager.Instance.photoNames.Contains(photoName))
+            if (_gm.photoNames.Contains(photoName))
             {
-                OpenTrackerUtils.Register(GameManager.Instance.photoNames, GameManager.Instance.photoCounts, photoName);
-                if (GameManager.Instance.useSaveData)
+                OpenTrackerUtils.Register(_gm.photoNames, _gm.photoCounts, photoName);
+                if (_gm.useSaveData)
                     SaveDataManager.WriteSaveData();
             }
         }
@@ -84,11 +88,12 @@ namespace GalleryApp
         {
             // Check if the current photo is a Sandra photo
             // maybe change to only show the photo when the player has talked to paris
-            if (_currentIndex == 6 && GameManager.Instance.currentLevel == 1)
+            if (_currentIndex == 6 && _gm.currentLevel == 1)
             {
                 Invoke(nameof(ShowPopup), 1f);
-                GameManager.Instance.zoomReady = true;
-                GameManager.Instance.progressStory = true;
+                _gm.zoomReady = true;
+                _gm.progressStory = true;
+                _gm.happyBirdLoading = false; // for linear test build
             }
         }
     }

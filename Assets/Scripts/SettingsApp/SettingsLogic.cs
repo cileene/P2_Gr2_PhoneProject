@@ -6,11 +6,16 @@ namespace SettingsApp
     public class SettingsLogic : MonoBehaviour
     {
         [SerializeField] private GameObject parisPopUp;
+        private GameManager _gm;
         
         private void Start()
         {
-            if (GameManager.Instance.currentLevel == 1 && !GameManager.Instance.parisPopUpSeen)
+            _gm = GameManager.Instance;
+            
+            if (_gm.currentLevel == 1 && !_gm.parisPopUpSeen)
             {
+                _gm.photosLoading = false; // for linear test build
+                
                 StartCoroutine(ShowParisPopUp());
             }
 
@@ -20,8 +25,8 @@ namespace SettingsApp
         {
             yield return new WaitForSeconds(2f);
             parisPopUp.SetActive(true);
-            GameManager.Instance.parisPopUpSeen = true;
-            GameManager.Instance.settingsBadge = false;
+            _gm.parisPopUpSeen = true;
+            _gm.settingsBadge = false;
         }
         
     }

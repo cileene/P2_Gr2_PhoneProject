@@ -206,7 +206,7 @@ namespace MessagesApp
                     GameManager.Instance.messagesBadge = false;
                     GameManager.Instance.settingsBadge = true;
                     GameManager.Instance.settingsLoading = false;
-                    GameManager.Instance.photosLoading = false;
+                    GameManager.Instance.photosLoading = true; // for linear test build
                     GameManager.Instance.currentLevel = 1;
                 }
                 // Wait for 2 seconds
