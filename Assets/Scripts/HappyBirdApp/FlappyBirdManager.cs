@@ -35,6 +35,7 @@ namespace HappyBirdApp
         private void Start()
         {
             _gm = GameManager.Instance;
+            _gm.happyBirdBadge = false;
             
             Pause();
             highScoreText.text = _gm.birdHighScore.ToString();

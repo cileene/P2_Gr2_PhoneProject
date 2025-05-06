@@ -105,6 +105,7 @@ namespace GalleryApp
                 _gm.zoomReady = true;
                 _gm.progressStory = true;
                 _gm.happyBirdLoading = false; // for linear test build
+                _gm.happyBirdBadge = true; // for linear test build
             }
         }
     }
