@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace HappyBirdApp
 {
-    [DefaultExecutionOrder(-1)]
+    [DefaultExecutionOrder(-1)] // This means "I get to go first" when the scene loads
     public class FlappyBirdManager : MonoBehaviour
     {
         public static FlappyBirdManager Instance { get; private set; }
@@ -22,7 +22,7 @@ namespace HappyBirdApp
 
         private void Awake()
         {
-            if (Instance != null)
+            if (Instance) // cool unity syntax for null checks
             {
                 DestroyImmediate(gameObject);
             }
@@ -35,7 +35,7 @@ namespace HappyBirdApp
         private void Start()
         {
             _gm = GameManager.Instance;
-            _gm.happyBirdBadge = false;
+            //_gm.happyBirdBadge = false;
             
             Pause();
             highScoreText.text = _gm.birdHighScore.ToString();
@@ -101,6 +101,7 @@ namespace HappyBirdApp
                 {
                     popUp.SetActive(true);
                     _gm.progressStory = true;
+                    _gm.happyBirdBadge = false;
                 }
                 
             }

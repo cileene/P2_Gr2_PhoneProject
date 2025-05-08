@@ -9,11 +9,11 @@ namespace HappyBirdApp
         public float speed = 5f;
         public float gap = 2f;
 
-        private float leftEdge;
+        private float _leftEdge;
 
         private void Start()
         {
-            leftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f;
+            if (Camera.main) _leftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f;
             top.position += Vector3.up * gap / 2;
             bottom.position += Vector3.down * gap / 2;
         }
@@ -22,7 +22,7 @@ namespace HappyBirdApp
         {
             transform.position += speed * Time.deltaTime * Vector3.left;
 
-            if (transform.position.x < leftEdge) {
+            if (transform.position.x < _leftEdge) {
                 Destroy(gameObject);
             }
         }

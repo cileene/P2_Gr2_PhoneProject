@@ -9,13 +9,13 @@ namespace HappyBirdApp
         public float gravity = -4.81f;  //Tyngdekraften - kan bruges til at variere sværhedsgrad
         public float tilt = 3f;
 
-        private SpriteRenderer spriteRenderer;
-        private Vector3 direction;
-        private int spriteIndex;
+        private SpriteRenderer _spriteRenderer;
+        private Vector3 _direction;
+        private int _spriteIndex;
 
         private void Awake()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Start()
@@ -28,7 +28,7 @@ namespace HappyBirdApp
             Vector3 position = transform.position;
             position.y = 0f;
             transform.position = position;
-            direction = Vector3.zero;
+            _direction = Vector3.zero;
         }
 
         private void Update()
@@ -48,31 +48,31 @@ namespace HappyBirdApp
 
             if (Input.GetKeyDown(KeyCode.Space)) {
                 //Debug.Log("Space pressed - Initial jump force applied");
-                direction = Vector3.up * strength;
+                _direction = Vector3.up * strength;
             }
 
             if (Input.GetMouseButtonDown(0)) {
                 //Debug.Log("Mouse clicked - Initial jump force applied");
-                direction = Vector3.up * strength;
+                _direction = Vector3.up * strength;
             }
 
-            direction.y += gravity * Time.deltaTime;
-            transform.position += direction * Time.deltaTime;
+            _direction.y += gravity * Time.deltaTime;
+            transform.position += _direction * Time.deltaTime;
 
             Vector3 rotation = transform.eulerAngles;
-            rotation.z = direction.y * tilt;
+            rotation.z = _direction.y * tilt;
             transform.eulerAngles = rotation;
         }
 
         private void AnimateSprite()
         {
-            spriteIndex++;
+            _spriteIndex++;
 
-            if(spriteIndex >= sprites.Length ) {
-                spriteIndex = 0;
+            if(_spriteIndex >= sprites.Length ) {
+                _spriteIndex = 0;
             }
 
-            spriteRenderer.sprite = sprites[spriteIndex];
+            _spriteRenderer.sprite = sprites[_spriteIndex];
 
         }
 
