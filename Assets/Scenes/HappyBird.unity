@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e04c2b04ff457f882b0dea011d47e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDetectionThreshold: 5
+  shakeDetectionThreshold: 2.5
   minShakeInterval: 0.5
   background: {fileID: 975218083}
 --- !u!4 &1388445734

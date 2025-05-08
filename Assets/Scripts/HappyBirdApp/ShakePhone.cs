@@ -5,7 +5,7 @@ namespace HappyBirdApp
     public class ShakePhone : MonoBehaviour
     {
         [Header("Shake Settings")] 
-        public float shakeDetectionThreshold = 1.0f;
+        public float shakeDetectionThreshold = 2.5f;
         public float minShakeInterval = 0.5f;
         private float sqrShakeThreshold;
         private float lastShakeTime;
@@ -25,9 +25,11 @@ namespace HappyBirdApp
 
         private void Update()
         {
+            if (!_gm.parisPopUpSeen || !_gm.wasShaken) return;
+            
             Vector3 acceleration = Input.acceleration;
             if (acceleration.sqrMagnitude >= sqrShakeThreshold
-                && Time.unscaledTime - lastShakeTime >= minShakeInterval && !_gm.wasShaken)
+                && Time.unscaledTime - lastShakeTime >= minShakeInterval)
             {
                 Debug.Log("Phone was shaken!");
                 _gm.wasShaken = true;
