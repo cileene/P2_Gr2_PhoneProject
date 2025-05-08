@@ -153,20 +153,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void InitPhotoNames()
-    {
-        // initialize photo tracking names and counts
-        if (photoNames.Count == 0)
-        {
-            var gallery = UnityEngine.Object.FindAnyObjectByType<GalleryApp.GalleryManager>();
-            if (gallery != null)
-            {
-                foreach (var sprite in gallery.images)
-                    photoNames.Add(sprite.name);
-            }
-        }
-    }
-
     //TODO: Make a separate class for handling scene management
     private void Start()
     {
@@ -178,6 +164,20 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No current scene found in save data.");
+        }
+    }
+    
+    private void InitPhotoNames()
+    {
+        // initialize photo tracking names and counts
+        if (photoNames.Count == 0)
+        {
+            var gallery = UnityEngine.Object.FindAnyObjectByType<GalleryApp.GalleryManager>();
+            if (gallery != null)
+            {
+                foreach (var sprite in gallery.images)
+                    photoNames.Add(sprite.name);
+            }
         }
     }
 
@@ -254,5 +254,4 @@ public class GameManager : MonoBehaviour
         if (useSaveData)
             SaveDataManager.WriteSaveData();
     }
-
 }
