@@ -4,7 +4,8 @@ namespace HappyBirdApp
 {
     public class ShakePhone : MonoBehaviour
     {
-        [Header("Shake Settings")] public float shakeDetectionThreshold = 2.0f;
+        [Header("Shake Settings")] 
+        public float shakeDetectionThreshold = 1.0f;
         public float minShakeInterval = 0.5f;
         private float sqrShakeThreshold;
         private float lastShakeTime;
