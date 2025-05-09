@@ -97,10 +97,10 @@ namespace GalleryApp
             // Disable swipe when zoomed in
             swipeEnabled = Mathf.Approximately(newZoom, _originalZoom);
 
-            if (Mathf.Approximately(newZoom, 4f) && GameManager.Instance.zoomReady)
-            {
-                Invoke(nameof(PopUpIfZoom), 4f);
-            }
+            // if (Mathf.Approximately(newZoom, 4f) && GameManager.Instance.zoomReady)
+            // {
+            //     Invoke(nameof(PopUpIfZoom), 4f);
+            // }
         }
 
         public void PopUpIfZoom()

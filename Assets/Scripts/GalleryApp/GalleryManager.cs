@@ -19,7 +19,7 @@ namespace GalleryApp
         private void Start()
         {
             _gm = GameManager.Instance;
-            _gm.photosBadge = false; // for linear test build
+            //_gm.photosBadge = false; // for linear test build
         }
 
         public void OpenImage(int index)
@@ -102,11 +102,11 @@ namespace GalleryApp
             // maybe change to only show the photo when the player has talked to paris
             if (_currentIndex == 6 && _gm.currentLevel == 1)
             {
-                Invoke(nameof(ShowPopup), 1f);
-                _gm.zoomReady = true;
                 _gm.progressStory = true;
-                _gm.happyBirdLoading = false; // for linear test build
-                _gm.happyBirdBadge = true; // for linear test build
+                // Invoke(nameof(ShowPopup), 1f);
+                // _gm.zoomReady = true;
+                // _gm.happyBirdLoading = false; // for linear test build
+                // _gm.happyBirdBadge = true; // for linear test build
             }
         }
     }

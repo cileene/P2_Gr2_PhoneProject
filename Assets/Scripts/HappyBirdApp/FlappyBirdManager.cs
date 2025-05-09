@@ -99,9 +99,9 @@ namespace HappyBirdApp
 
                 if (Score >= 5) // after winning hardmode go to new messages in paris scene
                 {
-                    popUp.SetActive(true);
+                    //popUp.SetActive(true);
                     _gm.progressStory = true;
-                    _gm.happyBirdBadge = false;
+                    //_gm.happyBirdBadge = false;
                 }
                 
             }

@@ -18,8 +18,8 @@ namespace IDMojiApp
 
             GameManager.Instance.iDMojiCreated = true;
             GameManager.Instance.progressStory = true;
-            GameManager.Instance.idMojiBadge = false;
-            popUpPanel.SetActive(true);
+            //GameManager.Instance.idMojiBadge = false;
+            //popUpPanel.SetActive(true);
             Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("iDMojiCreated");
         }
     }

@@ -178,16 +178,16 @@ namespace MessagesApp
             SaveConversationState();
             if (!GameManager.Instance.progressStory)
             {
-                if (!GameManager.Instance.iDMojiCreated)
-                {
-                    GameManager.Instance.idMojiLoading = false;
-                    GameManager.Instance.idMojiBadge = true;
-                }
-                else if (!GameManager.Instance.deathGamePlayed && GameManager.Instance.iDMojiCreated)
-                {
-                    GameManager.Instance.deathLoading = false;
-                    GameManager.Instance.deathBadge = true;
-                }
+                // if (!GameManager.Instance.iDMojiCreated)
+                // {
+                //     GameManager.Instance.idMojiLoading = false;
+                //     GameManager.Instance.idMojiBadge = true;
+                // }
+                // else if (!GameManager.Instance.deathGamePlayed && GameManager.Instance.iDMojiCreated)
+                // {
+                //     GameManager.Instance.deathLoading = false;
+                //     GameManager.Instance.deathBadge = true;
+                // }
 
                 buttonChoice1.SetActive(false);
                 buttonChoice2.SetActive(false);
@@ -203,10 +203,10 @@ namespace MessagesApp
                 if (GameManager.Instance.currentScene == "Sandra")
                 {
                     GameManager.Instance.lastSandraMessage = true;
-                    GameManager.Instance.messagesBadge = false;
-                    GameManager.Instance.settingsBadge = true;
-                    GameManager.Instance.settingsLoading = false;
-                    GameManager.Instance.photosLoading = true; // for linear test build
+                    //GameManager.Instance.messagesBadge = false;
+                    //GameManager.Instance.settingsBadge = true;
+                    //GameManager.Instance.settingsLoading = false;
+                    //GameManager.Instance.photosLoading = true; // for linear test build
                     GameManager.Instance.currentLevel = 1;
                 }
                 // Wait for 2 seconds

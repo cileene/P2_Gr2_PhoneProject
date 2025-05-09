@@ -28,8 +28,8 @@ namespace GalleryApp
             {
                 _gm.seenGyroHint = true;
                 
-                _gm.gyroLoading = false; // for linear test build
-                _gm.gyroBadge = true; // for linear test build
+                //_gm.gyroLoading = false; // for linear test build
+                //_gm.gyroBadge = true; // for linear test build
                 
                 secretFolderPanel.SetActive(true);
             }

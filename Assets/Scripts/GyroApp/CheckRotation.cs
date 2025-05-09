@@ -27,7 +27,7 @@ namespace GyroApp
         {
             Debug.Log($"YES!!");
             GameManager.Instance.gyroCodeSeen = true;
-            GameManager.Instance.playerIsTrapped = false;
+            //GameManager.Instance.playerIsTrapped = false;
             GameManager.Instance.gyroBadge = false; // for linear test build
             endPopupPanel.SetActive(true);
             //Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("gyroCodeSeen");

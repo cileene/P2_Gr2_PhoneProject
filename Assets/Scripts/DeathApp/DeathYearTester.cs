@@ -63,8 +63,8 @@ namespace DeathApp
 
             GameManager.Instance.deathGamePlayed = true;
             GameManager.Instance.progressStory = true;
-            GameManager.Instance.deathBadge = false;
-            GameManager.Instance.messagesBadge = true;
+            //GameManager.Instance.deathBadge = false;
+            //GameManager.Instance.messagesBadge = true;
             UGSSnitch();
         }
 

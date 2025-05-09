@@ -15,17 +15,17 @@ namespace SettingsApp
         [SerializeField] private Button viewButton;
         [SerializeField] private int backupCode = 1184; // The fall of Troy
 
-        private int inputCode;
-        private string fileName;
-        private string textToSave;
-        private GameManager gm;
+        private int _inputCode;
+        private string _fileName;
+        private string _textToSave;
+        private GameManager _gm;
 
         // --------------------------------------------------------------------
 
         private void Awake()
         {
-            gm = GameManager.Instance;
-            if (gm == null)
+            _gm = GameManager.Instance;
+            if (_gm == null)
             {
                 Debug.LogError("BackupCodeLogic: GameManager instance not found.");
                 return;
@@ -47,18 +47,18 @@ namespace SettingsApp
                 return;
             }
 
-            if (inputCode == backupCode)
+            if (_inputCode == backupCode)
             {
                 //selfieGameObject.SetActive(true); //TODO: Selfies are broken
                 popUp.SetActive(true);
                 SetFileNameAndText();
-                SaveTextFileToDevice.SaveTextFile(fileName, textToSave);
+                SaveTextFileToDevice.SaveTextFile(_fileName, _textToSave);
                 
 
                 // lift the friction once the truth is revealed
-                gm.rotationFriction = false;
-                gm.birdFriction = false;
-                gm.wasShaken = false;
+                _gm.rotationFriction = false;
+                _gm.birdFriction = false;
+                _gm.wasShaken = false;
                 
                 // Record analytics event
                 Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent("backupUnlocked");
@@ -75,8 +75,8 @@ namespace SettingsApp
         {
             if (int.TryParse(codeInputField.text, out int codeInt))
             {
-                inputCode = codeInt;
-                Debug.Log("Parsed value: " + inputCode);
+                _inputCode = codeInt;
+                Debug.Log("Parsed value: " + _inputCode);
                 return true;
             }
 
@@ -113,8 +113,8 @@ namespace SettingsApp
 
         private void SetFileNameAndText()
         {
-            fileName = "BACKUP.txt";
-            textToSave = BuildBackupText();
+            _fileName = "BACKUP.txt";
+            _textToSave = BuildBackupText();
         }
 
         // --------------------------------------------------------------------
@@ -126,11 +126,11 @@ namespace SettingsApp
             var today = DateTime.Today;
 
             sb.AppendLine("//—BEGIN_BACKUP_RECONSTRUCTION—//");
-            sb.AppendLine($"OWNER          : {gm.playerName}");
-            sb.AppendLine($"AGE / YOB      : {gm.playerAge} / {gm.playerBirthYear}");
-            sb.AppendLine($"LEVEL REACHED  : {gm.currentLevel}");
-            sb.AppendLine($"LAST SCENE     : {gm.currentScene}");
-            sb.AppendLine($"BIRD HI-SCORE  : {gm.birdHighScore}");
+            sb.AppendLine($"OWNER          : {_gm.playerName}");
+            sb.AppendLine($"AGE / YOB      : {_gm.playerAge} / {_gm.playerBirthYear}");
+            sb.AppendLine($"LEVEL REACHED  : {_gm.currentLevel}");
+            sb.AppendLine($"LAST SCENE     : {_gm.currentScene}");
+            sb.AppendLine($"BIRD HI-SCORE  : {_gm.birdHighScore}");
             sb.AppendLine();
             sb.AppendLine("— DEVICE —");
             sb.AppendLine($"MODEL          : {SystemInfo.deviceModel}");
@@ -139,10 +139,10 @@ namespace SettingsApp
                 $"BATTERY LEVEL  : {(SystemInfo.batteryLevel >= 0 ? (SystemInfo.batteryLevel * 100).ToString("F0", System.Globalization.CultureInfo.InvariantCulture) + "%" : "N/A")}");
             sb.AppendLine();
             sb.AppendLine("— HABIT —");
-            sb.AppendLine($"SMOKER         : {gm.playerSmokes}  ({gm.playerCigarettesPerDay}/day)");
-            sb.AppendLine($"DRINKER        : {gm.playerDrinks}  ({gm.playerDrinksPerWeek}/week)");
-            sb.AppendLine($"EXERCISE/WEEK  : {gm.playerExerciseSessionsPerWeek}");
-            sb.AppendLine($"SLEEP (h/night): {gm.playerSleepHours}");
+            sb.AppendLine($"SMOKER         : {_gm.playerSmokes}  ({_gm.playerCigarettesPerDay}/day)");
+            sb.AppendLine($"DRINKER        : {_gm.playerDrinks}  ({_gm.playerDrinksPerWeek}/week)");
+            sb.AppendLine($"EXERCISE/WEEK  : {_gm.playerExerciseSessionsPerWeek}");
+            sb.AppendLine($"SLEEP (h/night): {_gm.playerSleepHours}");
             sb.AppendLine();
             sb.AppendLine("— DIARY (-30→0 days) —");
 
@@ -169,7 +169,7 @@ namespace SettingsApp
                         break;
                     case 7:
                         sb.AppendLine(
-                            $"{date}  {gm.playerCigarettesPerDay} cigarettes logged. Paris texts: 'City still burning?'.");
+                            $"{date}  {_gm.playerCigarettesPerDay} cigarettes logged. Paris texts: 'City still burning?'.");
                         break;
                     case 5:
                         sb.AppendLine($"{date}  System haptics disabled. Silence preferred.");
@@ -188,7 +188,7 @@ namespace SettingsApp
             sb.AppendLine();
             sb.AppendLine("— CONVERSATION EXCERPTS —");
             sb.AppendLine(
-                $"{today.AddDays(-35).ToString("yyyy-MM-dd")}  Sandra: \"hey {gm.playerName}, build uploaded. don't judge the placeholder art.\"");
+                $"{today.AddDays(-35).ToString("yyyy-MM-dd")}  Sandra: \"hey {_gm.playerName}, build uploaded. don't judge the placeholder art.\"");
             sb.AppendLine($"{today.AddDays(-35).ToString("yyyy-MM-dd")}  You   : \"placeholders are my jam.\"");
             sb.AppendLine(
                 $"{today.AddDays(-34).ToString("yyyy-MM-dd")}  Sandra: \"promise you'll actually play it this time?\"");
@@ -207,7 +207,7 @@ namespace SettingsApp
             sb.AppendLine(
                 $"{today.AddDays(-21).ToString("yyyy-MM-dd")}  You   : \"phone glitching, did you code that?\"");
             sb.AppendLine(
-                $"{today.AddDays(-21).ToString("yyyy-MM-dd")}  Sandra: \"i wish. that's on you {gm.playerName}.\"");
+                $"{today.AddDays(-21).ToString("yyyy-MM-dd")}  Sandra: \"i wish. that's on you {_gm.playerName}.\"");
             sb.AppendLine(
                 $"{today.AddDays(-14).ToString("yyyy-MM-dd")}  Sandra: \"did you back up? please tell me you did.\"");
             sb.AppendLine($"{today.AddDays(-13).ToString("yyyy-MM-dd")}  You   : \"why?\"");
@@ -216,14 +216,14 @@ namespace SettingsApp
             sb.AppendLine($"{today.AddDays(-8).ToString("yyyy-MM-dd")}   Sandra: \"nope.\"");
             sb.AppendLine();
             sb.AppendLine("— PARIS THREAD —");
-            sb.AppendLine($"{today.AddDays(-19).ToString("yyyy-MM-dd")}  Paris : \"hey {gm.playerName}, you alive?\"");
+            sb.AppendLine($"{today.AddDays(-19).ToString("yyyy-MM-dd")}  Paris : \"hey {_gm.playerName}, you alive?\"");
             sb.AppendLine($"{today.AddDays(-18).ToString("yyyy-MM-dd")}  You   : \"busy.\"");
             sb.AppendLine(
-                $"{today.AddDays(-11).ToString("yyyy-MM-dd")}  Paris : \"heard about the reset. bad idea {gm.playerName}.\"");
+                $"{today.AddDays(-11).ToString("yyyy-MM-dd")}  Paris : \"heard about the reset. bad idea {_gm.playerName}.\"");
             sb.AppendLine($"{today.AddDays(-2).ToString("yyyy-MM-dd")}   Paris : \"look under 'Files'. not kidding.\"");
             // ----------------------  USAGE PATTERNS  -------------------------
-            int totalAppOpens = gm.appCounts.Sum();
-            int totalPhotoViews = gm.photoCounts.Sum();
+            int totalAppOpens = _gm.appCounts.Sum();
+            int totalPhotoViews = _gm.photoCounts.Sum();
 
             sb.AppendLine();
             sb.AppendLine("— USAGE PATTERNS —");
@@ -231,24 +231,24 @@ namespace SettingsApp
             sb.AppendLine($"TOTAL PHOTO VIEWS: {totalPhotoViews}");
             sb.AppendLine();
             sb.AppendLine("   APP        ▸ opens");
-            for (int i = 0; i < gm.appNames.Count; i++)
+            for (int i = 0; i < _gm.appNames.Count; i++)
             {
-                if (i < gm.appCounts.Count)
-                    sb.AppendLine($"{gm.appNames[i],-12}: {gm.appCounts[i]}");
+                if (i < _gm.appCounts.Count)
+                    sb.AppendLine($"{_gm.appNames[i],-12}: {_gm.appCounts[i]}");
             }
 
             sb.AppendLine();
             sb.AppendLine("   PHOTO      ▸ views");
-            for (int i = 0; i < gm.photoNames.Count; i++)
+            for (int i = 0; i < _gm.photoNames.Count; i++)
             {
-                if (i < gm.photoCounts.Count && gm.photoCounts[i] > 0)
-                    sb.AppendLine($"{gm.photoNames[i],-12}: {gm.photoCounts[i]}");
+                if (i < _gm.photoCounts.Count && _gm.photoCounts[i] > 0)
+                    sb.AppendLine($"{_gm.photoNames[i],-12}: {_gm.photoCounts[i]}");
             }
 
             // ----------------------------------------------------------------
             sb.AppendLine();
             sb.AppendLine("MEMORY_OVERRIDE : COMPLETE");
-            sb.AppendLine($"// 1184 — fall of Troy. {gm.playerName} chose the sack.");
+            sb.AppendLine($"// 1184 — fall of Troy. {_gm.playerName} chose the sack.");
             sb.AppendLine("//—END_BACKUP_RECONSTRUCTION_#3—//");
 
             return sb.ToString();
