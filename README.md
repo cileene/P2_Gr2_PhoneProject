@@ -1,4 +1,6 @@
-# This will become something
+# This doesn't need to be the End of Everything
+
+- A game in the found phone genre.
 
 ## Team
 - Ingrid Evertsen
@@ -13,4 +15,3 @@
 
 ### Packages
 - Unity Analytics
-- Yarn Spinner
