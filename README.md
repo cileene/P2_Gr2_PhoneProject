@@ -1,4 +1,4 @@
-# This doesn't need to be the End of Everything
+# This doesn't have to be the End of Everything
 
 - A game in the found phone genre.
 
