@@ -1,16 +1,14 @@
 using UnityEngine;
 using System.IO;
-using UnityEngine.SceneManagement;
 
 public static class SaveDataManager
 {
     public static void TriggerSave()
     {
-        if (!GameManager.Instance.useSaveData) return;
-        WriteSaveData();
+        if (GameManager.Instance.useSaveData) WriteSaveData();
     }
 
-    public static void WriteSaveData()
+    private static void WriteSaveData()
     {
         File.WriteAllText(GameManager.Instance.SaveData, SerializeToJson());
     }

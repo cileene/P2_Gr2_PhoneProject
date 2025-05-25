@@ -186,19 +186,18 @@ public class GameManager : MonoBehaviour
         // count app or conversation opens 
         if (OpenTrackerUtils.Register(appNames, appCounts, scene.name))
         {
-            if (useSaveData) SaveDataManager.WriteSaveData();
+            SaveDataManager.TriggerSave();
         }
         else if (OpenTrackerUtils.Register(conversationNames, conversationCounts, scene.name))
         {
-            if (useSaveData) SaveDataManager.WriteSaveData();
+            SaveDataManager.TriggerSave();
         }
         // when entering the Photos scene, build the photo list
         if (scene.name == "Photos")
         {
             InitPhotoNames();
             OpenTrackerUtils.Init(photoNames, photoCounts);
-            if (useSaveData)
-                SaveDataManager.WriteSaveData();
+            SaveDataManager.TriggerSave();
         }
     }
     
@@ -239,7 +238,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (useSaveData) SaveDataManager.WriteSaveData();
+        SaveDataManager.TriggerSave();
         Debug.Log($"New file created at {SaveData}");
     }
 
@@ -251,7 +250,6 @@ public class GameManager : MonoBehaviour
     // also save on application quit
     private void OnApplicationQuit()
     {
-        if (useSaveData)
-            SaveDataManager.WriteSaveData();
+        SaveDataManager.TriggerSave();
     }
 }

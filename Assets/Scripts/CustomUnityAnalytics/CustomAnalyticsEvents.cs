@@ -1,6 +1,8 @@
+using Unity.Services.Analytics;
+
 namespace CustomUnityAnalytics
 {
-    public class MessageSent : Unity.Services.Analytics.Event
+    public class MessageSent : Event
     {
         public MessageSent() : base("messageSent")
         {
@@ -12,7 +14,7 @@ namespace CustomUnityAnalytics
     }
 
 
-    public class PhotoViewed : Unity.Services.Analytics.Event
+    public class PhotoViewed : Event
     {
         public PhotoViewed() : base("photoViewed")
         {
@@ -22,7 +24,7 @@ namespace CustomUnityAnalytics
     }
 
 
-    public class PlayedBirdGame : Unity.Services.Analytics.Event
+    public class PlayedBirdGame : Event
     {
         public PlayedBirdGame() : base("playedBirdGame")
         {
@@ -32,7 +34,7 @@ namespace CustomUnityAnalytics
     }
 
 
-    public class PlayedDeathGame : Unity.Services.Analytics.Event
+    public class PlayedDeathGame : Event
     {
         public PlayedDeathGame() : base("playedDeathGame")
         {
@@ -55,7 +57,7 @@ namespace CustomUnityAnalytics
     }
 
 
-    public class SceneLoaded : Unity.Services.Analytics.Event
+    public class SceneLoaded : Event
     {
         public SceneLoaded(string sceneName) : base("sceneLoaded")
         {

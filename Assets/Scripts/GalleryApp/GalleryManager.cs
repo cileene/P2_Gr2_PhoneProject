@@ -86,8 +86,7 @@ namespace GalleryApp
             if (_gm.photoNames.Contains(photoName))
             {
                 OpenTrackerUtils.Register(_gm.photoNames, _gm.photoCounts, photoName);
-                if (_gm.useSaveData)
-                    SaveDataManager.WriteSaveData();
+                SaveDataManager.TriggerSave();
             }
         }
         
