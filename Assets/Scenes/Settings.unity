@@ -3829,7 +3829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d3d041288b436898bb3088c48b956f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codeInputField: {fileID: 0}
+  codeInputField: {fileID: 1941676230}
   popUp: {fileID: 7419505001465025018}
   selfieGameObject: {fileID: 1362443767}
   viewButton: {fileID: 418491045}
@@ -8331,7 +8331,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2034505702}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.54027045
+  m_Size: 0.5402691
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
